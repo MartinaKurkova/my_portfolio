@@ -1,0 +1,260 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: clamp(1rem, 1vw + 0.9375rem, 1.125rem);
+    line-height: 1.45;
+    color: #333333;
+    margin: 0;
+}
+
+.page-wrapper {
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 5rem 1rem 0 1rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    line-height: 1.2;
+    color: purple;
+}
+
+h1 {
+  font-size: clamp(1.875rem, 2vw + 1rem, 3.125rem);
+  margin: 0;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 1.6vw + 0.9rem, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 1.3vw + 0.8rem, 2rem);
+}
+
+h4 {
+    font-size: clamp(1.125rem, 1vw + 0.7rem, 1.75rem);
+}
+
+h5 {
+    font-size: clamp(1rem, 0.8vw + 0.6rem, 1.5rem);
+}
+
+h6 {
+    font-size: clamp(0.875rem, 0.6vw + 0.5rem, 1.25rem);
+}
+
+/* Header */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: purple;
+    padding: 0.5rem 1.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+}
+
+/* logo */
+.header__logo-link {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1.125rem, calc(0.875rem + 1.25vw), 1.875rem);
+    display: inline-block;
+}
+
+.header__logo-title {
+    margin: 0;
+}
+
+/* navigation */
+.header__nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav-item {
+    list-style-type: none;
+}
+
+.header__nav-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+/* Hover, focus, active */
+.header__nav-link:hover {
+    background-color: rgb(146, 6, 146);
+}
+
+.header__nav-link:focus-visible {
+    outline: 3px solid #FFAA00; 
+    outline-offset: 2px;
+    background-color: rgb(146, 6, 146);
+}
+
+.header__nav-link:active {
+    background-color: rgb(110, 0, 110);
+}
+
+/* contact button */
+.header__nav-link--button {
+    background-color: white;
+    color: purple;
+}
+
+.header__nav-link--button:hover,
+.header__nav-link--button:focus-visible,
+.header__nav-link--button:active {
+    background-color: #f5f5f5;
+    opacity: 0.9;
+    outline: 3px solid #FFAA00; 
+    outline-offset: 2px;
+}
+
+/* hamburger - hidden */
+.header__nav-hamburger {
+    display: none;
+}
+
+/* Mobile/tablet breakpoint */
+@media screen and (max-width: 53.75rem){
+    /* hamburger */
+    .header__nav-hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .hamburger__inner,
+    .hamburger__inner::before,
+    .hamburger__inner::after {
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 3px;
+        border-radius: 2px;
+        background-color: white;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger__inner {
+        position: relative;
+    }
+
+    .hamburger__inner::before,
+    .hamburger__inner::after {
+        position: absolute;
+        left: 0;
+    }
+
+    .hamburger__inner::before {
+        top: -0.5rem;
+    }
+
+    .hamburger__inner::after {
+        top: 0.5rem; 
+    }
+
+    /* hamburger menu close */
+    .header__nav-hamburger.is-active .hamburger__inner {
+        transform: rotate(45deg);
+        background-color: purple;
+    }
+
+    .header__nav-hamburger.is-active .hamburger__inner::before {
+        transform: rotate(-90deg) translateX(-0.5rem);
+        background-color: purple;
+    }
+
+    .header__nav-hamburger.is-active .hamburger__inner::after {
+        opacity: 0;
+    }
+
+    /* navigation */
+    .header__nav-list {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 100vh;
+        background-color: white;
+        padding: 5rem 1rem 2rem 0;
+        margin: 0;
+        box-shadow: -4px 0 0.6em rgba(0, 0, 0, 0.2);
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .header__nav-list--visible {
+        right: 0;
+    }
+
+    .header__nav-item {
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header__nav-link {
+        color: purple;
+    }
+
+    /* contact button */
+    .header__nav-link--button {
+        background-color: purple;
+        color: white;
+    }
+
+    .header__nav-link--button:hover,
+    .header__nav-link--button:focus-visible,
+    .header__nav-link--button:active {
+        background-color: purple;
+        opacity: 0.9;
+        outline: 3px solid #FFAA00; 
+        outline-offset: 2px;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* footer */
