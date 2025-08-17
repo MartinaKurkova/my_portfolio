@@ -397,8 +397,12 @@ h6 {
 
 .hero__text-container {
     margin: auto 1.25rem;
-    padding-top: 6rem;
 }
+
+.hero__heading {
+    padding-top: 5rem;
+}
+
 .hero__button-cta {
     background-color: #FFAA00;
     border-radius: 20px;
