@@ -9,41 +9,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Ilustrace a vizuální obsah pro knihy i web | Martina Kurková Nožičková</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="header">
+        <header class="header" role="banner">
             <div class="header__container">
                 <div class="header__logo">
-                    <p class="header__logo-title">
-                        <a href="/" class="header__logo-link">Martina Kurková</a>
-                    </p>
+                    <div class="header__logo-title">
+                        <a href="/" class="header__logo-link" aria-label="Martina Kurková Nožičková - domovská stránka">Martina Kurková</a>
+                    </div>
                 </div>
-                <!-- navigation -->
-                <nav id="header-nav-main" class="header__nav-main" aria-label="Hlavní navigace" aria-hidden="true">
-                    <ul class="header__nav-list header__nav-list--hidden">
+                <!-- main navigation -->
+                <nav class="header__navigation" id="header__navigation" aria-label="Hlavní navigace">
+                    <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link">Úvod</a></li>
+                            <a href="/" class="header__nav-link" aria-current="page">Úvod</a></li>
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link">Portfolio</a></li>
+                            <a href="/portfolio" class="header__nav-link">Portfolio</a></li>
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link">Služby</a></li>
+                            <a href="/sluzby" class="header__nav-link">Služby</a></li>
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link">O mně</a></li>
+                            <a href="/o-mne" class="header__nav-link">O mně</a></li>
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link">Blog</a></li>
+                            <a href="/blog" class="header__nav-link">Blog</a></li>
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link">E-shop</a></li>
+                            <a href="/e-shop" class="header__nav-link">E-shop</a></li>
                         <li class="header__nav-item">
-                            <a href="/" class="header__nav-link header__nav-link--button">Kontakt</a>
+                            <a href="/kontakt" class="header__nav-link header__nav-link_cta">Kontakt</a>
                         </li>
                     </ul>
                 </nav>
+
                 <!-- hamburger menu -->
-                <button class="header__nav-hamburger" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="header-nav-main">
+                <button class="header__menu-toggle"
+                    type="button" 
+                    aria-label="Otevřít navigaci" 
+                    aria-expanded="false" 
+                    aria-controls="header__navigation"
+                    data-menu-toggle>
                     <span class="hamburger__inner"></span>
+                    <span class="sr-only">Menu</span>
                 </button>
             </div>
         </header>
@@ -60,12 +68,67 @@
         </div>
     </main>
     
-    <!-- Plná šířka -->
-    <footer>
-        <div class="container">
-            <!-- Obsah footeru v kontejneru -->
-        </div>
-    </footer>
+    <!-- Footer -->
+    <div class=".page-wrapper ">
+        <footer class="footer" role="contentinfo">
+            <div class="footer__container">
+                <div class="footer__section footer__section_about">
+                    <h2 class="footer__heading">Martina Kurková Nožičková</h2>
+                    <p class="footer__tagline">Ilustrace / grafika / kód</p>
+                </div>
+                
+                <div class="footer__section footer__section_contact">
+                    <h3 class="footer__subheading footer__heading_contact">Kontakt</h3>
+                    <address class="footer__contact">
+                        <a href="mailto:martinanozickova.ilustrace@gmail.com" 
+                        class="footer__contact-link">martinanozickova.ilustrace@gmail.com</a><br>
+                        <a href="tel:+420605034317" 
+                        class="footer__contact-link">+420 605 034 317</a><br>
+                        <span class="footer__address">Riegrova 624, 289 12 Sadská</span>
+                    </address>
+                </div>
+                
+                <div class="footer__section footer__section_social">
+                    <h3 class="footer__subheading">Zůstaňme v kontaktu</h3>
+                    <div class="footer__social-links">
+                        <a href="https://www.instagram.com/martinanozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Instagram profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.behance.net/martinanozickova?locale=cs_CZ" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Behance portfolio Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-behance" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/MartinaKurkova" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="GitHub profil Martiny Kurkové">
+                            <i class="fa-brands fa-square-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/martina-kurkova-nozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section footer__section_info">
+                    <p class="footer__copyright footer__text">&copy; Martina Kurková Nožičková, 2025</p>
+                    <p class="footer__credit footer__text">Tento web jsem vytvořila od nuly – stejně jako své ilustrace.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     </div>
     <script src="script.js"></script>
