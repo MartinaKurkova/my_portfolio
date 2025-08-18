@@ -57,19 +57,83 @@
         </header>
 
         <main>
-        <section class="hero__container">
-            <div class="hero__text-container">
-                <h1 class="hero__heading">Od ilustrace po interaktivní zážitek</h1>
-                <p class="hero__text">Tvořím ilustrace a vizuální obsah pro děti i dospělé – od knižních ilustrací a sazby po infografiky a naučné materiály.</p>
-                <p class="hero__text">Díky znalosti HTML, CSS a JavaScriptu dokážu propojit kresbu s digitálním prostředím a vytvářet obsah, který je nejen estetický, ale i funkční a živý.</p>
-                <p class="hero__text">Ať už hledáte ilustraci, grafiku nebo jednoduchý web, ráda váš projekt přivedu k životu.</p>
-                <div class="hero__button-cta"><a href="/" class="hero__link">Pojďme tvořit</a></div>
-            </div>
-            <div class="hero__image-container">
-                <img src="images/Autoportret_ctverec.jpg" alt="Martina Kurková Nožičková kreslený autoportrét" class="hero__image">
-            </div>
-        </section>
-    </main>
+        <!-- hero -->
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__text-container">
+                        <h1 class="hero__heading fade-in">Od ilustrace po interaktivní zážitek</h1>
+                        <p class="hero__text">Tvořím ilustrace a vizuální obsah pro děti i dospělé – od knižních ilustrací a sazby po infografiky a naučné materiály.</p>
+                        <p class="hero__text">Díky znalosti HTML, CSS a JavaScriptu dokážu propojit kresbu s digitálním prostředím a vytvářet obsah, který je nejen estetický, ale i funkční a živý.</p>
+                        <p class="hero__text">Ať už hledáte ilustraci, grafiku nebo jednoduchý web, ráda váš projekt přivedu k životu.</p>
+                        <div class="hero__button-cta"><a href="/" class="hero__link">Pojďme tvořit</a></div>
+                    </div>
+                    <div class="hero__image-container">
+                        <img src="images/autoportret/Autoportret_mediu_550.webp"
+                        srcset="
+                        images/autoportret/Autoportret_small_330.webp 330w,
+                        images/autoportret/Autoportret_mediu_550.webp 550w,
+                        images/autoportret/Autoportret_large_920.webp 920w"
+                        sizes="(max-width: 860px) 920px, 550px"
+                        alt="Martina Kurková Nožičková kreslený autoportrét"
+                        class="hero__image" loading="lazy">
+                    </div>
+                </div>
+            </section>
+            <!-- portfolio -->
+             <section class="portfolio">
+                <div class="portfolio__container">
+                    <div class="portfolio__text-container">
+                        <h2 class="portfolio__heading">Co už vzniklo</h2>
+                        <p class="portfolio__text">Každý projekt je trochu jiný – stejně jako lidé, pro které ho tvořím. Tady je pár ukázek, které mám ráda a které možná inspirují i vás.</p>
+                    </div>
+                    <!-- <div class="portfolio__slider">
+                        <div class="portfolio__slide fade">
+                            <img src="images/slider/gramla_01.webp" alt="Gramla" class="portfolio__slide-img">
+                            <div class="portfolio__slide-text">Gramla</div>
+                        </div>
+
+                        <div class="portfolio__slide fade">
+                            <img src="images/slider/oskare_plav_cesta.webp" alt="Oskar" class="portfolio__slide-img">
+                            <div class="portfolio__slide-text">Oskare, plav!</div>
+                        </div>
+
+                        <div class="portfolio__slide fade">
+                            <img src="images/slider/Stardust_Gaiman.webp" alt="Gramla" class="portfolio__slide-img">
+                            <div class="portfolio__slide-text">Hvězdný prach</div>
+                        </div>
+
+                        <a class="portfolio__slider-prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="portfolio__slider-next" onclick="plusSlides(1)">&#10095;</a>
+                    </div> -->
+                    <div class="portfolio__gallery">
+                        <figure class="portfolio__figure">
+                            <img class="portfolio__image" src="images/slider/gramla_01.webp" alt="gramla">
+                            <figcaption class="portfolio__caption">
+                                <h3 class="portfolio__text">Gramla</h3>
+                                <p class="portfolio__description">Ilustrace, pop-up</p>
+                            </figcaption> 
+                        </figure>
+
+                        <figure class="portfolio__figure">
+                            <img class="portfolio__image" src="images/slider/oskare_plav_cesta.webp" alt="gramla">
+                            <figcaption class="portfolio__caption">
+                                <h3 class="portfolio__text">Oskare, plav!</h3>
+                                <p class="portfolio__description">Ilustrace, pop-up</p>
+                            </figcaption> 
+                        </figure>
+
+                        <figure class="portfolio__figure">
+                            <img class="portfolio__image" src="images/slider/Stardust_Gaiman.webp" alt="gramla">
+                            <figcaption class="portfolio__caption">
+                                <h3 class="portfolio__text">Gaiman, obálky</h3>
+                                <p class="portfolio__description">Ilustrace</p>
+                            </figcaption> 
+                        </figure>
+
+                    </div>
+                </div>
+             </section>
+        </main>
     
     <!-- Footer -->
     <div class=".page-wrapper ">
