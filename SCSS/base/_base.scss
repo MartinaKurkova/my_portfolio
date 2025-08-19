@@ -1,0 +1,22 @@
+@use "../utils/variables";
+
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: variables.$font-sans;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: variables.$color-text;
+    margin: 0;
+}
+
+.page-wrapper {
+    margin: 0 auto;
+}

@@ -1,0 +1,55 @@
+@use "../utils/variables";
+
+// header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;            
+  background-color: variables.$color-primary;
+  z-index: 999;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 70rem;    
+        margin: 0 auto;     
+        padding: 0.5rem 1.25rem;
+    }
+
+    // logo
+    &__logo-link {
+        font-family: variables.$font-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        color: white;
+        text-decoration: none;
+        font-size: clamp(0.875rem, calc(1rem + 1vw), 1.25rem);
+        display: inline-block;
+    }
+
+    &__logo-title {
+        margin: 0;
+    }
+
+    &__logo-animation {
+        opacity: 0;
+        animation: surname 1s ease-in-out forwards;
+
+        @media screen and (max-width: 21.875rem) {
+            display: none;
+        }
+    }
+}
+
+// logo animation
+@keyframes surname {
+    0% {
+        transform: translateY(-6.25rem);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
