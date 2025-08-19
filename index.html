@@ -19,7 +19,7 @@
             <div class="header__container">
                 <div class="header__logo">
                     <div class="header__logo-title">
-                        <a href="/" class="header__logo-link" aria-label="Martina Kurková Nožičková - domovská stránka">Martina Kurková</a>
+                        <a href="/" class="header__logo-link" aria-label="Martina Kurková Nožičková - domovská stránka">Martina Kurková <span class="header__logo-animation">Nožičková</span></a>
                     </div>
                 </div>
                 <!-- main navigation -->
@@ -50,8 +50,10 @@
                     aria-expanded="false" 
                     aria-controls="header__navigation"
                     data-menu-toggle>
-                    <span class="hamburger__inner"></span>
-                    <span class="sr-only">Menu</span>
+                    <div class="header__hamburger">
+                        <span class="header__hamburger-line"></span>
+                    </div>
+                    <span class="header__menu-text">Menu</span>
                 </button>
             </div>
         </header>
