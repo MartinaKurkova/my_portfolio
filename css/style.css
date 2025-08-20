@@ -81,23 +81,26 @@ h6 {
 .header__logo-title {
   margin: 0;
 }
-.header__logo-animation {
-  opacity: 0;
-  animation: surname 1s ease-in-out forwards;
+.header__animated {
+  border-right: 2px solid white;
+  animation: cursor 0.75s step-end infinite;
 }
 @media screen and (max-width: 21.875rem) {
-  .header__logo-animation {
+  .header__animated {
     display: none;
   }
 }
+.header__animated.typing-complete {
+  animation: none;
+  border-right: none;
+}
 
-@keyframes surname {
-  0% {
-    transform: translateY(-6.25rem);
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  50% {
+    border-color: white;
   }
 }
 .header__nav-list {
@@ -125,9 +128,11 @@ h6 {
   outline: 3px solid #FFAA00;
   outline-offset: 2px;
   background-color: rgb(146, 6, 146);
+  font-weight: 600;
 }
 .header__nav-link:active {
   background-color: rgb(110, 0, 110);
+  font-weight: 600;
 }
 .header__nav-link_cta {
   background-color: white;
@@ -256,6 +261,10 @@ h6 {
     outline-offset: 2px;
   }
 }
+.active {
+  font-weight: 600;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -273,26 +282,22 @@ h6 {
   border: 0;
 }
 
-/* footer */
 .footer {
-  background-color: purple;
+  background-color: #800080;
   color: white;
   font-size: 0.875rem;
 }
-
 .footer__container {
   max-width: 70rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
-
 .footer__heading {
   color: white;
   margin-bottom: 0;
   margin-top: 0;
-  font-size: clamp(1.125rem, 1vw + 0.7rem, 1.75rem);
+  font-size: clamp(1.125rem, 1vw + 0.7rem, 1.4rem);
 }
-
 .footer__subheading {
   color: white;
   margin-bottom: 0;
@@ -303,86 +308,93 @@ h6 {
   font-weight: 600;
   font-size: 0.875rem;
 }
-
-.footer__tagline {
-  text-transform: uppercase;
+.footer__text {
   margin: 0;
 }
-
+.footer__section {
+  margin-bottom: 2rem;
+}
+.footer__tagline {
+  text-transform: uppercase;
+  margin: 0.3rem 0 0 0;
+}
 .footer__contact-link {
   color: white;
   text-decoration: none;
   font-style: normal;
 }
-
 .footer__address {
   font-style: normal;
 }
-
-.fa-brands {
-  font-size: 30px;
+.footer__social-icon {
+  font-size: 1.875rem;
   color: white;
 }
-
 .footer__social-link {
   text-decoration: none;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.1rem;
   transition: transform 0.2s ease;
 }
-
 .footer__social-link:hover {
   transform: translateY(-2px);
 }
-
 .footer__social-link:focus-visible {
   outline: 2px solid #007acc;
   outline-offset: 2px;
 }
-
-.footer__text {
-  margin: 0;
-}
-
-.footer__section {
-  margin-bottom: 2rem;
-}
-
 .footer__social-links {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+.footer__section_info {
+  margin-bottom: 0;
 }
 
-@media screen and (min-width: 53.75rem) {
+@media screen and (min-width: 38.75rem) {
   .footer__container {
     display: grid;
-    grid-template-columns: [about-start] 1fr [about-end contact-start] 1fr [contact-end social-start] 1fr [social-end];
-    grid-template-rows: repeat(2, auto);
     gap: 1.25rem;
+    grid-template-areas: "about contact" "info social";
   }
   .footer__section_about {
-    grid-column: about-start/about-end;
+    grid-area: about;
   }
   .footer__section_contact {
-    grid-column: contact-start/contact-end;
+    grid-area: contact;
   }
   .footer__section_social {
-    grid-column: social-start/social-end;
+    grid-area: social;
   }
   .footer__section_info {
-    grid-column: about-start/social-end;
-    grid-row: 2/3;
+    grid-area: info;
+  }
+}
+@media screen and (min-width: 53.75rem) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "about contact social" "info info info";
+  }
+  .footer__section_about {
+    grid-area: about;
+  }
+  .footer__section_contact {
+    grid-area: contact;
+  }
+  .footer__section_social {
+    grid-area: social;
+  }
+  .footer__section_info {
+    grid-area: info;
     display: grid;
-    grid-template-columns: [about-start] 1fr [about-end contact-start] 1fr [contact-end social-start] 1fr [social-end];
-    gap: 1.25rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr, 2fr;
   }
   .footer__copyright {
-    grid-column: about-start/about-end;
+    grid-column: 1/2;
   }
   .footer__credit {
-    grid-column: contact-start/social-end;
-  }
-  .footer__section {
-    margin-bottom: 1rem;
+    grid-column: 2/4;
   }
 }
 /* hero */

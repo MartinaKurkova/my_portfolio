@@ -61,3 +61,41 @@ window.addEventListener("resize", () => {
         closeMenu();
     }
 });
+
+
+// active navigation
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll(".header__nav-link");
+const menuLength = menuItem.length;
+
+for (let i = 0; i < menuLength; i++) {
+    if (menuItem[i].href === currentLocation) {
+        menuItem[i].classList.add("active");
+    };
+};
+
+// animation
+function startTypewriter() {
+    const element = document.getElementById('typewriter');
+    const text = 'Nožičková';
+    let i = 0;
+    
+    element.textContent = '';
+    element.classList.remove('typing-complete');
+    
+    const timer = setInterval(() => {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(timer);
+            setTimeout(() => {
+                element.classList.add('typing-complete');
+            }, 1000);
+        }
+    }, 200);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(startTypewriter, 1000);
+});

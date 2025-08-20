@@ -33,23 +33,22 @@
         margin: 0;
     }
 
-    &__logo-animation {
-        opacity: 0;
-        animation: surname 1s ease-in-out forwards;
+    &__animated {
+        border-right: 2px solid white;
+        animation: cursor 0.75s step-end infinite;
 
         @media screen and (max-width: 21.875rem) {
             display: none;
         }
     }
+
+    &__animated.typing-complete {
+        animation: none;
+        border-right: none;
+    }
 }
 
-// logo animation
-@keyframes surname {
-    0% {
-        transform: translateY(-6.25rem);
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+@keyframes cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
 }

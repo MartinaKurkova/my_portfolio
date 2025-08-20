@@ -32,10 +32,12 @@
         outline: 3px solid variables.$color-outline; 
         outline-offset: 2px;
         background-color: variables.$color-hover;
+        font-weight: 600;
     }
 
     &__nav-link:active {
         background-color: variables.$color-active;
+        font-weight: 600;
     }
 
     // CTA button
@@ -201,6 +203,10 @@
             outline-offset: 2px;
         }
     }
+}
+
+.active {
+    font-weight: 600;
 }
 
 .no-scroll {
