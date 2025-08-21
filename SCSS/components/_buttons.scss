@@ -2,15 +2,32 @@
 @use "../base/typography";
 @use "../base/base";
 
-@mixin button__cta {
+@mixin button-cta {
     background-color: variables.$color-secondary;
+    width: fit-content;
+    padding: 0.6rem 2rem;
+    border-radius: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+@mixin button-cta-hover {
+    background-color: variables.$color-hover;
     width: fit-content;
     padding: 0.6rem 2rem;
     border-radius: 1.25rem;
     margin-top: 2rem;
 }
 
-@mixin button__cta-text {
+@mixin button-cta-active {
+    background-color: variables.$color-active;
+    width: fit-content;
+    padding: 0.6rem 2rem;
+    border-radius: 1.25rem;
+    margin-top: 2rem;
+}
+
+@mixin button-cta-text {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
