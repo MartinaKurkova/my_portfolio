@@ -397,7 +397,6 @@ h6 {
     grid-column: 2/4;
   }
 }
-/* hero */
 .hero__container {
   display: flex;
   flex-direction: column;
@@ -409,27 +408,27 @@ h6 {
   padding-bottom: 1rem;
   background-color: #f5e7f9;
 }
-
 .hero__text-container {
   flex: 1;
-  margin-left: 1.25rem;
+  margin: 0 1.25rem;
 }
-
 .hero__image-container {
   flex: 1;
   position: relative;
 }
-
 .hero__image {
   max-width: 100%;
   max-height: auto;
   clip-path: circle(50% at 61% 50%);
 }
-
 .hero__heading {
   padding-top: 4rem;
 }
+.hero__button-cta {
+  @in;
+}
 
+/* hero */
 .hero__button-cta {
   background-color: #C71585;
   width: -moz-fit-content;

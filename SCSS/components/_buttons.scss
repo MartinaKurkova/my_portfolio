@@ -1,0 +1,19 @@
+@use "../utils/variables";
+@use "../base/typography";
+@use "../base/base";
+
+@mixin button__cta {
+    background-color: variables.$color-secondary;
+    width: fit-content;
+    padding: 0.6rem 2rem;
+    border-radius: 1.25rem;
+    margin-top: 2rem;
+}
+
+@mixin button__cta-text {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: variables.$font-serif;
+}

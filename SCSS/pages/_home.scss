@@ -1,0 +1,80 @@
+@use "../utils/variables";
+@use "../base/typography";
+@use "../base/base";
+
+// Hero section
+.hero {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        max-width: 70rem;
+        max-height: fit-content;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        background-color: variables.$color-bg;
+        overflow: hidden;
+
+        @media screen and (min-width: 42rem) {
+            flex-direction: row;
+        }
+    }
+
+    &__text-container {
+        flex: 1;
+        margin: 0 1.25rem;
+    }
+
+    &__image-container {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: auto;
+        clip-path: circle(50% at 61% 50%);
+        animation: moveImage 1.5s ease-in-out 1s forwards;
+        opacity: 0;
+    }
+
+    &__heading {
+        padding-top: 4rem;
+    }
+
+    &__button-cta {
+        @include button__cta;
+    }
+
+    &__link {
+        @include button__cta-text;
+    }
+
+    &__heading,
+    &__text,
+    &__button-cta {
+        animation: moveText 1s ease-in-out forwards;
+    }
+}
+
+// Hero image animation
+@keyframes moveImage {
+    0% {
+        transform: translate(500px,0);
+    }
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+// Hero text animation
+@keyframes moveText {
+    0% {
+        transform: translate(-500px,0);
+    }
+    100% {
+        transform: translate(0px,0);
+    }
+}
