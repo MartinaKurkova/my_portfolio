@@ -126,8 +126,20 @@
         }
     }
 
-    &__heading {
-        margin: 0;
+    &__button-cta {
+        @include buttons.button-cta;
+        margin: 1.25rem auto;
+    }
+
+    &__button-cta:hover {
+        @include buttons.button-cta-hover;
+        margin: 1.25rem auto;
+    }
+
+    &__button-cta:active,
+    &__button-cta:focus {
+        @include buttons.button-cta-active;
+        margin: 1.25rem auto;
     }
 }
 
@@ -211,7 +223,7 @@
         &.active { 
             background-color: variables.$color-primary; 
         }
-}
+    }
 }
 
 // slider animitaion
@@ -224,3 +236,50 @@
     from {opacity: .4}
     to { opacity: 1}
 } 
+
+// SESCTION ABOUT ME
+.about {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        max-width: 70rem;
+        max-height: fit-content;
+        padding: 1.25rem;
+        margin: 0 auto;
+        background-color: variables.$color-bg;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 37.5rem) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        @media screen and (min-width: 42rem) {
+            width: 66%;
+            align-self: center;
+        }
+    }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        margin: 1.25rem auto;
+    }
+
+    &__button-cta:hover {
+        @include buttons.button-cta-hover;
+        margin: 1.25rem auto;
+    }
+
+    &__button-cta:active,
+    &__button-cta:focus {
+        @include buttons.button-cta-active;
+        margin: 1.25rem auto;
+    }
+
+}

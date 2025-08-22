@@ -522,8 +522,33 @@ h6 {
     align-self: center;
   }
 }
-.portfolio__heading {
-  margin: 0;
+.portfolio__button-cta {
+  background-color: #C71585;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin: 1.25rem auto;
+}
+.portfolio__button-cta:hover {
+  background-color: rgb(146, 6, 146);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  margin: 1.25rem auto;
+}
+.portfolio__button-cta:active, .portfolio__button-cta:focus {
+  background-color: rgb(110, 0, 110);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  margin: 1.25rem auto;
 }
 
 .portfolio__slider {
@@ -612,4 +637,58 @@ h6 {
   to {
     opacity: 1;
   }
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 70rem;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding: 1.25rem;
+  margin: 0 auto;
+  background-color: #f5e7f9;
+}
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 37.5rem) {
+  .about__text-container {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 42rem) {
+  .about__text {
+    width: 66%;
+    align-self: center;
+  }
+}
+.about__button-cta {
+  background-color: #C71585;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin: 1.25rem auto;
+}
+.about__button-cta:hover {
+  background-color: rgb(146, 6, 146);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  margin: 1.25rem auto;
+}
+.about__button-cta:active, .about__button-cta:focus {
+  background-color: rgb(110, 0, 110);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  margin: 1.25rem auto;
 }/*# sourceMappingURL=style.css.map */
