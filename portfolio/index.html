@@ -1,0 +1,70 @@
+---
+layout: layout.njk
+title: "Portfolio prací: ilustrace, grafika, kód." 
+---
+
+<section class="portfolio">
+    <div class="portfolio__container">
+        <div class="portfolio__text-container">
+            <h1 class="portfolio__intro-heading">Vizuály řeknou víc než slova</h1>
+            <p class="portfolio__intro">Když mám něco říct, raději to nakreslím.</p>
+            <p class="portfolio__intro">Tady najdete výběr projektů, které jsem vytvořila – od ilustrací a infografik po interaktivní vizuály nebo papírové pop-upy.</p>
+            <p class="portfolio__intro">Nejsou tu jen zakázky pro klienty, ale i volná tvorba, ve které jsem zkoušela nové nápady a přístupy.</p>
+            <p class="portfolio__intro">Každý projekt je jiný a každý vznikl na míru.</p>
+        </div>
+        <div class="portfolio__image-container">
+            <img src="" alt="" class="portfolio__image">
+        </div>
+    </div>
+</section>
+
+<!-- Gallery section -->
+ <section class="gallery">
+    <div class="gallery__container">
+        <h2 class="gallery__heading">Portfolio</h2>
+        <div class="gallery__filter-container" id="myBtnContainer">
+                <button class="gallery__btn active" data-filter="all">Ukázat vše</button>
+                <button class="gallery__btn" data-filter="illustration">Ilustrace</button>
+                <button class="gallery__btn" data-filter="free">Volná tvorba</button>
+                <button class="gallery__btn" data-filter="drawing">Kresba</button>
+                <button class="gallery__btn" data-filter="comics">Komiks</button>
+                <button class="gallery__btn" data-filter="popUp">Pop-up</button>
+                <button class="gallery__btn" data-filter="graphic">Grafika</button>
+                <button class="gallery__btn" data-filter="web">Web</button>
+            </div>
+
+        <!-- portfolio gallery grid -->
+            <div class="gallery__grid" id="galleryGrid">
+                <!-- item 1 -->
+                <div class="gallery__column show illustration popUp" data-categories="illustration,popUp">
+                    <figure class="gallery__figure">
+                        <img class="gallery__image" src="/images/gallery/oskare_plav_obalka_bez.webp" alt="Oskar">
+                        <figcaption class="gallery__caption">
+                            <h3 class="gallery__text">Oskare, Plav!</h3>
+                            <p class="gallery__description">Ilustrace, pop-up</p>
+                        </figcaption> 
+                    </figure>
+                </div>
+            <!-- item 2 -->
+                <div class="gallery__column show drawing popUp" data-categories="drawing,popUp">
+                    <figure class="gallery__figure">
+                        <img class="gallery__image" src="/images/gallery/gramla_00.webp" alt="Gramla">
+                        <figcaption class="gallery__caption">
+                            <h3 class="gallery__text">Gramla</h3>
+                            <p class="gallery__description">Kresba, pop-up</p>
+                        </figcaption> 
+                    </figure>
+                </div>
+            <!-- item 3 -->
+                <div class="gallery__column show illustration graphic" data-categories="illustration,graphic">
+                    <figure class="gallery__figure">
+                        <img class="gallery__image" src="/images/gallery/Stardust_Gaiman.webp" alt="Gaiman">
+                        <figcaption class="gallery__caption">
+                            <h3 class="gallery__text">Gaiman</h3>
+                            <p class="gallery__description">Ilustrace</p>
+                        </figcaption> 
+                    </figure>
+                </div>
+         </div>
+    </div>
+ </section>

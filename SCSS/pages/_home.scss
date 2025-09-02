@@ -99,10 +99,11 @@
 }
 
 // PORTFOLIO SECTION
-.portfolio {
+.carousel {
     &__container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1.25rem;
         max-width: 70rem;
         max-height: fit-content;
@@ -128,23 +129,33 @@
 
     &__button-cta {
         @include buttons.button-cta;
-        margin: 1.25rem auto;
+        margin: 0;
     }
 
-    &__button-cta:hover {
+     &__button-cta:hover {
         @include buttons.button-cta-hover;
-        margin: 1.25rem auto;
     }
 
-    &__button-cta:active,
-    &__button-cta:focus {
+     &__button-cta:active,
+     &__button-cta:focus {
         @include buttons.button-cta-active;
-        margin: 1.25rem auto;
     }
+
+    &__link {
+        @include buttons.button-cta-text;
+    }
+
 }
 
 // Slider
-.portfolio {
+.carousel {
+    &__container {
+        max-width: 70rem;
+        max-height: fit-content;
+        margin: 0 auto;
+        padding: 1.25rem;
+    }
+
     &__slider {
         max-width: 100%;
         position: relative;
@@ -253,17 +264,6 @@
     &__text-container {
         display: flex;
         flex-direction: column;
-
-        @media screen and (min-width: 37.5rem) {
-            text-align: center;
-        }
-    }
-
-    &__text {
-        @media screen and (min-width: 42rem) {
-            width: 66%;
-            align-self: center;
-        }
     }
 
     &__button-cta {

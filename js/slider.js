@@ -11,8 +11,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("portfolio__slide");
-  let dots = document.getElementsByClassName("portfolio__slider-dot"); 
+  let slides = document.getElementsByClassName("carousel__slide");
+  let dots = document.getElementsByClassName("carousel__slider-dot"); 
   
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
