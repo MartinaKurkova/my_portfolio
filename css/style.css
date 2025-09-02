@@ -806,22 +806,45 @@ h6 {
 }
 .gallery__caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(128, 0, 128, 0.5);
+  width: 86%;
+  height: 86%;
+  bottom: 7%;
+  left: 7%;
+  right: 7%;
+  background: rgba(255, 255, 255, 0.9);
   color: white;
-  text-align: center;
   padding: 0.625rem;
-  font-size: 0.8rem;
-  transform: translateY(100%);
+  transform: translateY(120%);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.gallery__figure:hover .portfolio__caption {
+.gallery__caption.visible {
   transform: translateY(0);
 }
-.gallery__figure:hover .portfolio__image {
+.gallery__figure:hover .gallery__caption {
+  transform: translateY(0);
+}
+.gallery__figure:hover .gallery__image {
   transform: scale(1.1);
+}
+.gallery__figure.touched .gallery__caption {
+  transform: translateY(0);
+}
+.gallery__figure.touched .gallery__image {
+  transform: scale(1.1);
+}
+.gallery__title {
+  margin: 0;
+  text-align: center;
+}
+.gallery__category {
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .gallery__column {

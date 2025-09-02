@@ -99,3 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
     window.portfolioFilter = new PortfolioFilter();
     console.log('Portfolio filter načten!');
 });
+
+
+// gallery caption
+document.querySelectorAll(".gallery__figure").forEach(figure => {
+    figure.addEventListener("touchstart", () => {
+        figure.classList.add("touched");
+    });
+
+    figure.addEventListener("touchend", () => {
+        setTimeout(() => {
+            figure.classList.remove("touched");
+        }, 2000);
+    });  
+});
