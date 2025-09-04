@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>O mně | Martina Kurková Nožičková</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header" role="banner">
+            <div class="header__container">
+                <div class="header__logo">
+                    <div class="header__logo-title">
+                        <a href="/" class="header__logo-link" aria-label="Martina Kurková Nožičková - domovská stránka">Martina Kurková <span class="header__animated" id="typewriter"></span></a>
+                    </div>
+                </div>
+                <!-- main navigation -->
+                <nav class="header__navigation" id="header__navigation" aria-label="Hlavní navigace">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="/" class="header__nav-link" aria-current="page">Úvod</a></li>
+                        <li class="header__nav-item">
+                            <a href="/portfolio" class="header__nav-link">Portfolio</a></li>
+                        <li class="header__nav-item">
+                            <a href="/sluzby" class="header__nav-link">Služby</a></li>
+                        <li class="header__nav-item">
+                            <a href="/o-mne" class="header__nav-link">O mně</a></li>
+                        <li class="header__nav-item">
+                            <a href="/blog" class="header__nav-link">Blog</a></li>
+                        <li class="header__nav-item">
+                            <a href="/e-shop" class="header__nav-link">E-shop</a></li>
+                        <li class="header__nav-item">
+                            <a href="/kontakt/" class="header__nav-link header__nav-link_cta">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- hamburger menu -->
+                <button class="header__menu-toggle"
+                    type="button" 
+                    aria-label="Otevřít navigaci" 
+                    aria-expanded="false" 
+                    aria-controls="header__navigation"
+                    data-menu-toggle>
+                    <div class="header__hamburger">
+                        <span class="header__hamburger-line"></span>
+                    </div>
+                    <span class="header__menu-text">Menu</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+
+            
+<section class="about-me">
+    <div class="about-me__container">
+        <div class="about-me__text-container">
+            <h1 class="about-me__heading">Propojuji svět ilustrace, grafiky a technologií</h1>
+            <p class="about-me__text">Jsem ilustrátorka a grafička, kterou baví převádět složité nápady do jednoduchých obrazů. Ilustrace mě provází od střední školy a postupně se stala mou profesí i vášní. Nejraději tvořím digitálně na tabletu, protože mi umožňuje rychle a jasně zachytit myšlenku.</p>
+            <p class="about-me__text">Ráda pracuji na projektech, které něco sdělují – od dětských knih přes infografiky až po ilustrace k odborným textům. Ilustrace pro mě nejsou jen ozdobou, ale cestou k pochopení.</p>
+            <p class="about-me__text">Vedle kresby se věnuji i webdesignu a kódování (HTML, CSS, JavaScript). Vnímám to jako další cestu, jak propojit obraz a technologii a posunout vizuální tvorbu ještě o krok dál.</p>
+            <p class="about-me__text">Spolupracuji s nakladatelstvími, institucemi i jednotlivci. Moje práce získala i ocenění, například Cenu za ilustraci v soutěži Nejkrásnější česká kniha roku.</p>
+            <p class="about-me__text">Ilustrace je pro mě živý obor, který se neustále vyvíjí. Stejně tak i já – učím se nové věci, zkouším různé cesty a každý projekt beru jako výzvu, na které mi opravdu záleží.</p>
+        </div>
+        <div class="about-me__image-container">
+            <img src="/images/autoportret/profil_medium_550.webp"
+            srcset="
+            /images/autoportret/profil_small_330.webp 330w,
+            /images/autoportret/profil_medium_550.webp 550w,
+            /images/autoportret/profil_large_920.webp 920w"
+            sizes="(max-width: 860px) 920px, 550px"
+            alt="Martina Kurková Nožičková kreslený autoportrét"
+            class="about-me__image" loading="lazy">
+        </div>
+    </div>
+</section>
+
+
+  <!-- My Journey -->
+   <section class="timeline">
+    <div class="timeline__container">
+        <h2 class="timeline__heading">Moje cesta</h2>
+
+        <div class="timeline__list">
+            <div class="timeline__item">
+                <div class="timeline__frame">
+                    <h4 class="timeline__title">Ilustrace od střední školy</h4>
+                    <p class="timeline__description">Začala jsem s vědeckou a propagační kresbou. Od té doby mě baví hledat, jak složité věci nakreslit jednoduše.</p>
+                </div>
+                <i class="timeline__icon fa-solid fa-pencil"></i>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__frame">
+                    <h4 class="timeline__title">Vysokoškolské studium ilustrace</h4>
+                    <p class="timeline__description">Studovala jsem ilustraci a grafický design – nejdřív mediální a didaktickou ilustraci, později knižní ilustraci a autorskou tvorbu.</p>
+                </div>
+                <i class="timeline__icon fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__frame">
+                    <h4 class="timeline__title">Ocenění za ilustraci</h4>
+                    <p class="timeline__description">Například Cena za ilustraci v soutěži Nejkrásnější česká kniha roku nebo zařazení knihy do výběru Nejlepší knihy dětem.</p>
+                </div>
+                <i class="timeline__icon fa-solid fa-star"></i>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__frame">
+                    <h4 class="timeline__title">Zkušenosti s grafikou a sazbou</h4>
+                    <p class="timeline__description">Pracovala jsem v redakcích a vydavatelstvích. Umím připravit tiskoviny od návrhu po tisk, včetně sazby a předtiskové přípravy.</p>
+                </div>
+                <i class="timeline__icon fa-solid fa-bezier-curve"></i>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__frame">
+                    <h4 class="timeline__title">Spolupráce s nakladateli a institucemi</h4>
+                    <p class="timeline__description">Tvořím pro nakladatelství, školy, muzea i neziskovky. Ilustruji knihy, edukační materiály i infografiky.</p>
+                </div>
+                <i class="timeline__icon fa-solid fa-book"></i>
+            </div>
+
+            <div class="timeline__item">
+                <div class="timeline__frame">
+                    <h4 class="timeline__title">Propojování ilustrace a kódu</h4>
+                    <p class="timeline__description">Kreslení mi nestačilo – začala jsem se věnovat frontendu. Učím se HTML, CSS a JavaScript a propojuji ilustraci s webem a interaktivitou.</p>
+                </div>
+                <i class="timeline__icon fa-solid fa-code"></i>
+            </div>
+        </div>
+    </div>
+   </section>
+
+    <!-- Detail info -->
+    <section class="detail">
+        <div class="detail__container">
+            <!-- PDF -->
+            <div class="detail__download">
+                <a class="detail__link" href="/assets/cv.pdf" download
+                    aria-label="Stáhnout životopis ve formátu PDF s přehledem vzdělání, praxe a ocenění">
+                    <i class="fa-regular fa-file-pdf detail__icon" aria-hidden="true"></i>
+                    <div class="detail__text">
+                    <strong>Chcete stručný přehled?</strong><br>
+                    Stáhněte si moje CV v PDF s přehledem vzdělání, praxe a ocenění.
+                    </div>
+                </a>
+            </div>
+            <!-- LinkedIn -->
+            <div class="detail__social">
+                <a class="detail__link" 
+                    href="https://www.linkedin.com/in/martina-kurkova-nozickova/" 
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-square-linkedin detail__icon" aria-hidden="true"></i>
+                    <span class="detail__text">
+                    <strong>Odkaz na LinkedIn</strong><br>
+                    Najdete mě i na sociální síti LinkedIn.
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        </main>
+    
+    <!-- Footer -->
+    <div class=".page-wrapper ">
+        <footer class="footer" role="contentinfo">
+            <div class="footer__container">
+                <div class="footer__section footer__section_about">
+                    <h2 class="footer__heading">Martina Kurková Nožičková</h2>
+                    <p class="footer__tagline">Ilustrace / grafika / kód</p>
+                </div>
+                
+                <div class="footer__section footer__section_contact">
+                    <h3 class="footer__subheading footer__heading_contact">Kontakt</h3>
+                    <address class="footer__contact">
+                        <a href="mailto:martinanozickova.ilustrace@gmail.com" 
+                        class="footer__contact-link">martinanozickova.ilustrace@gmail.com</a><br>
+                        <a href="tel:+420605034317" 
+                        class="footer__contact-link">+420 605 034 317</a><br>
+                        <span class="footer__address">Riegrova 624, 289 12 Sadská</span>
+                    </address>
+                </div>
+                
+                <div class="footer__section footer__section_social">
+                    <h3 class="footer__subheading">Zůstaňme v kontaktu</h3>
+                    <div class="footer__social-links">
+                        <a href="https://www.instagram.com/martinanozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Instagram profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-instagram footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.behance.net/martinanozickova?locale=cs_CZ" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Behance portfolio Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-behance footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/MartinaKurkova" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="GitHub profil Martiny Kurkové">
+                            <i class="fa-brands fa-square-github footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/martina-kurkova-nozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-linkedin footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section footer__section_info">
+                    <p class="footer__copyright footer__text">&copy; Martina Kurková Nožičková, 2025</p>
+                    <p class="footer__credit footer__text">Tento web jsem vytvořila od nuly – stejně jako své ilustrace.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/timeline.js"></script>
+    <script src="/js/filter.js"></script>
+    <script src="/js/lightbox.js"></script>
+</body>
+</html>

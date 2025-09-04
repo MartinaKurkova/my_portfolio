@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ilustrace a vizuální obsah pro knihy i web | Martina Kurková Nožičková</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header" role="banner">
+            <div class="header__container">
+                <div class="header__logo">
+                    <div class="header__logo-title">
+                        <a href="/" class="header__logo-link" aria-label="Martina Kurková Nožičková - domovská stránka">Martina Kurková <span class="header__animated" id="typewriter"></span></a>
+                    </div>
+                </div>
+                <!-- main navigation -->
+                <nav class="header__navigation" id="header__navigation" aria-label="Hlavní navigace">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="/" class="header__nav-link" aria-current="page">Úvod</a></li>
+                        <li class="header__nav-item">
+                            <a href="/portfolio" class="header__nav-link">Portfolio</a></li>
+                        <li class="header__nav-item">
+                            <a href="/sluzby" class="header__nav-link">Služby</a></li>
+                        <li class="header__nav-item">
+                            <a href="/o-mne" class="header__nav-link">O mně</a></li>
+                        <li class="header__nav-item">
+                            <a href="/blog" class="header__nav-link">Blog</a></li>
+                        <li class="header__nav-item">
+                            <a href="/e-shop" class="header__nav-link">E-shop</a></li>
+                        <li class="header__nav-item">
+                            <a href="/kontakt/" class="header__nav-link header__nav-link_cta">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- hamburger menu -->
+                <button class="header__menu-toggle"
+                    type="button" 
+                    aria-label="Otevřít navigaci" 
+                    aria-expanded="false" 
+                    aria-controls="header__navigation"
+                    data-menu-toggle>
+                    <div class="header__hamburger">
+                        <span class="header__hamburger-line"></span>
+                    </div>
+                    <span class="header__menu-text">Menu</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+
+            
+        <!-- hero -->
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__text-container">
+                        <h1 class="hero__heading fade-in">Od ilustrace po interaktivní zážitek</h1>
+                        <p class="hero__text">Tvořím ilustrace a vizuální obsah pro děti i dospělé – od knižních ilustrací a sazby po infografiky a naučné materiály.</p>
+                        <p class="hero__text">Díky znalosti HTML, CSS a JavaScriptu dokážu propojit kresbu s digitálním prostředím a vytvářet obsah, který je nejen estetický, ale i funkční a živý.</p>
+                        <p class="hero__text">Ať už hledáte ilustraci, grafiku nebo jednoduchý web, ráda váš projekt přivedu k životu.</p>
+                        <div class="hero__button-cta"><a href="/" class="hero__link">Pojďme tvořit</a></div>
+                    </div>
+                    <div class="hero__image-container">
+                        <img src="/images/autoportret/Autoportret_medium_550.webp"
+                        srcset="
+                        /images/autoportret/Autoportret_small_330.webp 330w,
+                        /images/autoportret/Autoportret_medium_550.webp 550w,
+                        /images/autoportret/Autoportret_large_920.webp 920w"
+                        sizes="(max-width: 860px) 920px, 550px"
+                        alt="Martina Kurková Nožičková kreslený autoportrét"
+                        class="hero__image" loading="lazy">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- portfolio -->
+             <section class="carousel">
+                <div class="carousel__container">
+                    <div class="carousel__text-container">
+                        <h2 class="carousel__heading">Co už vzniklo</h2>
+                        <p class="carousel__text">Každý projekt je trochu jiný – stejně jako lidé, pro které ho tvořím. Tady je pár ukázek, které mám ráda a které možná inspirují i vás.</p>
+                    </div>
+                    <div class="carousel__slider">
+                        <div class="carousel__slide fade">
+                            <img src="images/slider/gramla_01.webp" alt="Gramla" class="carousel__slide-img">
+                        </div>
+
+                        <div class="carousel__slide fade">
+                            <img src="images/slider/oskare_plav_cesta.webp" alt="Oskar" class="carousel__slide-img">
+                        </div>
+
+                        <div class="carousel__slide fade">
+                            <img src="images/slider/Stardust_Gaiman.webp" alt="Gramla" class="portfolio__slide-img">
+                        </div>
+
+                        <!-- next, prev -->
+                        <a class="carousel__slider-prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="carousel__slider-next" onclick="plusSlides(1)">&#10095;</a>
+                        
+                        <!-- dots -->
+                        <div class="carousel__slider-dots">
+                            <span class="carousel__slider-dot" onclick="currentSlide(1)"></span>
+                            <span class="carousel__slider-dot" onclick="currentSlide(2)"></span>
+                            <span class="carousel__slider-dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                    <div class="carousel__button-cta"><a href="/" class="carousel__link">Portfolio</a></div>
+                    <!-- <div class="portfolio__gallery">
+                        <figure class="portfolio__figure">
+                            <img class="portfolio__image" src="images/slider/gramla_01.webp" alt="gramla">
+                            <figcaption class="portfolio__caption">
+                                <h3 class="portfolio__text">Gramla</h3>
+                                <p class="portfolio__description">Ilustrace, pop-up</p>
+                            </figcaption> 
+                        </figure>
+
+                        <figure class="portfolio__figure">
+                            <img class="portfolio__image" src="images/slider/oskare_plav_cesta.webp" alt="gramla">
+                            <figcaption class="portfolio__caption">
+                                <h3 class="portfolio__text">Oskare, plav!</h3>
+                                <p class="portfolio__description">Ilustrace, pop-up</p>
+                            </figcaption> 
+                        </figure>
+
+                        <figure class="portfolio__figure">
+                            <img class="portfolio__image" src="images/slider/Stardust_Gaiman.webp" alt="gramla">
+                            <figcaption class="portfolio__caption">
+                                <h3 class="portfolio__text">Gaiman, obálky</h3>
+                                <p class="portfolio__description">Ilustrace</p>
+                            </figcaption> 
+                        </figure>
+
+                    </div> -->
+                </div>
+             </section>
+
+             <!-- section about -->
+             <section class="about">
+                <div class="about__container">
+                    <div class="about__text-container">
+                        <h2 class="about__heading">Krátce o mně</h2>
+                        <p class="about__text">Ilustrace mě provází od střední školy – baví mě hledat, jak složité věci znázornit jednoduše a srozumitelně.</p>
+                        <p class="about__text">Pracuji digitálně i tradičně, ale v posledních letech mě nejvíc baví kresba na tabletu a propojování ilustrace s webem a kódem.</p>
+                        <p class="about__text">Spolupracuji s nakladatelstvími, institucemi i jednotlivci – na knihách, infografikách i naučných projektech.</p>
+                    </div>
+                    <div class="about__button-cta"><a href="/" class="hero__link">Poznejte mě blíže</a></div>
+                </div>
+             </section>
+            <script src="/js/slider.js"></script>
+        
+
+        </main>
+    
+    <!-- Footer -->
+    <div class=".page-wrapper ">
+        <footer class="footer" role="contentinfo">
+            <div class="footer__container">
+                <div class="footer__section footer__section_about">
+                    <h2 class="footer__heading">Martina Kurková Nožičková</h2>
+                    <p class="footer__tagline">Ilustrace / grafika / kód</p>
+                </div>
+                
+                <div class="footer__section footer__section_contact">
+                    <h3 class="footer__subheading footer__heading_contact">Kontakt</h3>
+                    <address class="footer__contact">
+                        <a href="mailto:martinanozickova.ilustrace@gmail.com" 
+                        class="footer__contact-link">martinanozickova.ilustrace@gmail.com</a><br>
+                        <a href="tel:+420605034317" 
+                        class="footer__contact-link">+420 605 034 317</a><br>
+                        <span class="footer__address">Riegrova 624, 289 12 Sadská</span>
+                    </address>
+                </div>
+                
+                <div class="footer__section footer__section_social">
+                    <h3 class="footer__subheading">Zůstaňme v kontaktu</h3>
+                    <div class="footer__social-links">
+                        <a href="https://www.instagram.com/martinanozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Instagram profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-instagram footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.behance.net/martinanozickova?locale=cs_CZ" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Behance portfolio Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-behance footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/MartinaKurkova" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="GitHub profil Martiny Kurkové">
+                            <i class="fa-brands fa-square-github footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/martina-kurkova-nozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-linkedin footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section footer__section_info">
+                    <p class="footer__copyright footer__text">&copy; Martina Kurková Nožičková, 2025</p>
+                    <p class="footer__credit footer__text">Tento web jsem vytvořila od nuly – stejně jako své ilustrace.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/timeline.js"></script>
+    <script src="/js/filter.js"></script>
+    <script src="/js/lightbox.js"></script>
+</body>
+</html>

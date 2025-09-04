@@ -8,7 +8,6 @@ class PortfolioFilter {
     init() {
         this.filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-
                 const filter = button.getAttribute('data-filter');
                 this.handleFilterClick(button, filter);
             });
@@ -18,7 +17,6 @@ class PortfolioFilter {
     }
 
     handleFilterClick(clickedButton, filter) {
-
         this.filterButtons.forEach(btn => btn.classList.remove('active'));
         clickedButton.classList.add('active');
         this.filterItems(filter);
@@ -26,11 +24,21 @@ class PortfolioFilter {
 
     filterItems(category) {
         this.galleryItems.forEach(item => {
-            if (category === 'all' || this.itemHasCategory(item, category)) {
-                item.classList.add('show');
-            } else {
-                item.classList.remove('show');
-            }
+            // Nejdříve odstraníme show třídu ze všech prvků
+            item.classList.remove('show');
+            
+            // Po krátké pauze přidáme show třídu pouze k relevantním prvkům
+            setTimeout(() => {
+                if (category === 'all' || this.itemHasCategory(item, category)) {
+                    item.style.display = 'block';
+                    // Malé zpoždění pro plynulou animaci
+                    requestAnimationFrame(() => {
+                        item.classList.add('show');
+                    });
+                } else {
+                    item.style.display = 'none';
+                }
+            }, 300); // Počká na dokončení fade-out animace
         });
     }
 
@@ -45,6 +53,7 @@ class PortfolioFilter {
 
     showAllItems() {
         this.galleryItems.forEach(item => {
+            item.style.display = 'block';
             item.classList.add('show');
         });
     }

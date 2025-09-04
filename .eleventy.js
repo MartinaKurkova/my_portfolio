@@ -8,11 +8,20 @@ module.exports = function(eleventyConfig) {
   // Zkopírovat JS
   eleventyConfig.addPassthroughCopy("js");
 
-  // Vrácení nastavení šablon
+  // Kolekce všech projektů (HTML i NJK) ze složky portfolio
+  eleventyConfig.addCollection("projects", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("./portfolio/*.{html,njk}");
+  });
+
   return {
     templateFormats: ["njk", "html", "md"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
+    dir: {
+      input: ".",         
+      includes: "_includes",
+      output: "dist",
+    },
   };
 };
