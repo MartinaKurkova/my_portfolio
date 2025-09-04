@@ -4,16 +4,17 @@ layout: layout.njk
 
 <section class="project">
   <div class="project__container">
+
+    <!-- Galerie -->
     <div class="project__gallery">
-      <!-- sem se vloží obrázky / galerie z konkrétního projektu -->
       {{ content | safe }}
     </div>
 
+    <!-- Text projektu -->
     <div class="project__text-container">
       <h1 class="project__heading">{{ title }}</h1>
 
       <div class="project__content">
-        <!-- popis projektu (z front matter: description) -->
         {{ description | safe }}
       </div>
 
@@ -24,22 +25,33 @@ layout: layout.njk
         {% if client %}<li><span class="project__label">Zadavatel: </span>{{ client | safe }}</li>{% endif %}
       </ul>
 
-      <!-- prev / next navigace pomocí kolekce projects -->
-      {% set currentIndex = collections.projects | findIndex(p => p.url == page.url) %}
-      {% set prevProject = collections.projects[currentIndex - 1] if currentIndex > 0 else null %}
-      {% set nextProject = collections.projects[currentIndex + 1] if currentIndex < collections.projects | length - 1 else null %}
+      <!-- Navigation -->
+<nav class="project__navigation">
+  {% set currentIndex = -1 %}
+  {% for project in collections.projects %}
+    {% if project.url == page.url %}
+      {% set currentIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
 
-      <nav class="project__navigation">
-        {% if prevProject %}
-          <a href="{{ prevProject.url }}" class="project__navigation-link project__navigation-link--previous">← Předchozí</a>
-        {% endif %}
+  {% set prevProject = collections.projects[currentIndex - 1] if currentIndex > 0 else null %}
+  {% set nextProject = collections.projects[currentIndex + 1] if currentIndex < collections.projects | length - 1 else null %}
 
-        <a href="/portfolio/" class="project__navigation-link project__navigation-link--back">Zpět na portfolio</a>
+  {% if prevProject %}
+    <a href="{{ prevProject.url }}" class="project__navigation-link project__navigation-link--previous">
+      <i class="project__navigation-arrow fa-solid fa-arrow-left"></i>
+    </a>
+  {% endif %}
 
-        {% if nextProject %}
-          <a href="{{ nextProject.url }}" class="project__navigation-link project__navigation-link--next">Další →</a>
-        {% endif %}
-      </nav>
+  <a href="/portfolio/" class="project__navigation-link project__navigation-link--back">Portfolio</a>
+
+  {% if nextProject %}
+    <a href="{{ nextProject.url }}" class="project__navigation-link project__navigation-link--next">
+      <i class="project__navigation-arrow fa-solid fa-arrow-right"></i>
+    </a>
+  {% endif %}
+</nav>
+
     </div>
   </div>
 </section>
