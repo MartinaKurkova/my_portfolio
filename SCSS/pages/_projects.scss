@@ -1,0 +1,227 @@
+@use "../utils/variables";
+@use "../base/typography";
+@use "../base/base";
+@use "../components/buttons";
+@use "../layout/grid";
+
+// Grid
+.project {
+    &__container {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 5rem 1.25rem 1.25rem 1.25rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        @media screen and (min-width: 48rem) {
+            grid-template-columns: repeat(5, 1fr);
+            // Pouze 2 řádky - gallery/text v prvním, navigace ve druhém
+            grid-template-rows: auto auto;
+        }
+    }
+
+    &__text-container {
+        @media screen and (min-width: 48rem) {
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: auto;
+        gap: 1.25rem;
+
+        @media screen and (min-width: 48rem) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: min-content;
+            grid-column: 3/6;
+            grid-row: 1;
+        }
+    }
+
+    &__gallery-item:first-of-type {
+            grid-column: span 2; 
+    }
+
+    &__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+    }
+
+    &__heading {
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 48rem) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__link {
+        color: variables.$color-text;
+        text-decoration-thickness: .5px;
+        text-underline-offset: 0.2em;
+    }
+
+    &__list {
+        margin: 3rem 0 1rem 0;
+        padding: 1rem 0;
+        list-style-type: none;
+        border-top: 1px solid variables.$color-primary;
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+
+    // navigation
+    &__navigation {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 48rem) {
+            grid-column: 1/-1; // Přes celou šířku
+            grid-row: 2; // Explicitně druhý řádek
+        }
+    }
+
+    &__navigation-link {
+        text-decoration: none;
+        color: variables.$color-text;
+        padding: 1rem;
+    }
+}
+
+// Lightbox - teď už NENÍ součástí grid layoutu
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+.lightbox {
+    &__content {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        border: 2px solid white;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    &__close,
+    &__arrow {
+        position: absolute;
+        background: rgba(255,255,255,0.2);
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: .625rem;
+        border-radius: 50%;
+        transition: background 0.3s ease;
+        z-index: 1001;
+    }
+
+    &__close:hover,
+    &__arrow:hover {
+        background: rgba(255,255,255,0.4);
+    }
+
+    &__close {
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 3.125rem;
+        height: 3.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 48rem) {
+            top: .625rem;
+            right: .625rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    &__arrow {
+        top: 50%;
+        transform: translateY((-50%));
+        width: 3.125rem;
+        height: 3.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 48rem) {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    &__arrow--prev {
+        left: 1.25rem;
+
+        @media screen and (max-width: 48rem) {
+            left: .625rem;
+        }
+    }
+
+    &__arrow--next {
+        right: 1.25rem;
+
+        @media screen and (max-width: 48rem) {
+            right: .625rem;
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        top: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background: rgba(0,0,0,0.5);
+        padding: .5rem 1rem;
+        border-radius: 1.25rem;
+        font-size: .875rem;
+
+        @media screen and (max-width: 48rem) {
+            top: .625rem;
+            font-size: 0.75rem;
+            padding: .375rem .75rem;
+        }
+    }
+}

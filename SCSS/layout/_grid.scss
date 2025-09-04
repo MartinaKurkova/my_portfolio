@@ -1,0 +1,8 @@
+@use "../utils/variables";
+@use "../base/typography";
+@use "../base/base";
+@use "../components/buttons";
+
+@mixin top {
+    padding-top: 5rem 1.25rem 1.25rem 1.25rem;
+}
