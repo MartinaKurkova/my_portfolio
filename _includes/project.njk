@@ -1,0 +1,45 @@
+---
+layout: layout.njk
+---
+
+<section class="project">
+  <div class="project__container">
+    <div class="project__gallery">
+      <!-- sem se vloží obrázky / galerie z konkrétního projektu -->
+      {{ content | safe }}
+    </div>
+
+    <div class="project__text-container">
+      <h1 class="project__heading">{{ title }}</h1>
+
+      <div class="project__content">
+        <!-- popis projektu (z front matter: description) -->
+        {{ description | safe }}
+      </div>
+
+      <ul class="project__list">
+        {% if category %}<li><span class="project__label">Kategorie: </span>{{ category }}</li>{% endif %}
+        {% if scope %}<li><span class="project__label">Rozsah prací: </span>{{ scope }}</li>{% endif %}
+        {% if technique %}<li><span class="project__label">Technika: </span>{{ technique }}</li>{% endif %}
+        {% if client %}<li><span class="project__label">Zadavatel: </span>{{ client | safe }}</li>{% endif %}
+      </ul>
+
+      <!-- prev / next navigace pomocí kolekce projects -->
+      {% set currentIndex = collections.projects | findIndex(p => p.url == page.url) %}
+      {% set prevProject = collections.projects[currentIndex - 1] if currentIndex > 0 else null %}
+      {% set nextProject = collections.projects[currentIndex + 1] if currentIndex < collections.projects | length - 1 else null %}
+
+      <nav class="project__navigation">
+        {% if prevProject %}
+          <a href="{{ prevProject.url }}" class="project__navigation-link project__navigation-link--previous">← Předchozí</a>
+        {% endif %}
+
+        <a href="/portfolio/" class="project__navigation-link project__navigation-link--back">Zpět na portfolio</a>
+
+        {% if nextProject %}
+          <a href="{{ nextProject.url }}" class="project__navigation-link project__navigation-link--next">Další →</a>
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+</section>
