@@ -124,3 +124,17 @@
     window.lightboxInitialized = true;
     
 })();
+
+
+// parallax efect
+if (window.innerWidth >= 1024) {
+  const images = document.querySelectorAll('.project__image');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    images.forEach((img, i) => {
+      const speed = 0.15 + i * 0.05;
+      img.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+  });
+}

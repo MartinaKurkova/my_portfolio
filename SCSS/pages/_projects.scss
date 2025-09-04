@@ -16,7 +16,6 @@
 
         @media screen and (min-width: 48rem) {
             grid-template-columns: repeat(5, 1fr);
-            // Pouze 2 řádky - gallery/text v prvním, navigace ve druhém
             grid-template-rows: auto auto;
         }
     }
@@ -25,6 +24,10 @@
         @media screen and (min-width: 48rem) {
             grid-column: 1/3;
             grid-row: 1;
+            align-self: start; 
+            position: sticky;
+            top: 2rem;           
+            height: fit-content; 
         }
     }
 
@@ -39,6 +42,7 @@
             grid-template-rows: min-content;
             grid-column: 3/6;
             grid-row: 1;
+            align-self: start;
         }
     }
 
@@ -77,6 +81,8 @@
         padding: 1rem 0;
         list-style-type: none;
         border-top: 1px solid variables.$color-primary;
+        border-bottom: 1px solid variables.$color-primary;
+        font-size: 0.9rem;
     }
 
     &__label {
@@ -89,8 +95,8 @@
         justify-content: center;
 
         @media screen and (min-width: 48rem) {
-            grid-column: 1/-1; // Přes celou šířku
-            grid-row: 2; // Explicitně druhý řádek
+            grid-column: 1/-1; 
+            grid-row: 2; 
         }
     }
 
@@ -98,10 +104,24 @@
         text-decoration: none;
         color: variables.$color-text;
         padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__navigation-arrow {
+        background-color: variables.$color-secondary;
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
     }
 }
 
-// Lightbox - teď už NENÍ součástí grid layoutu
+// Lightbox 
 #lightbox {
     position: fixed;
     z-index: 1000;
@@ -136,6 +156,7 @@
         height: auto;
         border: 2px solid white;
         box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        object-fit: contain;
     }
 
     &__close,
