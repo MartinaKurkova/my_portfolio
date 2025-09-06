@@ -1,5 +1,11 @@
 ---
 layout: layout.njk
+title: "{{ title }}"
+description: "{{ description }}"
+category: "{{ category }}"
+scope: "{{ scope }}"
+technique: "{{ technique }}"
+client: "{{ client }}"
 ---
 
 <section class="project">
@@ -7,10 +13,19 @@ layout: layout.njk
 
     <!-- Galerie -->
     <div class="project__gallery">
-      {{ content | safe }}
+      {% for image in images %}
+        <div class="project__gallery-item">
+          <img 
+            src="{{ image.src }}" 
+            srcset="{{ image.srcset }}" 
+            alt="{{ image.alt }}" 
+            class="project__image" 
+            loading="lazy">
+        </div>
+      {% endfor %}
     </div>
 
-    <!-- Text projektu -->
+    <!-- Text a informace -->
     <div class="project__text-container">
       <h1 class="project__heading">{{ title }}</h1>
 
@@ -19,38 +34,32 @@ layout: layout.njk
       </div>
 
       <ul class="project__list">
-        {% if category %}<li><span class="project__label">Kategorie: </span>{{ category }}</li>{% endif %}
-        {% if scope %}<li><span class="project__label">Rozsah prací: </span>{{ scope }}</li>{% endif %}
-        {% if technique %}<li><span class="project__label">Technika: </span>{{ technique }}</li>{% endif %}
-        {% if client %}<li><span class="project__label">Zadavatel: </span>{{ client | safe }}</li>{% endif %}
+        {% if category %}<li class="project__list-item"><span class="project__label">Kategorie: </span>{{ category }}</li>{% endif %}
+        {% if scope %}<li class="project__list-item"><span class="project__label">Rozsah prací: </span>{{ scope }}</li>{% endif %}
+        {% if technique %}<li class="project__list-item"><span class="project__label">Technika: </span>{{ technique }}</li>{% endif %}
+        {% if client %}<li class="project__list-item"><span class="project__label">Zadavatel: </span>{{ client | safe }}</li>{% endif %}
       </ul>
 
-      <!-- Navigation -->
-<nav class="project__navigation">
-  {% set currentIndex = -1 %}
-  {% for project in collections.projects %}
-    {% if project.url == page.url %}
-      {% set currentIndex = loop.index0 %}
-    {% endif %}
-  {% endfor %}
+      <!-- Navigace prev / next -->
+      {% set currentIndex = collections.projects | findIndex(p => p.url == page.url) %}
+      {% set prevProject = collections.projects[currentIndex - 1] if currentIndex > 0 else null %}
+      {% set nextProject = collections.projects[currentIndex + 1] if currentIndex < collections.projects | length - 1 else null %}
 
-  {% set prevProject = collections.projects[currentIndex - 1] if currentIndex > 0 else null %}
-  {% set nextProject = collections.projects[currentIndex + 1] if currentIndex < collections.projects | length - 1 else null %}
+      <nav class="project__navigation">
+        {% if prevProject %}
+          <a href="{{ prevProject.url }}" class="project__navigation-link project__navigation-link--previous">
+            <i class="project__navigation-arrow fa-solid fa-arrow-left"></i>
+          </a>
+        {% endif %}
 
-  {% if prevProject %}
-    <a href="{{ prevProject.url }}" class="project__navigation-link project__navigation-link--previous">
-      <i class="project__navigation-arrow fa-solid fa-arrow-left"></i>
-    </a>
-  {% endif %}
+        <a href="/portfolio/" class="project__navigation-link project__navigation-link--back">Portfolio</a>
 
-  <a href="/portfolio/" class="project__navigation-link project__navigation-link--back">Portfolio</a>
-
-  {% if nextProject %}
-    <a href="{{ nextProject.url }}" class="project__navigation-link project__navigation-link--next">
-      <i class="project__navigation-arrow fa-solid fa-arrow-right"></i>
-    </a>
-  {% endif %}
-</nav>
+        {% if nextProject %}
+          <a href="{{ nextProject.url }}" class="project__navigation-link project__navigation-link--next">
+            <i class="project__navigation-arrow fa-solid fa-arrow-right"></i>
+          </a>
+        {% endif %}
+      </nav>
 
     </div>
   </div>
