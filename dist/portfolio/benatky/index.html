@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gramla</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header" role="banner">
+            <div class="header__container">
+                <div class="header__logo">
+                    <div class="header__logo-title">
+                        <a href="/" class="header__logo-link" aria-label="Martina Kurková Nožičková - domovská stránka">Martina Kurková <span class="header__animated" id="typewriter"></span></a>
+                    </div>
+                </div>
+                <!-- main navigation -->
+                <nav class="header__navigation" id="header__navigation" aria-label="Hlavní navigace">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="/" class="header__nav-link" aria-current="page">Úvod</a></li>
+                        <li class="header__nav-item">
+                            <a href="/portfolio" class="header__nav-link">Portfolio</a></li>
+                        <li class="header__nav-item">
+                            <a href="/sluzby" class="header__nav-link">Služby</a></li>
+                        <li class="header__nav-item">
+                            <a href="/o-mne" class="header__nav-link">O mně</a></li>
+                        <li class="header__nav-item">
+                            <a href="/blog" class="header__nav-link">Blog</a></li>
+                        <li class="header__nav-item">
+                            <a href="/e-shop" class="header__nav-link">E-shop</a></li>
+                        <li class="header__nav-item">
+                            <a href="/kontakt/" class="header__nav-link header__nav-link_cta">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- hamburger menu -->
+                <button class="header__menu-toggle"
+                    type="button" 
+                    aria-label="Otevřít navigaci" 
+                    aria-expanded="false" 
+                    aria-controls="header__navigation"
+                    data-menu-toggle>
+                    <div class="header__hamburger">
+                        <span class="header__hamburger-line"></span>
+                    </div>
+                    <span class="header__menu-text">Menu</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+
+            
+<section class="project">
+    <div class="project__container">
+        <!-- Gallery -->
+        <div class="project__gallery">
+            <div class="project__gallery-item">
+                <img src="/images/benatky/large/benatky_uprava_large_1000.png"
+                        srcset="
+                        /images/benatky/small/benatky_uprava_small_400.png 400w,
+                        /images/benatky/medium/benatky_uprava_medium_600.png 600w,
+                        /images/benatky/large/benatky_uprava_large_1000.png 1000w,
+                        /images/benatky/xl/benatky_uprava_xl_1200.png 1200w,"
+                        data-full="/images/benatky/xl/benatky_uprava_xl_1200.png"
+                        alt="Gramla – dětská vystřihovánka s motivem velryby "
+                        class="project__image" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="project__text-container">
+            <h1 class="project__heading">Gramla</h1>
+            
+            <div class="project__content">
+                <p class="project__description">Gramla je vystřihovánka pro děti, která rozvíjí jemnou motoriku i koordinaci. Název odkazuje na moravské slovo pro „nešiku“ – a právě tuhle nemotornost děti hravě překonávají. Ilustrace velryby je baví a motivuje k dokončení úkolu.</p>
+
+                <p class="project__description">Projekt vznikl pro soutěž Surface Touch Creative Hub, kde získal zvláštní cenu za originalitu. Díky digitálnímu parciálnímu laku má vystřihovánka nejen atraktivní vzhled, ale i hmatový rozměr, který dělá práci s ní ještě zábavnější.</p>
+                    
+                <p class="project__description">Gramla spojuje hru, vzdělávání a moderní tiskové technologie.</p>
+
+                <ul class="project__list">
+                    <li class="project__list-item"><span class="project__label">Kategorie: </span>Kresba, pop-up</li>
+                    <li class="project__list-item"><span class="project__label">Rozsah prací: </span>Papírová vystřihovánka</li>
+                    <li class="project__list-item"><span class="project__label">Technika: </span>Digitální kresba, digitální lak</li>
+                    <li class="project__list-item"><span class="project__label">Zadavatel: </span>Creative Hub</li>
+                </ul>
+            </div>
+            <!-- Navigation -->
+            <nav class="project__navigation">
+                <a href="/portfolio/krok_domu/" class="project__navigation-link project__navigation-link--previous"><i class="project__navigation-arrow fa-solid fa-arrow-left"></i></a>
+                <a href="/portfolio/" class="project__navigation-link project__navigation-link--back">Portfolio</a>
+                <a href="/portfolio/benatky/" class="project__navigation-link project__navigation-link--next"><i class="project__navigation-arrow fa-solid fa-arrow-right"></i></a>
+            </nav>
+        </div>
+    </div>    
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <div class="lightbox__content">
+        <button class="lightbox__close" title="Zavřít">&times;</button>
+        <button class="lightbox__arrow lightbox__arrow--prev" title="Předchozí">&#8249;</button>
+        <button class="lightbox__arrow lightbox__arrow--next" title="Další">&#8250;</button>
+        <div class="lightbox__counter"></div>
+        <img class="lightbox__image" src="" alt="">
+    </div>
+</div>
+
+<script src="/js/lightbox.js"></script>
+
+
+        </main>
+    
+    <!-- Footer -->
+    <div class=".page-wrapper ">
+        <footer class="footer" role="contentinfo">
+            <div class="footer__container">
+                <div class="footer__section footer__section_about">
+                    <h2 class="footer__heading">Martina Kurková Nožičková</h2>
+                    <p class="footer__tagline">Ilustrace / grafika / kód</p>
+                </div>
+                
+                <div class="footer__section footer__section_contact">
+                    <h3 class="footer__subheading footer__heading_contact">Kontakt</h3>
+                    <address class="footer__contact">
+                        <a href="mailto:martinanozickova.ilustrace@gmail.com" 
+                        class="footer__contact-link">martinanozickova.ilustrace@gmail.com</a><br>
+                        <a href="tel:+420605034317" 
+                        class="footer__contact-link">+420 605 034 317</a><br>
+                        <span class="footer__address">Riegrova 624, 289 12 Sadská</span>
+                    </address>
+                </div>
+                
+                <div class="footer__section footer__section_social">
+                    <h3 class="footer__subheading">Zůstaňme v kontaktu</h3>
+                    <div class="footer__social-links">
+                        <a href="https://www.instagram.com/martinanozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Instagram profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-instagram footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.behance.net/martinanozickova?locale=cs_CZ" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Behance portfolio Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-behance footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/MartinaKurkova" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="GitHub profil Martiny Kurkové">
+                            <i class="fa-brands fa-square-github footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/martina-kurkova-nozickova/" 
+                        class="footer__social-link" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn profil Martiny Kurkové Nožičkové">
+                            <i class="fa-brands fa-square-linkedin footer__social-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section footer__section_info">
+                    <p class="footer__copyright footer__text">&copy; Martina Kurková Nožičková, 2025</p>
+                    <p class="footer__credit footer__text">Tento web jsem vytvořila od nuly – stejně jako své ilustrace.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/timeline.js"></script>
+    <script src="/js/filter.js"></script>
+    <script src="/js/lightbox.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-// Opravený lightbox.js - odstraňte původní a použijte tento
 (function() {
     'use strict';
     
@@ -33,8 +32,10 @@
             return;
         }
         
-        // Convert NodeList to Array and get src attributes
-        images = Array.from(projectImages).map(img => img.src);
+        // Použijeme data-full, pokud existuje, jinak fallback na src
+        images = Array.from(projectImages).map(img => 
+            img.dataset.full || img.src
+        );
         
         // Add click listeners to images
         projectImages.forEach((img, index) => {
@@ -126,15 +127,21 @@
 })();
 
 
+
 // parallax efect
 if (window.innerWidth >= 1024) {
   const images = document.querySelectorAll('.project__image');
 
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
     images.forEach((img, i) => {
-      const speed = 0.15 + i * 0.05;
-      img.style.transform = `translateY(${scrollY * speed}px)`;
+      const rect = img.getBoundingClientRect(); // pozice obrázku vůči viewportu
+      const imgMid = rect.top + rect.height / 2; // střed obrázku
+      const offset = (imgMid - windowHeight / 2) / windowHeight; // normalizace -1 až +1
+
+      const speed = 30 + i * 10; // max posun v px
+      img.style.transform = `translateY(${offset * speed}px)`;
     });
   });
 }
