@@ -8,8 +8,8 @@ OUTPUT_DIR="$INPUT_DIR/output"
 mkdir -p "$OUTPUT_DIR/small" "$OUTPUT_DIR/medium" "$OUTPUT_DIR/large" "$OUTPUT_DIR/xl"
 
 # smyčka přes všechny PSD soubory
-for img in "$INPUT_DIR"/*.png; do
-  filename=$(basename "$img" .png)   # název souboru bez přípony
+for img in "$INPUT_DIR"/*.jpg; do
+  filename=$(basename "$img" .jpg)   # název souboru bez přípony
 
   convert "$img" -resize 400x -quality 100 "$OUTPUT_DIR/small/${filename}_small_400.png"
   convert "$img" -resize 600x -quality 100 "$OUTPUT_DIR/medium/${filename}_medium_600.png"
