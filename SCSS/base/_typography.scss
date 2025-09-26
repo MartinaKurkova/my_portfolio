@@ -6,7 +6,8 @@ h1, h2, h3, h4, h5, h6 {
     font-optical-sizing: auto;
     font-weight: 800;
     line-height: 1.2;
-    color: variables.$color-primary;
+    color: variables.$color-dark;
+    text-transform: uppercase;
 }
 
 h1 {

@@ -6,8 +6,8 @@
     background-color: variables.$color-secondary;
     width: fit-content;
     padding: 0.6rem 2rem;
-    border-radius: 1.25rem;
-    margin-top: 2rem;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -15,22 +15,24 @@
     background-color: variables.$color-hover;
     width: fit-content;
     padding: 0.6rem 2rem;
-    border-radius: 1.25rem;
-    margin-top: 2rem;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    transition: all ease-in 1s;
 }
 
 @mixin button-cta-active {
     background-color: variables.$color-active;
     width: fit-content;
     padding: 0.6rem 2rem;
-    border-radius: 1.25rem;
-    margin-top: 2rem;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+    transition: all ease-in 1s;
 }
 
 @mixin button-cta-text {
     color: white;
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: 500;
-    font-family: variables.$font-serif;
+    font-family: variables.$font-sans;
+    text-transform: uppercase;
 }

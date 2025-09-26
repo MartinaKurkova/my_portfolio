@@ -9,9 +9,11 @@
         max-width: 70rem;
         max-height: fit-content;
         margin: 0 auto;
-        padding: 0 1.25rem 1.25rem 1.25rem;
-        background-color: variables.$color-bg;
+        padding: 0 1.25rem 3rem 1.25rem;
+        background-color: #f9e0ff;
+        background: variables.$color-bg;
         overflow: hidden;
+        position: relative;
 
         @media screen and (min-width: 50rem) {
             flex-direction: row;
@@ -45,12 +47,35 @@
     }
 
     &__intro-heading {
-        padding-top: 4rem;
+        padding-top: 5rem;
     }
 
     &__intro {
         margin: 0.5rem 0;
     }
+}
+
+// wavy shape
+.custom-shape-divider-bottom-1758790901 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1758790901 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1758790901 .shape-fill {
+    fill: #FFFFFF;
 }
 
 // gallery section
