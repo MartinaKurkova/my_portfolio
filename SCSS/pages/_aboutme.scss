@@ -3,16 +3,20 @@
 @use "../base/base";
 @use "../components/buttons";
 
-.about-me {
+.about-hero {
     &__container {
         display: flex;
         flex-direction: column;
         max-width: 70rem;
         max-height: fit-content;
         margin: 0 auto;
-        padding-bottom: 1rem;
-        background-color: variables.$color-bg;
-        overflow: hidden;
+        // background-color: #f9e0ff;
+        // background: variables.$color-bg;
+        background-image: url(/images/ilustrace/bg2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
 
         @media screen and (min-width: 50rem) {
             flex-direction: row;
@@ -21,12 +25,22 @@
     }
 
     &__text-container {
-        flex: 1;
+        flex: 3;
         margin: 0 1.25rem;
     }
 
+    &__heading {
+        margin-top: 5rem;
+    }
+
+    &__perex {
+        font-weight: bold;
+        color: white;
+        max-width: 80%;
+    }
+
     &__image-container {
-        flex: 1;
+        flex: 2;
         position: relative;
         overflow: hidden;
         padding-top: 4rem;
@@ -41,9 +55,6 @@
     &__image {
         max-width: 100%;
         max-height: auto;
-        clip-path: circle(50% at 61% 50%);
-        animation: moveImage 1.5s ease-in-out 1s forwards;
-        opacity: 0;
     }
 
     &__heading {
@@ -75,6 +86,51 @@
     &__text,
     &__button-cta {
         animation: moveText 1s ease-in-out forwards;
+    }
+}
+
+// wavy shape
+.custom-shape-divider-bottom-1759995040 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1759995040 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 34px;
+}
+
+.custom-shape-divider-bottom-1759995040 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.about-me {
+    &__container {
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 1.25rem;
+        display: flex;
+    }
+
+    &__text-container {
+        flex: 3;
+        margin: 0 1.25rem;
+    }
+
+    &__image-container {
+        flex: 2;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: auto;
     }
 }
 

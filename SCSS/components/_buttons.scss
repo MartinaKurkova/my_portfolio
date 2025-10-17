@@ -6,7 +6,7 @@
     background-color: variables.$color-secondary;
     width: fit-content;
     padding: 0.6rem 2rem;
-    border-radius: 1.5rem;
+    // border-radius: .5rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
@@ -15,7 +15,7 @@
     background-color: variables.$color-hover;
     width: fit-content;
     padding: 0.6rem 2rem;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
     margin-top: 3rem;
     transition: all ease-in 1s;
 }
@@ -24,7 +24,7 @@
     background-color: variables.$color-active;
     width: fit-content;
     padding: 0.6rem 2rem;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
     margin-top: 3rem;
     transition: all ease-in 1s;
 }
@@ -34,5 +34,10 @@
     text-decoration: none;
     font-weight: 500;
     font-family: variables.$font-sans;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    // text-transform: uppercase;
+
+    @media screen and (max-width: 31.25rem) {
+        font-size: 1rem;
+    }
 }

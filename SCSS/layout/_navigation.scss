@@ -186,7 +186,8 @@
 
         &__nav-link:hover,
         &__nav-link:active {
-            background-color: variables.$color-bg;
+            background-color: white;
+            font-weight: 800;
         }
 
         // CTA button
