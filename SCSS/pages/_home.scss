@@ -8,14 +8,15 @@
     &__container {
         display: flex;
         flex-direction: column;
-        max-width: 70rem;
-        // max-height: 100vh;
+        // max-width: 70rem;
+        max-height: 100vh;
         margin: 0 auto;
         padding: 0 1.25rem;
         background-image: url(/images/ilustrace/bg.png);
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        overflow: hidden;
 
         @media screen and (min-width: 43.75rem){
             flex-direction: row;
@@ -35,7 +36,7 @@
         }
 
         @media screen and (min-width: 59.375rem){
-            flex: 1;
+            flex: 4;
         }
     }
 
@@ -49,7 +50,7 @@
         }
 
         @media screen and (min-width: 59.375rem){
-            flex: 1;
+            flex: 5;
         }
     }
 
@@ -69,7 +70,7 @@
         font-weight: 900;
         font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
         margin-top: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         color: rgb(85, 4, 85);
         text-transform: uppercase;
         text-align: center;
@@ -110,6 +111,7 @@
         flex-direction: column;
         gap: .625rem;
         align-items: center;
+        padding-bottom: 2rem;
 
         @media screen and (min-width: 43.75rem){
             flex-direction: row;
@@ -178,15 +180,35 @@
     }
 }
 
+.custom-shape-divider-bottom-1760803383 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1760803383 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 64px;
+}
+
+.custom-shape-divider-bottom-1760803383 .shape-fill {
+    fill: #FFFFFF;
+}
+
 // what section
 .what {
     &__container {
         display: flex;
         flex-direction: column;
-        max-width: 70rem;
+        // max-width: 70rem;
         max-height: fit-content;
         margin: 0 auto;
-        margin-top: 2rem;
+        padding-top: 2rem;
         overflow: hidden;
         position: relative;
 
@@ -239,11 +261,42 @@
     }
 }
 
+// wrap
+.wrap {
+    position: relative;
+    // max-width: 70rem;
+    margin: 0 auto;
+    padding-top: 3rem;
+    background: #e7d3ed;
+    background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
+}
+
+.custom-shape-divider-top-1760803599 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1760803599 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 70px;
+}
+
+.custom-shape-divider-top-1760803599 .shape-fill {
+    fill: #FFFFFF;
+}
+
 
 // gallery section
 .small-gallery {
     &__container {
-        max-width: 70rem;
+        // max-width: 70rem;
         margin: 0 auto;
         padding: 1.25rem;
         display: flex;
@@ -424,12 +477,12 @@
     &__container {
         display: flex;
         flex-direction: column;
-        max-width: 70rem;
+        // max-width: 70rem;
         max-height: fit-content;
         margin: 0 auto;
         padding-bottom: 1rem;
         // background-color: rgb(202, 176, 209);
-        background-image: url(/images/ilustrace/bg2.png);
+        // background-image: url(/images/ilustrace/bg2.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -456,8 +509,8 @@
     &__image-container {
         flex: 1;
         position: relative;
-        margin-top: 3rem;
-        margin-left: 1.25rem;
+        margin-top: 1rem;
+        margin-left: .25rem;
 
         @media screen and (max-width: 50rem) {
             margin-right: 1.25rem;
@@ -478,7 +531,7 @@
         overflow: hidden;
         position: relative;
         user-select: none;
-        box-shadow: 0 0 0 0 rgba($white, 0.5);
+        box-shadow: 0 0 0 0 rgba(white, 0.5);
         transition: box-shadow 150ms ease-out;
     }
 
@@ -491,25 +544,4 @@
         @include buttons.button-cta-active;
     }
 
-}
-
-//tilt shape
-.custom-shape-divider-top-1760732891 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1760732891 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1760732891 .shape-fill {
-    fill: #FFFFFF;
 }

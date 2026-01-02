@@ -54,32 +54,34 @@
 
     &__heading {
         padding-top: 4rem;
+        text-transform: uppercase;
     }
 
-    &__span {
-        text-transform: uppercase;
+    &__perex {
+        font-weight: bold;
+        color: white;
+        max-width: 80%;
     }
 }
 
 // wavy shape
-.custom-shape-divider-bottom-1759995040 {
+.custom-shape-divider-bottom-1760903366 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1759995040 svg {
+.custom-shape-divider-bottom-1760903366 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 34px;
+    width: calc(273% + 1.3px);
+    height: 70px;
 }
 
-.custom-shape-divider-bottom-1759995040 .shape-fill {
+.custom-shape-divider-bottom-1760903366 .shape-fill {
     fill: #FFFFFF;
 }
 
@@ -118,7 +120,7 @@
         padding: 1.25rem;
         width: 100%;
         height: 100%;
-        background-color: rgb(247, 230, 247);
+        // background-color: rgb(247, 230, 247);
         border-radius: 11px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
@@ -175,10 +177,19 @@
         background-color: variables.$color-bg;
         overflow: hidden;
         position: relative;
-        background-image: url(/images/ilustrace/bg2.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // background-image: url(/images/ilustrace/bg2.png);
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        background: #e7d3ed;
+        background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
+    }
+
+    &__subheading {
+        @media screen and (min-width: 50rem) {
+            max-width: 75%;
+            text-align: center;
+        }
     }
 
     &__item {
@@ -252,6 +263,28 @@
     &__description {
         text-align: center;
     }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 31.25rem) {
+            margin-bottom: 2rem;
+        }
+    }
+
+     &__button-cta:hover {
+        @include buttons.button-cta-hover;
+    }
+
+     &__button-cta:active,
+     &__button-cta:focus {
+        @include buttons.button-cta-active;
+    }
+
+    &__link {
+        @include buttons.button-cta-text;
+    }
 }
 
 // wavy shape
@@ -276,46 +309,82 @@
     fill: #FFFFFF;
 }
 
-// Tools section
-.tools {
+// Calculation section
+.calculation{
     &__container {
-        display: flex;
-        flex-direction: column;
         max-width: 70rem;
         margin: 0 auto;
-        padding: 1.25rem;
+        padding: 3rem 1.25rem;
+        position: relative;
+        background: #e7d3ed;
+        background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
+    }
+
+    &__text-conatiner {
+        display: flex;
+        flex-direction: column;
 
         @media screen and (min-width: 50rem) {
             align-items: center;
         }
     }
 
-    &__containers {
-
-        @media screen and (min-width: 50rem) {
-            display: flex;
-            flex-direction: row;
-            gap: 1.25rem;
-        }
-    }
-
-    &__heading {
+    &__heading,
+    &__subheading {
         @media screen and (min-width: 50rem) {
             max-width: 75%;
             text-align: center;
         }
     }
 
-    &__perex {
+    &__text {
         @media screen and (min-width: 50rem) {
             max-width: 75%;
             text-align: center;
         }
     }
 
-    &__title {
-        font-family: variables.$font-sans;
-        color: variables.$color-text;
-        margin-bottom: 0;
+    &__button-cta {
+        @include buttons.button-cta;
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 31.25rem) {
+            margin-bottom: 2rem;
+        }
     }
+
+     &__button-cta:hover {
+        @include buttons.button-cta-hover;
+    }
+
+     &__button-cta:active,
+     &__button-cta:focus {
+        @include buttons.button-cta-active;
+    }
+
+    &__link {
+        @include buttons.button-cta-text;
+    }
+}
+
+// wavy shape
+.custom-shape-divider-top-1760901554 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1760901554 svg {
+    position: relative;
+    display: block;
+    width: calc(273% + 1.3px);
+    height: 70px;
+}
+
+.custom-shape-divider-top-1760901554 .shape-fill {
+    fill: #FFFFFF;
 }
