@@ -2,15 +2,15 @@
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: variables.$font-sans;
+    font-family: variables.$font-serif;
     font-optical-sizing: auto;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.1;
     color: variables.$color-dark;
 }
 
 h1 {
-  font-size: clamp(2rem, 2vw + 1rem, 4rem);
+  font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
   margin-top: 0;
   margin-bottom: 2rem;
 }

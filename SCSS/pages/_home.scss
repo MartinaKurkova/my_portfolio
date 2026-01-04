@@ -5,82 +5,55 @@
 
 // HERO SECTION
 .hero {
+    background-color: variables.$color-bg-hero;
+
     &__container {
         display: flex;
         flex-direction: column;
-        // max-width: 70rem;
-        max-height: 100vh;
         margin: 0 auto;
-        padding: 0 1.25rem;
-        background-image: url(/images/ilustrace/bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-
-        @media screen and (min-width: 43.75rem){
-            flex-direction: row;
-        }
+        padding: 2rem 1.25rem 0 1.25rem;
+        background: url('/images/autoportret/output/large/Autoportret_vlastovky-u_large_1000_orez.png') bottom right no-repeat;
+        background-size: contain;
     }
 
     &__text-container {
         margin-bottom: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        max-width: 50%;
 
-        @media screen and (min-width: 43.75rem){
-            flex: 2;
-            margin-bottom: 3rem;
-            align-items: start;
+        @media screen and (max-width: 58.125rem){
+            max-width: 60%;
         }
 
-        @media screen and (min-width: 59.375rem){
-            flex: 4;
-        }
-    }
-
-    &__image-container {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-
-        @media screen and (min-width: 43.75rem){
-            flex: 3;
+        @media screen and (max-width: 54rem){
+            margin-bottom: 7rem;
+            max-width: 50%;
         }
 
-        @media screen and (min-width: 59.375rem){
-            flex: 5;
+        @media screen and (max-width: 43.75rem){
+            margin-bottom: 7rem;
+            max-width: 60%;
         }
-    }
 
-    &__image {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-top: 2rem;
-        opacity: 0;
-        animation: fadeIn 1s ease-out 0.4s forwards;
+        @media screen and (max-width: 37.5rem){
+            margin-bottom: 13rem;
+            max-width: 80%;
+        }
+
+        @media screen and (max-width: 31.25rem){
+            max-width: 100%;
+        }
     }
 
     &__heading {
-        padding-top: 5rem;
-        line-height: 1.2;
-        font-family: "skolar-sans-latin", sans-serif;
+        padding-top: 4rem;
         font-weight: 900;
         font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
-        margin-top: 0;
         margin-bottom: 1rem;
-        color: rgb(85, 4, 85);
-        text-transform: uppercase;
-        text-align: center;
         animation: fadeInUp 0.8s ease-out forwards;
         animation-delay: 0.2s;
         opacity: 0; 
-
-        @media screen and (min-width: 43.75rem){
-            text-align: start;
-        }
     }
 
     &__name {
@@ -89,84 +62,46 @@
 
     &__tagline {
         display: block;
-        font-weight: 200;
-        font-family: "skolar-sans-latin", sans-serif;
+        font-family: variables.$font-sans;
+        font-weight: 300;
         text-transform: none;
         font-size: clamp(1.2rem, calc(1.2rem + 1vw), 2.4rem);
-        font-style: italic;
-        color: white;
+        color: variables.$color-text;
         margin-top: 1rem;
         font-weight: 200;
     }
 
-    &__text {
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.4s;
-        opacity: 0;
-    }
-
     // Buttons
-    &__buttons {
-        display: flex;
-        flex-direction: column;
-        gap: .625rem;
-        align-items: center;
-        padding-bottom: 2rem;
-
-        @media screen and (min-width: 43.75rem){
-            flex-direction: row;
-        }
-    }
-
     &__button-cta {
         @include buttons.button-cta;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin-bottom: 0;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
         animation: fadeInUp 0.8s ease-out forwards;
         animation-delay: 0.6s;
         opacity: 0;
 
-        @media screen and (max-width: 43.75rem) {
-            margin-top: 0;
+        @media screen and (max-width: 37.5rem){
+            margin-top: 1rem;
         }
     }
 
-    &__button-contact {
-        background-color: rgba(255,255,255,0.6);
-        border: white;
-    }
-
-     &__button-cta:hover {
+    &__button-cta:hover {
         @include buttons.button-cta-hover;
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
     }
 
-     &__button-cta:active,
-     &__button-cta:focus {
+    &__button-cta:focus-visible {
+        @include button-cta-focus-visible;
+    }
+
+    &__button-cta:active,
+    &__button-cta:focus {
         @include buttons.button-cta-active;
     }
 
     &__link {
         @include buttons.button-cta-text;
     }
-
-    &__link-contact {
-        color: variables.$color-secondary;
-    }
 }
-
-// Desktop hero image animation
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 
 // Hero text animation
 @keyframes fadeInUp {
@@ -180,164 +115,41 @@
     }
 }
 
-.custom-shape-divider-bottom-1760803383 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1760803383 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 64px;
-}
-
-.custom-shape-divider-bottom-1760803383 .shape-fill {
-    fill: #FFFFFF;
-}
-
-// what section
-.what {
-    &__container {
-        display: flex;
-        flex-direction: column;
-        // max-width: 70rem;
-        max-height: fit-content;
-        margin: 0 auto;
-        padding-top: 2rem;
-        overflow: hidden;
-        position: relative;
-
-        @media screen and (min-width: 50rem) {
-            flex-direction: row;
-            gap: 1.25rem;
-        }
-    }
-
-    &__text-container {
-        flex: 1;
-        margin: 0 1.25rem;
-    }
-
-    &__image-container {
-        flex: 1;
-        position: relative;
-    }
-
-    &__image {
-        max-width: 100%;
-        height: auto;
-    }
-
-    &__button-cta {
-        @include buttons.button-cta;
-
-        @media screen and (min-width: 50rem) {
-            margin-bottom: 5rem;
-        }
-    }
-
-     &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
-
-     &__button-cta:active,
-     &__button-cta:focus {
-        @include buttons.button-cta-active;
-    }
-
-    &__link {
-        @include buttons.button-cta-text;
-    }
-
-    &__heading,
-    &__text,
-    &__button-cta {
-        animation: moveText 1s ease-in-out forwards;
-    }
-}
-
 // wrap
 .wrap {
     position: relative;
-    // max-width: 70rem;
+    max-width: 70rem;
     margin: 0 auto;
-    padding-top: 3rem;
-    background: #e7d3ed;
-    background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
 }
-
-.custom-shape-divider-top-1760803599 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1760803599 svg {
-    position: relative;
-    display: block;
-    width: calc(147% + 1.3px);
-    height: 70px;
-}
-
-.custom-shape-divider-top-1760803599 .shape-fill {
-    fill: #FFFFFF;
-}
-
 
 // gallery section
 .small-gallery {
     &__container {
-        // max-width: 70rem;
+        max-width: 70rem;
         margin: 0 auto;
         padding: 1.25rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     &__text-container {
         display: flex;
         flex-direction: column;
-
-        @media screen and (min-width: 48rem) {
-            justify-content: center;
-            align-items: center;
-        }
     }
 
     &__heading {
-        // text-transform: uppercase;
         margin-bottom: 0;
-
-        @media screen and (min-width: 48rem) {
-            text-align: center;
-        }
     }
 
     &__span {
         text-transform: none;
     }
 
-    &__text {
-        @media screen and (min-width: 48rem) {
-            max-width: 70%;
-            text-align: center;
-        }
-    }
-
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+        margin-bottom: 2rem;
 
         @media screen and (max-width: 48rem) {
             grid-template-columns: repeat(2, 1fr);
@@ -451,6 +263,7 @@
 
     &__button-cta {
         @include buttons.button-cta;
+        margin-top: 2rem;
         margin-bottom: 3rem;
 
         @media screen and (min-width: 31.25rem) {
@@ -477,7 +290,7 @@
     &__container {
         display: flex;
         flex-direction: column;
-        // max-width: 70rem;
+        max-width: 70rem;
         max-height: fit-content;
         margin: 0 auto;
         padding-bottom: 1rem;

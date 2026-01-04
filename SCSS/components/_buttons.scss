@@ -4,38 +4,47 @@
 
 @mixin button-cta {
     background-color: variables.$color-secondary;
+    color: white;
     width: fit-content;
-    padding: 0.6rem 2rem;
-    // border-radius: .5rem;
-    margin-top: 3rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: .3125rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 @mixin button-cta-hover {
     background-color: variables.$color-hover;
+    box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
     width: fit-content;
-    padding: 0.6rem 2rem;
-    border-radius: .5rem;
-    margin-top: 3rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: .3125rem;
+    transform: translateY(-4px);
     transition: all ease-in 1s;
+}
+
+@mixin button-cta-focus-visible {
+    outline: 3px solid variables.$color-outline;
+    outline-offset: 3px;
 }
 
 @mixin button-cta-active {
     background-color: variables.$color-active;
     width: fit-content;
-    padding: 0.6rem 2rem;
-    border-radius: .5rem;
-    margin-top: 3rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: .3125rem;
+    transform: translateY(3px);
     transition: all ease-in 1s;
 }
 
 @mixin button-cta-text {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     font-family: variables.$font-sans;
     font-size: 1.2rem;
-    // text-transform: uppercase;
 
     @media screen and (max-width: 31.25rem) {
         font-size: 1rem;
