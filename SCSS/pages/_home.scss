@@ -125,7 +125,6 @@
 // gallery section
 .small-gallery {
     &__container {
-        max-width: 70rem;
         margin: 0 auto;
         padding: 1.25rem;
         display: flex;
@@ -141,15 +140,11 @@
         margin-bottom: 0;
     }
 
-    &__span {
-        text-transform: none;
-    }
-
+    // gallery grid
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
-        margin-bottom: 2rem;
 
         @media screen and (max-width: 48rem) {
             grid-template-columns: repeat(2, 1fr);
@@ -181,8 +176,7 @@
         overflow: hidden;
         margin: 0;
         z-index: 1;
-        border-radius: 0.5rem;
-        // box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        border-radius: .3125rem;
     }
 
     &__image {
@@ -195,11 +189,11 @@
 
      &__caption {
         position: absolute;
-        width: 86%;
-        height: 86%;
-        bottom: 7%;
-        left: 7%;
-        right: 7%;
+        width: 94%;
+        height: 94%;
+        bottom: 3%;
+        left: 3%;
+        right: 3%;
         background: rgba(255, 255, 255, 0.9); 
         color: white;
         padding: 0.625rem;
@@ -209,7 +203,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-radius: .5rem;
+        border-radius: .3125rem;
 
         &.visible {
             transform: translateY(0);
@@ -256,7 +250,6 @@
 
     &__category {
         color: variables.$color-text;
-        font-size: 1rem;
         text-align: center;
         text-transform: uppercase;
     }
@@ -265,6 +258,7 @@
         @include buttons.button-cta;
         margin-top: 2rem;
         margin-bottom: 3rem;
+        align-self: center;
 
         @media screen and (min-width: 31.25rem) {
             margin-bottom: 2rem;
