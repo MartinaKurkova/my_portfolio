@@ -90,7 +90,7 @@
     }
 
     &__button-cta:focus-visible {
-        @include button-cta-focus-visible;
+        @include buttons.button-cta-focus-visible;
     }
 
     &__button-cta:active,
