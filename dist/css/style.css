@@ -2015,50 +2015,96 @@ h6 {
   fill: #FFFFFF;
 }
 
-.contact {
+.contact-hero {
+  background-color: #D3BDD8;
+}
+.contact-hero__container {
+  display: flex;
+  flex-direction: row;
   margin: 0 auto;
-  max-width: 70rem;
+  padding: 2rem 1.25rem 0 1.25rem;
+}
+@media screen and (max-width: 43.75rem) {
+  .contact-hero__container {
+    flex-direction: column;
+  }
+}
+.contact-hero__text-container {
+  flex: 1;
+  margin-bottom: 0;
+}
+.contact-hero__image-container {
+  flex: 1;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.contact-hero__image {
+  display: block;
+  max-width: 100%;
+  min-height: auto;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 43.75rem) {
+  .contact-hero__image {
+    max-width: 80%;
+  }
+}
+.contact-hero__heading {
+  padding-top: 4rem;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.contact {
+  background-color: #F8F2FA;
 }
 .contact__container {
   display: grid;
-  gap: 1.25rem 3rem;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  padding: 0 1.25rem;
-  padding-bottom: 1rem;
-  background-color: #F8F2FA;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column: 1rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 0 1.25rem;
 }
-@media screen and (min-width: 50rem) {
+@media screen and (max-width: 43.75rem) {
   .contact__container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
-.contact__heading {
-  padding-top: 4rem;
+.contact__form-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
-.contact__subheading {
-  margin: 0 0 0.5rem 0;
-}
-@media screen and (min-width: 50rem) {
-  .contact__intro {
+@media screen and (max-width: 43.75rem) {
+  .contact__form-container {
     grid-column: 1/2;
     grid-row: 1/2;
   }
 }
-@media screen and (min-width: 50rem) {
-  .contact__form-container {
-    grid-column: 2/3;
-    grid-row: 1/3;
+.contact__info-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+@media screen and (max-width: 43.75rem) {
+  .contact__info-container {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
 }
 
 .contact-form__legend {
-  margin-top: 0;
+  margin-top: 2rem;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
 }
-@media screen and (min-width: 50rem) {
+@media screen and (max-width: 43.75rem) {
   .contact-form__legend {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 }
 .contact-form__fieldset {
@@ -2074,7 +2120,7 @@ h6 {
 }
 .contact-form__label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   font-weight: 500;
 }
 .contact-form__input, .contact-form__textarea {
@@ -2083,6 +2129,10 @@ h6 {
   border: 1px solid #800080;
   border-radius: 10px;
   font-family: inherit;
+  margin-bottom: 1rem;
+}
+.contact-form__note {
+  font-style: italic;
   margin-bottom: 1rem;
 }
 .contact-form__input:focus, .contact-form__textarea:focus, .contact-form__button:focus {
@@ -2100,22 +2150,12 @@ h6 {
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  color: white;
-  margin: 0;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
 }
-@media screen and (max-width: 31.25rem) {
-  .contact-form__button {
-    font-size: 1rem;
-  }
-}
-.contact-form__button:hover {
+.contact-form__button-cta:hover {
   background-color: #660066;
   box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
   width: -moz-fit-content;
@@ -2124,9 +2164,14 @@ h6 {
   border-radius: 0.3125rem;
   transform: translateY(-4px);
   transition: all ease-in 1s;
-  margin: 0;
+  margin-bottom: 3rem;
 }
-.contact-form__button:focus, .contact-form__button:active {
+.contact-form__button-cta:focus-visible {
+  outline: 3px solid #FFAA00;
+  outline-offset: 3px;
+  margin-bottom: 3rem;
+}
+.contact-form__button-cta:active, .contact-form__button-cta:focus {
   background-color: #4d004d;
   width: -moz-fit-content;
   width: fit-content;
@@ -2134,9 +2179,25 @@ h6 {
   border-radius: 0.3125rem;
   transform: translateY(3px);
   transition: all ease-in 1s;
-  margin: 0;
+  margin-bottom: 3rem;
+}
+.contact-form__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 31.25rem) {
+  .contact-form__link {
+    font-size: 1rem;
+  }
 }
 
+.contact__subheading {
+  margin-top: 0;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
+}
 .contact__address, .contact__address-name {
   font-style: normal;
   margin: 0;

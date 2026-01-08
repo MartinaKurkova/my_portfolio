@@ -2,23 +2,32 @@
 layout: layout.njk
 title: Kontakt | Martina Kurková Nožičková
 ---
-<section class="contact">
-    <div class="contact__container">
-        <div class="contact__intro">
-            <h1 class="contact__heading">Zaujalo vás něco? Napište mi.</h1>
-            <p class="contact__text">Máte zájem o spolupráci, chcete se na něco zeptat nebo mi jen poslat vzkaz?</p>
-            <p class="contact__text">Stačí vyplnit formulář nebo se ozvat přímo e-mailem či telefonem. Odpovídám nejpozději do dvou pracovních dnů.</p>
+<section class="contact-hero">
+    <div class="contact-hero__container container">
+        <div class="contact-hero__text-container">
+            <h1 class="contact-hero__heading">Zaujalo vás něco? Napište mi.</h1>
+            <p class="contact-hero__text">Nejraději komunikuji e-mailem, kde můžeme v klidu probrat detaily vaší představy. Ozvu se vám zpět nejpozději do dvou pracovních dnů.</p>
+            <div class="hero__button-cta hero__button-portfolio">
+                <a href="mailto:hello@martinakurkova.cz" class="hero__link">Napsat e-mail</a>
+            </div>
         </div>
+        <div class="contact-hero__image-container">
+            <img class="contact-hero__image" src="/images/vlastovky/vlastovky 3.png" alt="Tři papírové letící vlaštovky.">
+        </div>
+    </div>
+</section>
 
-        <!-- Contact form -->
-        <div class="contact__form-container">
+<!-- Contact form -->
+ <section class="contact">
+    <div class="contact__container container">
+        <div class="contact__form-container" id="contact-form">
             <form action="https://submit-form.com/YOUR_FORMSPARK_ID" class="contact-form" method="post" novalidate>
             <!-- hidden inputs -->
                 <input type="hidden" name="_redirect" value="https://martinakurkovaportfolio.netlify.app/kontakt/dekuji/">
                 <input type="hidden" name="_email.from" value="Kontaktní formulář">
                 <input type="hidden" name="_email.subject" value="Nová zpráva z kontaktního formuláře">
                 <fieldset class="contact-form__fieldset">
-                    <h3 class="contact-form__legend">Kontaktní formulář</h3>
+                    <h2 class="contact-form__legend">Kontaktní formulář</h2>
 
                     <!-- name -->
                     <div class="contact-form__field">
@@ -76,6 +85,17 @@ title: Kontakt | Martina Kurková Nožičková
                             required></textarea>
                     </div>
 
+                    <!-- checkbox -->
+                    <div class="contact-form__field">
+                        <input 
+                        type="checkbox" 
+                        id="checkbox" 
+                        class="contact-form__checkbox"
+                        name="checkbox"
+                        required />
+                        <label for="checkbox">Odesláním formuláře souhlasíte se <a href="/kontakt/zasady/" class="contact-form__GDPR">Zásadami ochrany osobních údajů.</a> *</label>
+                    </div>
+
                     <div class="contact-form__required">
                         <p class="contact-form__note">* Povinné položky</p>
                     </div>
@@ -91,11 +111,12 @@ title: Kontakt | Martina Kurková Nožičková
         </div>
 
         <!-- Contact informatiion -->
-        <div class="contact__info">
+         <div class="contact__info-container">
+            <div class="contact__info">
             <h2 class="contact__subheading">Kontaktní údaje</h2>
             <address class="contact__address">
                 <p class="contact__address-name">MgA. Martina Kurková Nožičková</p>
-                <a href="mailto:martinanozickova.ilustrace@gmail.com" 
+                <a href="mailto:hello@martinakurkova.cz" 
                 class="contact__address-link">hello@martinakurkova.cz</a><br>
                 <a href="tel:+420605034317" 
                 class="contact__address-link">+420 605 034 317</a><br>
@@ -103,9 +124,9 @@ title: Kontakt | Martina Kurková Nožičková
             </address>
 
             <div class="contact__business-info">
-                <p class="contact__subheading contact__subheading--business">Fakturační údaje</p>
+                <p class="contact__subheading--business">Fakturační údaje</p>
                 <p class="contact__business-text">
-                    IČO: 04088140<br>
+                    IČ: 04088140<br>
                     ID datové schránky: b5kh82b<br>
                     Fyzická osoba zapsaná v živnostenském rejstříku<br>
                     Neplátce DPH
@@ -113,7 +134,7 @@ title: Kontakt | Martina Kurková Nožičková
             </div>
             <!-- social -->
             <div class="contact__social">
-                <p class="contact__subheading contact__subheading--social">Sledujte mě na sociálních sítích</p>
+                <p class="contact__subheading--social">Sledujte mě na sociálních sítích</p>
                 <div class="contact__social-links">
                         <a href="https://www.instagram.com/martinanozickova/" 
                         class="contact__social-link" 
@@ -146,5 +167,6 @@ title: Kontakt | Martina Kurková Nožičková
                     </div>
             </div>
         </div>
+         </div>
     </div>
-</section>
+ </section>
