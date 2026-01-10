@@ -2232,4 +2232,34 @@ h6 {
 }
 .contact__social-links {
   margin-top: 0.5rem;
+}
+
+.gdpr-hero {
+  background-color: #D3BDD8;
+}
+.gdpr-hero__container {
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+.gdpr-hero__heading {
+  padding-top: 4rem;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.gdpr__container {
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+.gdpr__heading {
+  font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
+  margin: 2rem 0 0 0;
+}
+.gdpr__list, .gdpr__paragraph {
+  padding: 0.5rem 1rem;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
