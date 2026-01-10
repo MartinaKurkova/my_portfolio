@@ -304,3 +304,152 @@
 
 
 // thanks
+.thanks {
+    background-color: variables.$color-bg-hero;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-columns: auto;
+        grid-column: 2rem;
+        margin: 0 auto;
+        padding: 3rem 1.25rem;
+
+        @media screen and (max-width: 37.5rem) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__text-container {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__heading {
+        padding: 4rem 0 2rem 0;
+        font-weight: 900;
+        font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
+        margin-bottom: 1rem;
+        animation: fadeInUp 0.8s ease-out forwards;
+        animation-delay: 0.2s;
+        opacity: 0; 
+    }
+
+    &__paragraph {
+        margin-top: 0;
+    }
+
+    &__image-container {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        @media screen and (max-width: 37.5rem) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        display: block;
+        max-width: 200px;
+        min-height: auto;
+        margin-top: 1rem;
+    }
+
+    // Buttons
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        @media screen and (max-width: 48.75rem) {
+            flex-direction: column;
+        }
+    }
+    &__button-cta {
+        @include buttons.button-cta;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 0.8s ease-out forwards;
+        animation-delay: 0.6s;
+        opacity: 0;
+
+        @media screen and (max-width: 48.75rem){
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__button-cta:hover {
+        @include buttons.button-cta-hover;
+    }
+
+    &__button-cta:focus-visible {
+        @include buttons.button-cta-focus-visible;
+    }
+
+    &__button-cta:active,
+    &__button-cta:focus {
+        @include buttons.button-cta-active;
+    }
+
+    &__link {
+        @include buttons.button-cta-text;
+    }
+
+    // button secondary
+    &__button-secondary {
+        @include buttons.button-cta;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 0.8s ease-out forwards;
+        animation-delay: 0.6s;
+        opacity: 0;
+        background-color: variables.$color-bg-hero;
+        border: 2px solid variables.$color-secondary;
+
+        @media screen and (max-width: 48.75rem){
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link-secondary {
+        color: variables.$color-secondary;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: variables.$font-sans;
+        font-size: 1.2rem;
+
+        @media screen and (max-width: 31.25rem) {
+            font-size: 1rem;
+        }
+    }
+
+    &__social-icon {
+        font-size: 2.5rem; 
+        color: variables.$color-primary;
+    }
+
+    &__social-link {
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 0.1rem; 
+        transition: transform 0.2s ease;
+    }
+
+    &__social-link:hover {
+        transform: translateY(-2px); 
+    }
+
+    &__social-link:focus-visible {
+        outline: 2px solid #007acc;
+        outline-offset: 2px;
+    }
+
+    &__social-links {
+        margin-top: 2rem;
+    } 
+}
