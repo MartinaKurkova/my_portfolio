@@ -21,11 +21,12 @@ title: Kontakt | Martina Kurková Nožičková
  <section class="contact">
     <div class="contact__container container">
         <div class="contact__form-container" id="contact-form">
-            <form action="https://submit-form.com/YOUR_FORMSPARK_ID" class="contact-form" method="post" novalidate>
+            <form action="https://api.web3forms.com/submit" method="POST" novalidate>
             <!-- hidden inputs -->
-                <input type="hidden" name="_redirect" value="https://martinakurkovaportfolio.netlify.app/kontakt/dekuji/">
+                <input type="hidden" name="access_key" value="224e6b87-7393-4341-aec3-7caa72ba8c52">
                 <input type="hidden" name="_email.from" value="Kontaktní formulář">
                 <input type="hidden" name="_email.subject" value="Nová zpráva z kontaktního formuláře">
+                <input type="checkbox" name="botcheck" class="contact-form__checkbox" style="display: none;">
                 <fieldset class="contact-form__fieldset">
                     <h2 class="contact-form__legend">Kontaktní formulář</h2>
 
@@ -83,17 +84,19 @@ title: Kontakt | Martina Kurková Nožičková
                             placeholder="Tady začíná váš příběh…" 
                             rows="15" 
                             required></textarea>
+                            <div id="message-error" class="contact-form__error" role="alert" aria-live="polite"></div>
                     </div>
 
                     <!-- checkbox -->
                     <div class="contact-form__field">
                         <input 
-                        type="checkbox" 
-                        id="checkbox" 
-                        class="contact-form__checkbox"
-                        name="checkbox"
-                        required />
+                            type="checkbox" 
+                            id="checkbox" 
+                            class="contact-form__checkbox"
+                            name="checkbox"
+                            required />
                         <label for="checkbox">Odesláním formuláře souhlasíte se <a href="/kontakt/zasady/" class="contact-form__GDPR">Zásadami ochrany osobních údajů.</a> *</label>
+                        <div id="checkbox-error" class="contact-form__error" role="alert"></div>
                     </div>
 
                     <div class="contact-form__required">

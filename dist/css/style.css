@@ -2154,6 +2154,7 @@ h6 {
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 0.6s;
   opacity: 0;
+  font-size: 1rem;
 }
 .contact-form__button-cta:hover {
   background-color: #660066;
@@ -2193,9 +2194,28 @@ h6 {
     font-size: 1rem;
   }
 }
+.contact-form__input.is-invalid, .contact-form__textarea.is-invalid, .contact-form__checkbox.is-invalid {
+  border: 2px solid #C71585 !important;
+  background-color: #fff8f8;
+}
+.contact-form__input.is-invalid:focus, .contact-form__textarea.is-invalid:focus {
+  outline-color: #C71585;
+  box-shadow: 0 0 5px rgba(217, 48, 37, 0.3);
+}
+.contact-form__error {
+  color: #C71585;
+  font-size: 0.85rem;
+  margin: 0 0 0.8rem 0;
+  font-weight: 500;
+}
+
+#checkbox-error {
+  margin-left: 0;
+  display: block;
+}
 
 .contact__subheading {
-  margin-top: 0;
+  margin-top: 2rem;
   font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
 }
 .contact__address, .contact__address-name {
@@ -2213,8 +2233,11 @@ h6 {
   color: #333333;
   font-weight: 800;
 }
+.contact__business-text {
+  margin-top: 0;
+}
 .contact__social-icon {
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   color: #800080;
 }
 .contact__social-link {
@@ -2259,7 +2282,11 @@ h6 {
   font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
   margin: 2rem 0 0 0;
 }
-.gdpr__list, .gdpr__paragraph {
-  padding: 0.5rem 1rem;
+.gdpr__list {
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+}
+.gdpr__paragraph {
+  padding: 0.5rem 0;
   margin: 0;
 }/*# sourceMappingURL=style.css.map */
