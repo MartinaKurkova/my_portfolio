@@ -823,84 +823,86 @@ h6 {
   transition: all ease-in 1s;
 }
 
-.portfolio__container {
+.error {
+  background-color: #D3BDD8;
+}
+.error__container {
   display: flex;
-  max-width: 70rem;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  padding: 0 1.25rem 3rem 1.25rem;
-  background-image: url(/images/ilustrace/bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
+  padding: 8rem 1.25rem;
 }
-@media screen and (min-width: 50rem) {
-  .portfolio__container {
-    flex-direction: row;
-    gap: 1.25rem;
-  }
-}
-.portfolio__text-container {
-  flex: 1;
-}
-.portfolio__image-container {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  padding-top: 4rem;
-}
-@media screen and (max-width: 50rem) {
-  .portfolio__image-container {
-    max-width: 80%;
-    align-self: flex-end;
-    padding-top: 0;
-  }
-}
-.portfolio__image {
-  max-width: 100%;
-  max-height: auto;
-  clip-path: circle(50% at 61% 50%);
-  animation: moveImage 1.5s ease-in-out 1s forwards;
+.error__heading {
+  padding: 4rem 0 2rem 0;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
   opacity: 0;
 }
-.portfolio__intro-heading {
-  padding-top: 5rem;
+.error__paragraph {
+  margin-top: 0;
 }
-.portfolio__span {
-  text-transform: uppercase;
-}
-.portfolio__intro {
-  margin: 0.5rem 0;
-}
-
-.custom-shape-divider-bottom-1759994854 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.error__button-cta {
+  background-color: #C71585;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3125rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1.25rem;
   overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1759994854 svg {
   position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 34px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  transition: box-shadow 150ms ease-out;
 }
-
-.custom-shape-divider-bottom-1759994854 .shape-fill {
-  fill: #FFFFFF;
+.error__button-cta:hover {
+  background-color: #660066;
+  box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3125rem;
+  transform: translateY(-4px);
+  transition: all ease-in 1s;
+}
+.error__button-cta:active, .error__button-cta:focus {
+  background-color: #4d004d;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3125rem;
+  transform: translateY(3px);
+  transition: all ease-in 1s;
+}
+.error__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 31.25rem) {
+  .error__link {
+    font-size: 1rem;
+  }
 }
 
 .gallery__container {
   max-width: 70rem;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 4rem 1.25rem 3rem 1.25rem;
 }
 .gallery__heading {
   text-align: center;
@@ -961,8 +963,7 @@ h6 {
   overflow: hidden;
   margin: 0;
   z-index: 1;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+  border-radius: 0.3125rem;
 }
 .gallery__image {
   width: 100%;
@@ -974,11 +975,11 @@ h6 {
 }
 .gallery__caption {
   position: absolute;
-  width: 86%;
-  height: 86%;
-  bottom: 7%;
-  left: 7%;
-  right: 7%;
+  width: 94%;
+  height: 94%;
+  bottom: 3%;
+  left: 3%;
+  right: 3%;
   background: rgba(255, 255, 255, 0.9);
   color: white;
   padding: 0.625rem;
@@ -988,7 +989,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-radius: 0.3125rem;
 }
 .gallery__caption.visible {
   transform: translateY(0);
@@ -1032,7 +1033,6 @@ h6 {
 }
 .gallery__category {
   color: #333333;
-  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1114,7 +1114,6 @@ h6 {
 .project__heading {
   font-weight: 900;
   margin-bottom: 2rem;
-  text-transform: uppercase;
 }
 .project__navigation {
   display: flex;

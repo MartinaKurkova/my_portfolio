@@ -352,3 +352,55 @@
     }
 
 }
+
+
+// error 404
+.error {
+    background-color: variables.$color-bg-hero;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 8rem 1.25rem;
+    }
+
+    &__heading {
+        padding: 4rem 0 2rem 0;
+        font-weight: 900;
+        font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
+        margin-bottom: 1rem;
+        animation: fadeInUp 0.8s ease-out forwards;
+        animation-delay: 0.2s;
+        opacity: 0; 
+    }
+
+    &__paragraph {
+        margin-top: 0;
+    }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        margin-top: 1.25rem;
+        overflow: hidden;
+        position: relative;
+        user-select: none;
+        box-shadow: 0 0 0 0 rgba(white, 0.5);
+        transition: box-shadow 150ms ease-out;
+    }
+
+    &__button-cta:hover {
+        @include buttons.button-cta-hover;
+    }
+
+    &__button-cta:active,
+    &__button-cta:focus {
+        @include buttons.button-cta-active;
+    }
+
+    &__link {
+        @include buttons.button-cta-text;
+    }
+}

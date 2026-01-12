@@ -101,6 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// error 404
+// Zobrazení adresy, kterou uživatel hledal
+const path = window.location.pathname;
+document.querySelector('.wrong-path').textContent = path
+
+
 
 // form
 // KONFIGURACE A VÝBĚR PRVKŮ
