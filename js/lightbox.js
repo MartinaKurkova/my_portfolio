@@ -126,22 +126,4 @@
     
 })();
 
-
-
-// parallax efect
-if (window.innerWidth >= 1024) {
-  const images = document.querySelectorAll('.project__image');
-
-  window.addEventListener('scroll', () => {
-    const windowHeight = window.innerHeight;
-
-    images.forEach((img, i) => {
-      const rect = img.getBoundingClientRect(); // pozice obrázku vůči viewportu
-      const imgMid = rect.top + rect.height / 2; // střed obrázku
-      const offset = (imgMid - windowHeight / 2) / windowHeight; // normalizace -1 až +1
-
-      const speed = 30 + i * 10; // max posun v px
-      img.style.transform = `translateY(${offset * speed}px)`;
-    });
-  });
-}
+// Parallax efekt byl odstraněn
