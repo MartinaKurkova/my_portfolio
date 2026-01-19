@@ -4,30 +4,17 @@
 @use "../components/buttons";
 
 .offer {
+     background-color: variables.$color-bg-hero;
+
     &__container {
         display: flex;
-        max-width: 70rem;
-        max-height: fit-content;
+        flex-direction: column;
         margin: 0 auto;
-        padding-bottom: 1rem;
-        // background-color: #f9e0ff;
-        // background: variables.$color-bg;
-        background-image: url(/images/ilustrace/bg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-        position: relative;
-
-        @media screen and (min-width: 50rem) {
-            flex-direction: row;
-            gap: 1.25rem;
-        }
+        padding: 2rem 1.25rem 0 1.25rem;
     }
 
     &__text-container {
         flex: 1;
-        margin: 0 1.25rem;
         padding-bottom: 5rem;
     }
 
@@ -54,35 +41,17 @@
 
     &__heading {
         padding-top: 4rem;
-        text-transform: uppercase;
     }
 
     &__perex {
-        font-weight: bold;
-        color: white;
-        max-width: 80%;
+        display: block;
+        font-family: variables.$font-sans;
+        text-transform: none;
+        font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
+        color: variables.$color-text;
+        margin-top: 1rem;
+        font-weight: 200;
     }
-}
-
-// wavy shape
-.custom-shape-divider-bottom-1760903366 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1760903366 svg {
-    position: relative;
-    display: block;
-    width: calc(273% + 1.3px);
-    height: 70px;
-}
-
-.custom-shape-divider-bottom-1760903366 .shape-fill {
-    fill: #FFFFFF;
 }
 
 // Services section
@@ -164,25 +133,19 @@
 
 // Process section
 .process {
+    background-color: variables.$color-bg;
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 70rem;
         max-height: fit-content;
         margin: 0 auto;
         margin-top: 4rem;
         padding: 1.25rem;
-        background-color: variables.$color-bg;
         overflow: hidden;
-        position: relative;
-        // background-image: url(/images/ilustrace/bg2.png);
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        background: #e7d3ed;
-        background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
+        // background: #e7d3ed;
+        // background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
     }
 
     &__subheading {
@@ -287,37 +250,15 @@
     }
 }
 
-// wavy shape
-.custom-shape-divider-top-1760003753 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1760003753 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 34px;
-}
-
-.custom-shape-divider-top-1760003753 .shape-fill {
-    fill: #FFFFFF;
-}
-
 // Calculation section
 .calculation{
+    background-color: variables.$color-bg;
     &__container {
-        max-width: 70rem;
         margin: 0 auto;
         padding: 3rem 1.25rem;
         position: relative;
-        background: #e7d3ed;
-        background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
+        // background: #e7d3ed;
+        // background: linear-gradient(180deg,rgba(231, 211, 237, 1) 0%, rgba(255, 255, 255, 1) 57%);
     }
 
     &__text-conatiner {
@@ -365,26 +306,4 @@
     &__link {
         @include buttons.button-cta-text;
     }
-}
-
-// wavy shape
-.custom-shape-divider-top-1760901554 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1760901554 svg {
-    position: relative;
-    display: block;
-    width: calc(273% + 1.3px);
-    height: 70px;
-}
-
-.custom-shape-divider-top-1760901554 .shape-fill {
-    fill: #FFFFFF;
 }
