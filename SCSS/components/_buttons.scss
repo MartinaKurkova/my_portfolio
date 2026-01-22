@@ -3,6 +3,55 @@
 @use "../base/base";
 
 @mixin button-cta {
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background: variables.$color-secondary;
+    border-radius: .3125rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: variables.$font-sans;
+}
+
+@mixin button-cta-hover {
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background-color: variables.$color-hover;
+    border-radius: .3125rem;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-4px);
+    transition: all ease-in 1s;
+    box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: variables.$font-sans;
+}
+
+@mixin button-cta-focus-visible {
+    outline: 3px solid variables.$color-outline;
+    outline-offset: 3px;
+}
+
+@mixin button-cta-active {
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background-color: variables.$color-active;
+    border-radius: .3125rem;
+    transform: translateY(3px);
+    transition: all ease-in 1s;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: variables.$font-sans;
+}
+
+// secondary
+@mixin button-cta {
     background-color: variables.$color-secondary;
     color: white;
     width: fit-content;
@@ -13,30 +62,6 @@
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-@mixin button-cta-hover {
-    background-color: variables.$color-hover;
-    box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
-    width: fit-content;
-    padding: 0.6rem 1.2rem;
-    border-radius: .3125rem;
-    transform: translateY(-4px);
-    transition: all ease-in 1s;
-}
-
-@mixin button-cta-focus-visible {
-    outline: 3px solid variables.$color-outline;
-    outline-offset: 3px;
-}
-
-@mixin button-cta-active {
-    background-color: variables.$color-active;
-    width: fit-content;
-    padding: 0.6rem 1.2rem;
-    border-radius: .3125rem;
-    transform: translateY(3px);
-    transition: all ease-in 1s;
 }
 
 @mixin button-cta-text {
