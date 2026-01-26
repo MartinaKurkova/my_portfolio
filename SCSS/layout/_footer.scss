@@ -64,6 +64,14 @@
     &__social-icon {
         font-size: 1.875rem; 
         color: white;
+        width: 30px;
+        margin-right: 12px;
+    }
+
+    &__social-icon--img {
+        width: 28px; 
+        height: 28px;
+        margin-left: 3px;
     }
 
     &__social-link {
@@ -84,10 +92,19 @@
 
     &__social-links {
         margin-top: 0.5rem;
+        display: flex;
+        flex-direction: row;
     } 
 
     &__section_info {
         margin-bottom: 0;
+    }
+
+    // legal
+    &__legal {
+        color: white;
+        text-decoration-thickness: .5px;
+        text-underline-offset: 0.2em;
     }
 }
 
