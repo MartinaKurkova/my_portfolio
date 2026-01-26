@@ -1,0 +1,55 @@
+---
+layout: layout.njk
+title: "Detail produktu: Pexeso Koho potkáš v lese"
+---
+
+<section class="product">
+    <div class="product__container">
+               <!-- Gallery -->
+         <div class="product__image-container">
+            <div class="product__main__image" onclick="openLightbox(0)">
+                <img src="/images/pexesa/Bez názvu-2-01.svg" alt="" class="product__image" id="mainImg">
+            </div>
+            <div class="product__thumbnails">
+                <div class="product__thumbnail active" onclick="changeImage(0)">
+                    <img src="/images/pexesa/Bez názvu-2-01.svg" alt="" class="product_thumbnail-image">
+                </div>
+                <div class="product__thumbnail" onclick="changeImage(1)">
+                    <img src="/images/pexesa/Bez názvu-2-02.svg" alt="" class="product_thumbnail-image">
+                </div>
+                <div class="product__thumbnail" onclick="changeImage(2)">
+                    <img src="/images/pexesa/Bez názvu-2-03.svg" alt="" class="product_thumbnail-image">
+                </div>
+            </div>
+         </div>
+
+         <!-- text container -->
+          <div class="product__text-container">
+            <h1 class="product__heading">Koho potkáš v lese</h1>
+            <div class="product__price">165 Kč</div>
+                <p class="product__text">Vydejte se do lesa s touto sadou pexesa, která představuje 32 dvojic lesních zvířat. Najdete zde ilustrace lišky, bažanta, srnky a dalších obyvatel lesa v provedení vektorové ilustrace. Pexeso nejen zabaví, ale také rozvíjí paměť a přináší hravou formou informace o přírodě.</p>
+            <ul class="product__list">
+                    <li class="product__list-item"><span class="product__label">Kategorie: </span>Pexeso</li>
+                    <li class="product__list-item"><span class="product__label">Papír: </span>Kvalitní nenatíraný papír Olin Regular 300 g/m2, vyroben ze 100% ECF buničiny s obsahem eukalyptových vláken, což zajišťuje vysokou kvalitu a trvanlivost. Vhodný pro archivaci, což znamená, že pexeso vydrží dlouhou dobu bez ztráty kvality.</li>
+                    <li class="product__list-item"><span class="product__label">Formát: </span>A4 (3 listy)</li>
+                </ul>
+                <div class="product_buy">
+                    <a href="https://www.fler.cz/zbozi/pexeso-koho-potkas-v-lese-15125009" class="pexeso__link">Koupit na Fler.cz</a>
+                    <a href="https://www.fler.cz/zbozi/pexeso-koho-potkas-v-lese-15125009" class="pexeso__link">Zpět do obchodu</a>
+                </div>
+          </div>
+    </div>
+</section>
+       
+<!-- Lightbox přesunut MIMO project container -->
+<div id="lightbox">
+    <div class="lightbox__content">
+        <button class="lightbox__close" title="Zavřít">&times;</button>
+        <button class="lightbox__arrow lightbox__arrow--prev" title="Předchozí">&#8249;</button>
+        <button class="lightbox__arrow lightbox__arrow--next" title="Další">&#8250;</button>
+        <div class="lightbox__counter"></div>
+        <img class="lightbox__image" src="" alt="">
+    </div>
+</div>
+
+<script src="/js/lightbox.js"></script>

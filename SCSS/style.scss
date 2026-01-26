@@ -18,76 +18,8 @@
 @use "pages/blog";
 @use "pages/shop";
 @use "pages/contact";
+@use "pages/product";
 
 @use "utils/variables";
 @use "utils/mixins";
 @use "utils/functions";
-
-
-// portfolio 
-
-
-
-
-// .portfolio__gallery {
-//     display: grid;
-//     grid-template-columns: 1fr;
-// }
-
-// @media screen and (min-width: 50rem) {
-//     .portfolio__gallery {
-//         grid-template-columns: repeat(3, 1fr);
-//         gap: 1.25rem;
-//     }
-// }
-
-// .portfolio__figure {
-//     position: relative;
-//     overflow: hidden;
-//     aspect-ratio: 1 / 1;
-//     margin: 0;
-//     z-index: 1;
-// }
-
-// .portfolio__image {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     display: block;
-//     transition: transform 0.3s ease;
-// }
-
-// .portfolio__caption {
-//     position: absolute;
-//     bottom: 0;
-//     left: 5%;
-//     right: 5%;
-//     background: rgba(255, 255, 255, 0.9); 
-//     width: 90%;
-//     height: 90%;
-//     transform: translateY(100%); 
-//     transition: transform 0.3s ease;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// .portfolio__description {
-//     text-transform: uppercase;
-// }
-
-// .portfolio__figure:hover .portfolio__caption {
-//     transform: translateY(-5%);
-// }
-
-// .portfolio__figure:hover .portfolio__image {
-//     transform: scale(1.2);
-// }
-
-
-// @media screen and (min-width: 62.5rem) {
-//     .portfolio__gallery {
-//         grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
-// }
-// }
