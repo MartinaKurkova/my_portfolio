@@ -79,7 +79,7 @@
     .then(async (response) => {
       if (response.status == 200) {
         // ÚSPĚCH -> Přesměrování na děkovnou stránku
-        window.location.href = "/kontakt/dekuji/"; 
+        window.location.href = "https://martinakurkovacz.netlify.app/kontakt/dekuji/"; 
       } else {
         // CHYBA SERVERU (např. špatný access_key)
         const resJson = await response.json();

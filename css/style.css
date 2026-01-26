@@ -2093,11 +2093,11 @@ h6 {
   }
 }
 .contact-hero__text-container {
-  flex: 1;
+  flex: 6;
   margin-bottom: 0;
 }
 .contact-hero__image-container {
-  flex: 1;
+  flex: 5;
   display: flex;
   align-items: end;
   justify-content: end;
@@ -2183,8 +2183,11 @@ h6 {
 }
 .contact-form__label {
   display: block;
-  margin-bottom: 0.2rem;
+  margin: 0.5rem 0 0.2rem 0;
   font-weight: 500;
+}
+.contact-form__label--textarea {
+  margin-top: 0.8rem;
 }
 .contact-form__input, .contact-form__textarea {
   width: 100%;
@@ -2192,7 +2195,7 @@ h6 {
   border: 1px solid #800080;
   border-radius: 10px;
   font-family: inherit;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .contact-form__GDPR {
   color: #333333;
@@ -2311,6 +2314,9 @@ h6 {
 }
 .contact__business-text {
   margin-top: 0;
+}
+.contact__social {
+  margin-bottom: 3rem;
 }
 .contact__social-links {
   margin-bottom: 1rem;
