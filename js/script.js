@@ -104,5 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // error 404
 // Zobrazení adresy, kterou uživatel hledal
 const path = window.location.pathname;
-document.querySelector('.wrong-path').textContent = path
+const errorElement = document.querySelector('.wrong-path');
 
+// Spustí se jen tehdy, pokud element existuje
+if (errorElement) {
+    errorElement.textContent = path;
+}
