@@ -781,6 +781,7 @@ h6 {
 }
 .about__subheading {
   margin: 0;
+  font-size: clamp(1.2rem, 1.2rem + 1.1vw, 1.9rem);
 }
 .about__text {
   margin: 2rem 0 3rem 0;
