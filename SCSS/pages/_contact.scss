@@ -39,8 +39,8 @@
 
     &__image {
         display: block;
-        max-width: 100%;
-        min-height: auto;
+        width: 100%;
+        height: auto;
         margin-top: 1rem;
 
          @media screen and (max-width: 43.75rem) {
