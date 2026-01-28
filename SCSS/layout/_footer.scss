@@ -61,17 +61,16 @@
     }
 
     // social icons
-    &__social-icon {
-        font-size: 1.875rem; 
-        color: white;
-        width: 30px;
-        margin-right: 12px;
-    }
-
     &__social-icon--img {
         width: 28px; 
         height: 28px;
         margin-left: 3px;
+    }
+
+    &__social-icon--fler {
+        width: 25px; 
+        height: 25px;
+        margin-left: 5px;
     }
 
     &__social-link {
