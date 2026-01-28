@@ -110,3 +110,17 @@ const errorElement = document.querySelector('.wrong-path');
 if (errorElement) {
     errorElement.textContent = path;
 }
+
+
+// E-mail pro kontaktní sekci
+  const user = 'hello';
+  const domain = 'martinakurkova.cz';
+  const email = user + '@' + domain;
+  
+  // Pro hlavní kontakt
+  document.getElementById('email-display').innerHTML = 
+    '<a href="mailto:' + email + '" class="contact__address-link">' + email + '</a>';
+  
+  // Pro patičku
+  document.getElementById('email-footer').innerHTML = 
+    '<a href="mailto:' + email + '" class="footer__contact-link">' + email + '</a>';
