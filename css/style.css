@@ -1755,9 +1755,6 @@ h6 {
 .about-me__text-container {
   flex: 3;
   margin: 1.25rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 @media screen and (max-width: 50rem) {
   .about-me__text-container {
@@ -1827,6 +1824,10 @@ h6 {
   will-change: opacity, transform;
 }
 .timeline__item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline__item:nth-child(1) {
   opacity: 1;
   transform: translateY(0);
 }
