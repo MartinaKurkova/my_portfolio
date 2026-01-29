@@ -625,12 +625,14 @@ h6 {
   border-radius: 0.3125rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid whitesmoke;
+  padding-bottom: 100%;
 }
 .small-gallery__image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  max-width: 450px;
-  aspect-ratio: 1/1;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;

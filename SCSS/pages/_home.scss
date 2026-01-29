@@ -162,21 +162,22 @@
     }
 
     &__figure {
-        position: relative; 
-        // aspect-ratio: 1 / 1;
+        position: relative;
         overflow: hidden;
         margin: 0;
         z-index: 1;
         border-radius: .3125rem;
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         border: 1px solid whitesmoke;
+        padding-bottom: 100%; 
     }
 
     &__image {
+        position: absolute; 
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        max-width: 450px; 
-        aspect-ratio: 1 / 1; 
+        height: 100%; 
         object-fit: cover;
         display: block;
         transition: transform 0.3s ease; 
