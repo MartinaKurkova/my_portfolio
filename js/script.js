@@ -75,30 +75,14 @@ for (let i = 0; i < menuLength; i++) {
 };
 
 // animation
-// function startTypewriter() {
-//     const element = document.getElementById('typewriter');
-//     const text = 'Nožičková';
-//     let i = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const element = document.getElementById('typewriter');
     
-//     element.textContent = '';
-//     element.classList.remove('typing-complete');
-    
-//     const timer = setInterval(() => {
-//         if (i < text.length) {
-//             element.textContent += text.charAt(i);
-//             i++;
-//         } else {
-//             clearInterval(timer);
-//             setTimeout(() => {
-//                 element.classList.add('typing-complete');
-//             }, 1000);
-//         }
-//     }, 200);
-// }
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     setTimeout(startTypewriter, 1000);
-// });
+    // Po dokončení animace odstraň kurzor
+    setTimeout(() => {
+        element.classList.add('typing-complete');
+    }, 2800); // 1s delay + 1.8s typing
+});
 
 
 // error 404

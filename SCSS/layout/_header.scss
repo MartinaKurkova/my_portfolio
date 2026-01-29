@@ -22,22 +22,29 @@
 
     // logo
     &__logo-link {
-        font-family: variables.$font-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
-        font-size: clamp(0.875rem, calc(1rem + 1vw), 1.25rem);
-        display: inline-block;
-    }
+    font-family: variables.$font-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.875rem, calc(1rem + 1vw), 1.25rem);
+    display: flex; // ✅ Změněno z inline-block
+    align-items: baseline; // ✅ Přidáno
+}
 
     &__logo-title {
         margin: 0;
     }
 
     &__animated {
+        display: inline-block;
+        overflow: hidden;
         border-right: 2px solid white;
-        animation: cursor 0.75s step-end infinite;
+        white-space: nowrap;
+        width: 0;
+        animation: 
+            typing 1.8s steps(9) 1s forwards,  
+            cursor 0.75s step-end infinite;
 
         @media screen and (max-width: 21.875rem) {
             display: none;
@@ -47,7 +54,13 @@
     &__animated.typing-complete {
         animation: none;
         border-right: none;
+        width: auto;
     }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 9ch; }  
 }
 
 @keyframes cursor {
