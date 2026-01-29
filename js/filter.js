@@ -35,7 +35,7 @@ class PortfolioFilter {
                 item.classList.remove('show');
                 setTimeout(() => {
                     item.style.display = 'none';
-                }, 300); // Čas na dokončení animace
+                }, 300); 
             }
         });
     }
@@ -50,12 +50,12 @@ class PortfolioFilter {
     }
 }
 
-// ✅ 'load' místo 'DOMContentLoaded' pro lepší CLS
+// load
 window.addEventListener('load', () => {
     window.portfolioFilter = new PortfolioFilter();
 });
 
-// gallery caption (zachováno)
+// gallery caption 
 document.querySelectorAll(".gallery__figure").forEach(figure => {
     figure.addEventListener("touchstart", () => {
         figure.classList.add("touched");
