@@ -103,7 +103,7 @@
      &__item.show {
         opacity: 1;
         transform: translateY(0);
-}
+    }
 
     // left side
     &__item:nth-child(odd) {
@@ -122,7 +122,6 @@
         width: calc(50% - 50px);
         transition: all 0.3s ease;
         position: relative;
-        // border: 1px solid variables.$color-primary;
 
         &:hover {
             transform: translateY(-5px);
@@ -141,18 +140,11 @@
     }
 
     // icon
-
     &__circle {
-        width: 60px !important;
-        height: 60px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, variables.$color-secondary 0%, variables.$color-primary 100%);
-        display: flex !important;
+        display: flex;
         align-items: center;
         justify-content: center;
         z-index: 5;
-         box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
-        border: 2px solid white;
         transition: all 0.3s ease;
         position: absolute;
         left: 50%;
@@ -160,19 +152,21 @@
     }
 
     &__icon {
-        width: 35px !important;
-        height: 35px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+        border: 5px solid white;
+        width: 5rem;
+        height: 5rem;
         z-index: 10;
     }
 
     &__title {
-        background-color: variables.$color-bg-hero;
-        color: variables.$color-dark;
+        background-color: variables.$color-primary;
+        color: white;
         border-radius: 10px 10px 0 0;
         padding: 0.8rem 1.25rem;
         margin: 0;
-        font-family: variables.$font-sans;
-        font-weight: 500;
+        font-family: variables.$font-serif;
         font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
     }
 
@@ -195,16 +189,19 @@
 
         &__frame {
             width: calc(100% - 5rem);
-            margin-left: 80px;
+            margin-left: 5rem;
+        }
+
+        &__circle {
+            position: absolute;
+            left: 1.875rem;
+            transform: translateX(-50%);
         }
 
         &__icon {
-            position: absolute;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            font-size: 1.2rem;
-            transform: none;
+            width: 4rem;
+            height: 4rem;
+            border-width: 3px;
         }
     }
 }

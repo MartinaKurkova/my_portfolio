@@ -345,12 +345,7 @@ h6 {
 .footer__social-icon--img {
   width: 28px;
   height: 28px;
-  margin-left: 3px;
-}
-.footer__social-icon--fler {
-  width: 25px;
-  height: 25px;
-  margin-left: 5px;
+  margin-right: 5px;
 }
 .footer__social-link {
   text-decoration: none;
@@ -377,6 +372,7 @@ h6 {
   color: white;
   text-decoration-thickness: 0.5px;
   text-underline-offset: 0.2em;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 38.75rem) {
@@ -1791,34 +1787,30 @@ h6 {
   border-right-color: rgba(255, 255, 255, 0.95);
 }
 .timeline__circle {
-  width: 60px !important;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #C71585 0%, #800080 100%);
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
-  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
-  border: 2px solid white;
   transition: all 0.3s ease;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 .timeline__icon {
-  width: 35px !important;
-  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+  border: 5px solid white;
+  width: 5rem;
+  height: 5rem;
   z-index: 10;
 }
 .timeline__title {
-  background-color: #D3BDD8;
-  color: #550455;
+  background-color: #800080;
+  color: white;
   border-radius: 10px 10px 0 0;
   padding: 0.8rem 1.25rem;
   margin: 0;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
+  font-family: "Fraunces", serif;
   font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
 }
 .timeline__description {
@@ -1835,15 +1827,17 @@ h6 {
   }
   .timeline__frame {
     width: calc(100% - 5rem);
-    margin-left: 80px;
+    margin-left: 5rem;
+  }
+  .timeline__circle {
+    position: absolute;
+    left: 1.875rem;
+    transform: translateX(-50%);
   }
   .timeline__icon {
-    position: absolute;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-    transform: none;
+    width: 4rem;
+    height: 4rem;
+    border-width: 3px;
   }
 }
 .detail__container {
@@ -2348,14 +2342,6 @@ h6 {
   height: 35px;
   fill: #800080;
   margin-right: 10px;
-  margin-top: 2px;
-}
-.contact__social-icon--fler {
-  width: 32px;
-  height: 32px;
-  fill: #800080;
-  margin-left: 2px;
-  margin-right: 12px;
   margin-top: 2px;
 }
 .contact__social-link {
