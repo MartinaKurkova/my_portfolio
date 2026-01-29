@@ -1776,7 +1776,6 @@ h6 {
   border-radius: 11px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   width: calc(50% - 50px);
-  transition: all 0.3s ease;
   position: relative;
 }
 .timeline__frame:hover {
@@ -1796,7 +1795,6 @@ h6 {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  transition: all 0.3s ease;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
