@@ -84,6 +84,11 @@ h6 {
   font-size: clamp(0.875rem, 1rem + 1vw, 1.25rem);
   display: inline-block;
 }
+@media screen and (max-width: 350px) {
+  .header__lastname {
+    display: none;
+  }
+}
 .header__logo-title {
   margin: 0;
 }

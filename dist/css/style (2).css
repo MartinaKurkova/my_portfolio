@@ -84,11 +84,6 @@ h6 {
   font-size: clamp(0.875rem, 1rem + 1vw, 1.25rem);
   display: inline-block;
 }
-@media screen and (max-width: 350px) {
-  .header__lastname {
-    display: none;
-  }
-}
 .header__logo-title {
   margin: 0;
 }
@@ -444,7 +439,7 @@ h6 {
   flex-direction: column;
   margin: 0 auto;
   padding: 2rem 1.25rem 0 1.25rem;
-  background: url("/images/autoportret/output/large/Autoportret_vlastovky-u_large_1000_orez.webp") bottom right no-repeat;
+  background: url("/images/autoportret/output/large/Autoportret_vlastovky-u_large_1000_orez.png") bottom right no-repeat;
   background-size: contain;
 }
 .hero__text-container {
@@ -806,7 +801,7 @@ h6 {
 }
 .about__image {
   max-width: 70%;
-  height: auto;
+  max-height: auto;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
 }

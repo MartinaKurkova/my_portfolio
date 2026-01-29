@@ -31,6 +31,12 @@
         display: inline-block;
     }
 
+    &__lastname {
+        @media screen and (max-width: 350px) {
+            display: none;
+        }
+    }
+
     &__logo-title {
         margin: 0;
     }
