@@ -95,9 +95,10 @@
         margin: 0;
         display: flex;
         align-items: center;
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.6s ease;
+        opacity: 0; 
+        transform: translateY(50px); 
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        will-change: opacity, transform; 
     }
 
      &__item.show {
