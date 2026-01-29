@@ -1761,6 +1761,10 @@ h6 {
   opacity: 1;
   transform: translateY(0);
 }
+.timeline__item:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+}
 .timeline__item:nth-child(odd) {
   flex-direction: row;
 }
