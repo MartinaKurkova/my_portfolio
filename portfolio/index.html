@@ -22,7 +22,15 @@ title: "Portfolio prací: ilustrace, grafika, kód."
                 <!-- item -->
                 <a href="/portfolio/krocan/" class="gallery__column show illustration" data-categories="illustration">
                     <figure class="gallery__figure">
-                        <img class="gallery__image" src="/images/gallery/Krocan.webp" alt="Ilustrace k textu Martina Zemana: Krocan. Jde o středověký epos. Na kresbě vidíme tři rytíře nesoucí na lehátku čtvrtého mrtvého. V dálce je hrad, na který směřují.">
+                        <img class="gallery__image" 
+                        src="/images/gallery/Krocan.webp"
+                        srcset="/images/gallery/Krocan_350.webp 350w,
+                                /images/gallery/Krocan.webp 450w"
+                        sizes="(max-width: 450px) 100vw, 
+                                (max-width: 768px) 50vw, 
+                                33vw" 
+                        data-full="/images/gallery/Krocan.webp" 
+                        alt="Ilustrace k textu Martina Zemana: Krocan. Jde o středověký epos. Na kresbě vidíme tři rytíře nesoucí na lehátku čtvrtého mrtvého. V dálce je hrad, na který směřují.">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Martin Zeman – Krocan</h2>
                             <p class="gallery__category">Ilustrace</p>

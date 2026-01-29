@@ -75,6 +75,13 @@
     <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
+    {% if preloadImage %}
+    <link rel="preload" 
+          as="image" 
+          href="{{ preloadImage }}"
+          fetchpriority="high">
+    {% endif %}
+
 </head>
 <body>
     <div class="page-wrapper">
