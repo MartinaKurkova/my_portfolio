@@ -82,19 +82,14 @@ h6 {
   color: white;
   text-decoration: none;
   font-size: clamp(0.875rem, 1rem + 1vw, 1.25rem);
-  display: flex;
-  align-items: baseline;
+  display: inline-block;
 }
 .header__logo-title {
   margin: 0;
 }
 .header__animated {
-  display: inline-block;
-  overflow: hidden;
   border-right: 2px solid white;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 1.8s steps(9) 1s forwards, cursor 0.75s step-end infinite;
+  animation: cursor 0.75s step-end infinite;
 }
 @media screen and (max-width: 21.875rem) {
   .header__animated {
@@ -104,17 +99,8 @@ h6 {
 .header__animated.typing-complete {
   animation: none;
   border-right: none;
-  width: auto;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 9ch;
-  }
-}
 @keyframes cursor {
   from, to {
     border-color: transparent;
