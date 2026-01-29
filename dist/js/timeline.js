@@ -1,44 +1,21 @@
-// Počkat až je stránka plně načtená
-window.addEventListener('load', () => {
+window.addEventListener('load', () => { // ✅ Musí být 'load'
     initScrollAnimations();
 });
 
 function initScrollAnimations() {
-    const frames = document.querySelectorAll(".timeline__item");
-    const items = document.querySelectorAll(".service__item");
-    const processes = document.querySelectorAll(".process__item");
+    const allElements = document.querySelectorAll(".timeline__item");
     
-    function checkScroll() {
-        const triggerBottom = (window.innerHeight / 5) * 4;
-        
-        // Timeline
-        frames.forEach((frame) => {
-            const topFrame = frame.getBoundingClientRect().top;
-            if (topFrame < triggerBottom) {
-                frame.classList.add("show");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target); // ✅ Důležité!
             }
         });
-        
-        // Services
-        items.forEach((item) => {
-            const topItem = item.getBoundingClientRect().top;
-            if (topItem < triggerBottom) {
-                item.classList.add("show");
-            }
-        });
-        
-        // Process
-        processes.forEach((process) => {
-            const topProcess = process.getBoundingClientRect().top;
-            if (topProcess < triggerBottom) {
-                process.classList.add("show");
-            }
-        });
-    }
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20% 0px'
+    });
     
-    // Spustit jednou při načtení
-    checkScroll();
-    
-    // Pak při scrollování
-    window.addEventListener("scroll", checkScroll, { passive: true });
+    allElements.forEach(el => observer.observe(el));
 }
