@@ -75,30 +75,30 @@ for (let i = 0; i < menuLength; i++) {
 };
 
 // animation
-function startTypewriter() {
-    const element = document.getElementById('typewriter');
-    const text = 'Nožičková';
-    let i = 0;
+// function startTypewriter() {
+//     const element = document.getElementById('typewriter');
+//     const text = 'Nožičková';
+//     let i = 0;
     
-    element.textContent = '';
-    element.classList.remove('typing-complete');
+//     element.textContent = '';
+//     element.classList.remove('typing-complete');
     
-    const timer = setInterval(() => {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(timer);
-            setTimeout(() => {
-                element.classList.add('typing-complete');
-            }, 1000);
-        }
-    }, 200);
-}
+//     const timer = setInterval(() => {
+//         if (i < text.length) {
+//             element.textContent += text.charAt(i);
+//             i++;
+//         } else {
+//             clearInterval(timer);
+//             setTimeout(() => {
+//                 element.classList.add('typing-complete');
+//             }, 1000);
+//         }
+//     }, 200);
+// }
 
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(startTypewriter, 1000);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     setTimeout(startTypewriter, 1000);
+// });
 
 
 // error 404
