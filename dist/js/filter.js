@@ -12,8 +12,6 @@ class PortfolioFilter {
                 this.handleFilterClick(button, filter);
             });
         });
-
-        this.showAllItems();
     }
 
     handleFilterClick(clickedButton, filter) {
@@ -24,21 +22,21 @@ class PortfolioFilter {
 
     filterItems(category) {
         this.galleryItems.forEach(item => {
-            // Nejdříve odstraníme show třídu ze všech prvků
-            item.classList.remove('show');
+            const shouldShow = category === 'all' || this.itemHasCategory(item, category);
             
-            // Po krátké pauze přidáme show třídu pouze k relevantním prvkům
-            setTimeout(() => {
-                if (category === 'all' || this.itemHasCategory(item, category)) {
-                    item.style.display = 'block';
-                    // Malé zpoždění pro plynulou animaci
-                    requestAnimationFrame(() => {
-                        item.classList.add('show');
-                    });
-                } else {
+            if (shouldShow) {
+                // Zobrazit
+                item.style.display = 'block';
+                requestAnimationFrame(() => {
+                    item.classList.add('show');
+                });
+            } else {
+                // Skrýt - nejdřív animace, pak display
+                item.classList.remove('show');
+                setTimeout(() => {
                     item.style.display = 'none';
-                }
-            }, 300); // Počká na dokončení fade-out animace
+                }, 300); // Čas na dokončení animace
+            }
         });
     }
 
@@ -50,22 +48,14 @@ class PortfolioFilter {
         }
         return item.classList.contains(category);
     }
-
-    showAllItems() {
-        this.galleryItems.forEach(item => {
-            item.style.display = 'block';
-            item.classList.add('show');
-        });
-    }
 }
 
-// Inicializace po načtení stránky
-document.addEventListener('DOMContentLoaded', () => {
+// ✅ 'load' místo 'DOMContentLoaded' pro lepší CLS
+window.addEventListener('load', () => {
     window.portfolioFilter = new PortfolioFilter();
-    console.log('Portfolio filter načten!');
 });
 
-// gallery caption
+// gallery caption (zachováno)
 document.querySelectorAll(".gallery__figure").forEach(figure => {
     figure.addEventListener("touchstart", () => {
         figure.classList.add("touched");
