@@ -1,8 +1,5 @@
 const items = document.querySelectorAll(".service__item");
 
-window.addEventListener("scroll", DisplayItem);
-DisplayItem();
-
 function DisplayItem() {
   const TriggerBottom = (window.innerHeight / 5) * 4;
 
@@ -15,13 +12,17 @@ function DisplayItem() {
       item.classList.remove("show");
     }
   });
-};
+}
+
+// Spustit až po načtení DOM
+document.addEventListener("DOMContentLoaded", () => {
+  DisplayItem();
+  window.addEventListener("scroll", DisplayItem);
+});
+
 
 // process
 const process = document.querySelectorAll(".process__item");
-
-window.addEventListener("scroll", DisplayProcess);
-DisplayProcess();
 
 function DisplayProcess() {
   const TriggerBottom = (window.innerHeight / 5) * 4;
@@ -35,4 +36,10 @@ function DisplayProcess() {
       process.classList.remove("show");
     }
   });
-};
+}
+
+// Spustit až po načtení DOM
+document.addEventListener("DOMContentLoaded", () => {
+  DisplayProcess();
+  window.addEventListener("scroll", DisplayProcess);
+});
