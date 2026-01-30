@@ -8,23 +8,23 @@
       }
 
       .st1 {
-        fill: #7b217e;
+        fill: #a46ca8;
       }
 
       .st2 {
-        fill: #fff;
+        fill: #7b217e;
       }
 
       .st3 {
-        fill: #a46ca8;
+        fill: #fff;
       }
     </style>
   </defs>
-  <rect class="st1" x="-.66" y="-.5" width="101.49" height="101.26"/>
+  <rect class="st2" x=".63" y=".79" width="98.78" height="98.55" rx="49.28" ry="49.28"/>
   <g>
-    <polygon class="st2" points="94.09 17.36 33.43 67.93 6.44 68.17 94.09 17.36"/>
-    <polygon class="st2" points="94.09 17.36 72.64 76.1 55.69 71.21 43.66 67.74 94.09 17.36"/>
-    <polygon class="st0" points="94.09 17.36 43.66 67.74 43.9 81.97 33.43 67.93 94.09 17.36"/>
-    <polygon class="st3" points="55.69 71.21 43.9 81.97 43.66 67.74 55.69 71.21"/>
+    <polygon class="st3" points="85.03 20.97 31.04 65.97 7.03 66.19 85.03 20.97"/>
+    <polygon class="st3" points="85.03 20.97 65.94 73.24 50.85 68.89 40.15 65.8 85.03 20.97"/>
+    <polygon class="st0" points="85.03 20.97 40.15 65.8 40.36 78.47 31.04 65.97 85.03 20.97"/>
+    <polygon class="st1" points="50.85 68.89 40.36 78.47 40.15 65.8 50.85 68.89"/>
   </g>
 </svg>
