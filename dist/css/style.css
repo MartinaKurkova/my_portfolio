@@ -1400,9 +1400,6 @@ h6 {
 .offer__text-container {
   flex: 1;
   padding-bottom: 5rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 .offer__image-container {
   flex: 1;
@@ -1494,6 +1491,7 @@ h6 {
 }
 .service__title {
   font-family: "Work Sans", sans-serif;
+  font-size: clamp(1.2rem, 1.2rem + 1.1vw, 1.9rem);
   color: #333333;
   margin-bottom: 0;
   text-align: center;
