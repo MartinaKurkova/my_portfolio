@@ -33,7 +33,6 @@
 
     &__gallery {
         display: grid;
-        //  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
         grid-template-columns: repeat(2, 1fr);
         grid-column: auto;
         gap: 1rem;
@@ -41,7 +40,6 @@
         @media screen and (min-width: 50.25rem) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: min-content;
-            // grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
             grid-column: 3/6;
             grid-row: 1;
             align-self: start;
