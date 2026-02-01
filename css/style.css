@@ -1306,7 +1306,7 @@ h6 {
 }
 .lightbox__close, .lightbox__arrow {
   position: absolute;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   border: none;
   color: white;
   font-size: 1.5rem;

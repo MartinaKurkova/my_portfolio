@@ -3,12 +3,10 @@
 @use "base/fonts";
 
 @use "components/buttons";
-@use "components/carousel";
 
 @use "layout/header";
 @use "layout/navigation";
 @use "layout/footer";
-@use "layout/forms";
 @use "layout/grid";
 
 @use "pages/home";
@@ -22,5 +20,3 @@
 @use "pages/product";
 
 @use "utils/variables";
-@use "utils/mixins";
-@use "utils/functions";
