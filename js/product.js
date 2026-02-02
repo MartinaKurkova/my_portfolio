@@ -10,20 +10,24 @@ let images = [];
  * Inicializace galerie - načte obrázky z HTML
  */
 function initGallery() {
-    // Hlavní obrázek
+    // Hlavní obrázek - použije data-full nebo src
     const mainImg = document.getElementById('mainImg');
     if (mainImg) {
-        images.push(mainImg.src);
+        const fullSrc = mainImg.getAttribute('data-full') || mainImg.src;
+        images.push(fullSrc);
     }
     
-    // Miniaturní obrázky
+    // Miniaturní obrázky - použije data-full nebo src
     const thumbnails = document.querySelectorAll('.product__thumbnail img');
     thumbnails.forEach((thumb, index) => {
-        // Pokud miniatura není stejná jako hlavní obrázek, přidáme ji
-        if (index > 0 || thumb.src !== mainImg.src) {
-            images.push(thumb.src);
+        const fullSrc = thumb.getAttribute('data-full') || thumb.src;
+        // Přidáme všechny obrázky kromě prvního (ten už máme z mainImg)
+        if (index > 0) {
+            images.push(fullSrc);
         }
     });
+    
+    console.log('Načtené obrázky pro lightbox:', images); // Pro debugging
 }
 
 /**
@@ -32,14 +36,21 @@ function initGallery() {
 function changeImage(index) {
     currentImageIndex = index;
     const mainImg = document.getElementById('mainImg');
+    const thumbnails = document.querySelectorAll('.product__thumbnail img');
     
-    if (mainImg && images[index]) {
-        mainImg.src = images[index];
+    if (mainImg && thumbnails[index]) {
+        const thumbImg = thumbnails[index];
+        
+        // Zkopíruj srcset a src přímo z miniatury (jsou stejné)
+        mainImg.src = thumbImg.src;
+        mainImg.srcset = thumbImg.srcset;
+        mainImg.setAttribute('data-full', thumbImg.getAttribute('data-full'));
+        mainImg.alt = thumbImg.alt;
     }
     
     // Aktualizace aktivní miniatury
-    const thumbnails = document.querySelectorAll('.product__thumbnail');
-    thumbnails.forEach((thumb, i) => {
+    const thumbnailContainers = document.querySelectorAll('.product__thumbnail');
+    thumbnailContainers.forEach((thumb, i) => {
         if (i === index) {
             thumb.classList.add('active');
         } else {
