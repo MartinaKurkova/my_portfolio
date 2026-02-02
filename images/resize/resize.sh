@@ -8,7 +8,7 @@ OUTPUT_DIR="$INPUT_DIR/output"
 mkdir -p "$OUTPUT_DIR/small" "$OUTPUT_DIR/medium" "$OUTPUT_DIR/large" "$OUTPUT_DIR/xl"
 
 # smyčka přes všechny soubory
-for img in "$INPUT_DIR"/*.png; do
+for img in "$INPUT_DIR"/*.webp; do
   filename=$(basename "$img" .webp)   # název souboru bez přípony
 
   convert "$img" -resize 400x -quality 100 "$OUTPUT_DIR/small/${filename}_small_400.webp"

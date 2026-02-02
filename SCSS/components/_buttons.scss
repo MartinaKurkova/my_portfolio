@@ -52,17 +52,52 @@
 }
 
 // secondary
-@mixin button-cta {
-    background-color: variables.$color-secondary;
-    color: white;
-    width: fit-content;
-    padding: 0.6rem 1.2rem;
+@mixin button-cta-secondary {
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background: white;
     border-radius: .3125rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: none;
+    border: 1px solid variables.$color-secondary;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: variables.$color-secondary;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: variables.$font-sans;
+}
+
+@mixin button-cta-secondary-hover {
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background: white;
+    border-radius: .3125rem;
+    border: 2px solid variables.$color-primary;
+    cursor: pointer;
+    transform: translateY(-4px);
+    transition: all ease-in 1s;
+    box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
+    color: variables.$color-primary;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: variables.$font-sans;
+}
+
+@mixin button-cta-seondary-focus-visible {
+    outline: 3px solid variables.$color-outline;
+    outline-offset: 3px;
+}
+
+@mixin button-cta-secondary-active {
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    background: variables.$color-bg;
+    border-radius: .3125rem;
+    transform: translateY(3px);
+    transition: all ease-in 1s;
+    color: variables.$color-primary;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: variables.$font-sans;
 }
 
 @mixin button-cta-text {
