@@ -25,11 +25,22 @@
 }
 // shop intro
 .shop-intro {
+    background-color: variables.$color-bg;
     &__container {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         padding: 2rem 1.25rem 0 1.25rem;
+    }
+
+    &__text {
+        display: block;
+        font-family: variables.$font-sans;
+        text-transform: none;
+        font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
+        color: variables.$color-text;
+        margin-top: 1rem;
+        font-weight: 300;
     }
 }
 
@@ -58,11 +69,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
 
-        @media screen and (max-width: 48rem) {
+        @media screen and (max-width: 56.25rem) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media screen and (max-width: 30rem) {
+        @media screen and (max-width: 37.5rem) {
             grid-template-columns: 1fr;
         }
     }

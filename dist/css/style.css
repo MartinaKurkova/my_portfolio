@@ -49,6 +49,13 @@
 }
 @font-face {
   font-family: "Work Sans";
+  src: url("/assets/fonts/work-sans-v24-latin_latin-ext-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
   src: url("/assets/fonts/work-sans-v24-latin_latin-ext-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -1408,29 +1415,41 @@ h6 {
   margin: 0 auto;
   padding: 2rem 1.25rem 0 1.25rem;
 }
+@media screen and (min-width: 43rem) {
+  .offer__container {
+    flex-direction: row;
+  }
+}
 .offer__text-container {
-  flex: 1;
-  padding-bottom: 5rem;
+  flex: 3;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 62.5rem) {
+  .offer__text-container {
+    flex: 2;
+  }
 }
 .offer__image-container {
   flex: 1;
   position: relative;
-  overflow: hidden;
-  padding-top: 4rem;
 }
-@media screen and (max-width: 50rem) {
+@media screen and (min-width: 43rem) {
   .offer__image-container {
-    max-width: 80%;
-    align-self: flex-end;
-    padding-top: 0;
+    position: relative;
   }
 }
 .offer__image {
-  max-width: 100%;
-  max-height: auto;
-  clip-path: circle(50% at 61% 50%);
-  animation: moveImage 1.5s ease-in-out 1s forwards;
-  opacity: 0;
+  width: 50%;
+  height: auto;
+  display: block;
+}
+@media screen and (min-width: 43rem) {
+  .offer__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
 }
 .offer__heading {
   padding-top: 4rem;
@@ -1442,7 +1461,7 @@ h6 {
   font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
   color: #333333;
   margin-top: 1rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .service__container {
@@ -2039,11 +2058,23 @@ h6 {
   margin: 3rem 0;
 }
 
+.shop-intro {
+  background-color: #F8F2FA;
+}
 .shop-intro__container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 2rem 1.25rem 0 1.25rem;
+}
+.shop-intro__text {
+  display: block;
+  font-family: "Work Sans", sans-serif;
+  text-transform: none;
+  font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
+  color: #333333;
+  margin-top: 1rem;
+  font-weight: 300;
 }
 
 .pexeso__container {
@@ -2063,12 +2094,12 @@ h6 {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 56.25rem) {
   .pexeso__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 37.5rem) {
   .pexeso__grid {
     grid-template-columns: 1fr;
   }

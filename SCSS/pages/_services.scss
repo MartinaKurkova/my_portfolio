@@ -12,32 +12,41 @@
         flex-direction: column;
         margin: 0 auto;
         padding: 2rem 1.25rem 0 1.25rem;
+
+        @media screen and (min-width: 43rem) {
+            flex-direction: row;
+        }
     }
 
     &__text-container {
-        flex: 1;
-        padding-bottom: 5rem;
+        flex: 3;
+        padding-bottom: 1rem;
+
+        @media screen and (min-width: 62.5rem) {
+            flex: 2;
+        }
     }
 
     &__image-container {
         flex: 1;
         position: relative;
-        overflow: hidden;
-        padding-top: 4rem;
 
-        @media screen and (max-width: 50rem) {
-            max-width: 80%;
-            align-self: flex-end;
-            padding-top: 0;
+        @media screen and (min-width: 43rem) {
+            position: relative;
         }
     }
 
     &__image {
-        max-width: 100%;
-        max-height: auto;
-        clip-path: circle(50% at 61% 50%);
-        animation: moveImage 1.5s ease-in-out 1s forwards;
-        opacity: 0;
+        width: 50%;
+        height: auto;
+        display: block;
+
+        @media screen and (min-width: 43rem) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
     }
 
     &__heading {
@@ -51,7 +60,7 @@
         font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
         color: variables.$color-text;
         margin-top: 1rem;
-        font-weight: 200;
+        font-weight: 300;
     }
 }
 
