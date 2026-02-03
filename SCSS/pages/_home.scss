@@ -76,6 +76,7 @@
         @include buttons.button-cta;
         margin-top: 3rem;
         margin-bottom: 2rem;
+        width: fit-content;
 
         @media screen and (max-width: 37.5rem){
             margin-top: 1rem;
@@ -254,6 +255,7 @@
         margin-top: 2rem;
         margin-bottom: 3rem;
         align-self: center;
+        width: fit-content;
 
         @media screen and (min-width: 31.25rem) {
             margin-bottom: 2rem;
@@ -343,6 +345,7 @@
         user-select: none;
         box-shadow: 0 0 0 0 rgba(white, 0.5);
         transition: box-shadow 150ms ease-out;
+        width: fit-content;
     }
 
     &__button-cta:hover {
@@ -392,6 +395,7 @@
         user-select: none;
         box-shadow: 0 0 0 0 rgba(white, 0.5);
         transition: box-shadow 150ms ease-out;
+        width: fit-content;
     }
 
     &__button-cta:hover {
