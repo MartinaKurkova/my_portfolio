@@ -174,6 +174,12 @@
         overflow: hidden;
     }
 
+    &__heading,
+    &__subheading {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
     &__subheading {
         @media screen and (min-width: 50rem) {
             max-width: 75%;
@@ -306,11 +312,11 @@
         }
     }
 
-    &__heading,
-    &__subheading {
+    &__heading {
         @media screen and (min-width: 50rem) {
             max-width: 75%;
             text-align: center;
+            margin-bottom: 1rem;
         }
     }
 
@@ -324,6 +330,7 @@
     &__button-cta {
         @include buttons.button-cta;
         margin-bottom: 3rem;
+        width: fit-content;
 
         @media screen and (min-width: 31.25rem) {
             margin-bottom: 2rem;

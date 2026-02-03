@@ -1561,6 +1561,10 @@ h6 {
   padding: 1.25rem;
   overflow: hidden;
 }
+.process__heading, .process__subheading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 @media screen and (min-width: 50rem) {
   .process__subheading {
     max-width: 75%;
@@ -1717,9 +1721,10 @@ h6 {
   }
 }
 @media screen and (min-width: 50rem) {
-  .calculation__heading, .calculation__subheading {
+  .calculation__heading {
     max-width: 75%;
     text-align: center;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (min-width: 50rem) {
@@ -1741,6 +1746,8 @@ h6 {
   font-weight: 400;
   font-family: "Work Sans", sans-serif;
   margin-bottom: 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media screen and (min-width: 31.25rem) {
   .calculation__button-cta {
