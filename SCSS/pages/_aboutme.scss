@@ -275,27 +275,22 @@
     }
 
     // Buttons
-    &__button-cta {
+    &__btn-cta {
         @include buttons.button-cta;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        color: white;
+        margin-top: 1rem;
 
-        @media screen and (max-width: 37.5rem){
-            margin-top: 1rem;
+        &:hover {
+            background-color: variables.$color-hover;
         }
-    }
 
-    &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
+        &:active {
+            background-color: variables.$color-active;
+        }
 
-    &__button-cta:focus-visible {
-        @include buttons.button-cta-focus-visible;
-    }
-
-    &__button-cta:active,
-    &__button-cta:focus {
-        @include buttons.button-cta-active;
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
     }
 
     &__button-link {

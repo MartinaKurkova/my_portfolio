@@ -11,11 +11,16 @@ html {
 
 body {
     font-family: variables.$font-sans; 
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.45;
     color: variables.$color-text;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .page-wrapper {
@@ -24,4 +29,6 @@ body {
 
 .container {
     max-width: 70rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
 }

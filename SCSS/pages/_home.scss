@@ -12,8 +12,8 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        padding: 2rem 1.25rem 0 1.25rem;
-        background: url('/images/autoportret/output/large/Autoportret_vlastovky-u_large_1000_orez.webp') bottom right no-repeat;
+        padding: 2rem 1.25rem 2rem 1.25rem;
+        background: url('/images/autoportret/Autoportret_cerveny.webp') bottom right no-repeat;
         background-size: contain;
     }
 
@@ -27,33 +27,39 @@
         opacity: 0; 
 
         @media screen and (max-width: 58.125rem){
-            max-width: 60%;
+            max-width: 55%;
         }
 
-        @media screen and (max-width: 54rem){
-            margin-bottom: 7rem;
-            max-width: 50%;
+        @media screen and (max-width: 55rem){
+            margin-bottom: 40rem;
+            max-width: 90%;
         }
 
         @media screen and (max-width: 43.75rem){
-            margin-bottom: 7rem;
-            max-width: 60%;
+            margin-bottom: 35rem;
+            max-width: 90%;
         }
 
         @media screen and (max-width: 37.5rem){
-            margin-bottom: 13rem;
-            max-width: 80%;
+            margin-bottom: 30rem;
+            max-width: 100%;
         }
 
         @media screen and (max-width: 31.25rem){
             max-width: 100%;
+            margin-bottom: 25rem;
+        }
+
+        @media screen and (max-width: 26rem){
+            max-width: 100%;
+            margin-bottom: 20rem;
         }
     }
 
     &__heading {
         padding-top: 4rem;
         font-weight: 900;
-        font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
+        font-size: clamp(1.8rem, calc(1.8rem + 2.6vw), 3.75rem);
         margin-bottom: 1rem;
     }
 
@@ -74,30 +80,20 @@
     // Buttons
     &__button-cta {
         @include buttons.button-cta;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-        width: fit-content;
+        background-color: variables.$color-secondary;
+        color: white;
 
-        @media screen and (max-width: 37.5rem){
-            margin-top: 1rem;
+        &:hover {
+            background-color: variables.$color-hover;
         }
-    }
 
-    &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
+        &:active {
+            background-color: variables.$color-active;
+        }
 
-    &__button-cta:focus-visible {
-        @include buttons.button-cta-focus-visible;
-    }
-
-    &__button-cta:active,
-    &__button-cta:focus {
-        @include buttons.button-cta-active;
-    }
-
-    &__link {
-        @include buttons.button-cta-text;
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
     }
 }
 
@@ -252,32 +248,25 @@
 
     &__button-cta {
         @include buttons.button-cta;
-        margin-top: 2rem;
-        margin-bottom: 3rem;
-        align-self: center;
-        width: fit-content;
+        background-color: variables.$color-secondary;
+        color: white;
 
-        @media screen and (min-width: 31.25rem) {
-            margin-bottom: 2rem;
+        &:hover {
+            background-color: variables.$color-hover;
         }
-    }
 
-     &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
+        &:active {
+            background-color: variables.$color-active;
+        }
 
-     &__button-cta:active,
-     &__button-cta:focus {
-        @include buttons.button-cta-active;
-    }
-
-    &__link {
-        @include buttons.button-cta-text;
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
     }
 }
 
-// SESCTION ABOUT ME
-.about {
+// SECTION ABOUT ME
+.HPabout {
     background-color: variables.$color-bg;
 
     &__container {
@@ -285,7 +274,7 @@
         flex-direction: column;
         max-height: fit-content;
         margin: 0 auto;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -298,16 +287,7 @@
     }
 
     &__heading {
-        margin: 3rem 0rem 1rem 0rem;
-    }
-
-    &__subheading {
-        margin: 0;
-        font-size: clamp(1.2rem, calc(1.2rem + 1.1vw), 1.9rem);
-    }
-
-    &__text {
-        margin: 2rem 0 3rem 0;
+        margin: O;
     }
 
     &__text-container {
@@ -315,6 +295,10 @@
         flex-direction: column;
         margin: 0 1.25rem;
         flex: 1;
+    }
+
+    &__text {
+        margin: 2rem 0 0 0;
     }
 
     &__image-container {
@@ -339,24 +323,231 @@
 
     &__button-cta {
         @include buttons.button-cta;
-        margin-top: 1.25rem;
-        overflow: hidden;
+        background-color: variables.$color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: variables.$color-hover;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
+    }
+}
+
+// SECTION OFFER
+.HPoffer {
+
+    &__container {
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1.25rem;
+        flex: 1;
+    }
+
+    &__heading {
+        margin: 3rem 0rem 1rem 0rem;
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 16px;
+        max-height: fit-content;
+        margin: 0 auto;
+
+        @media screen and (max-width: 50rem) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: 50rem) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+        border: 5px solid white;
+        margin: 2rem 0;
+
+        @media screen and (max-width: 50rem) {
+            margin: 1rem 0;
+        }
+    }
+
+    &__subheading {
+        margin: 0;
+        font-size: clamp(1.2rem, calc(1.2rem + 1.1vw), 1.9rem);
+    }
+
+    &__paragraph {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        background-color: variables.$color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: variables.$color-hover;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
+    }
+}
+
+// SECTION PEKSESO
+.pekseso {
+    background-color: variables.$color-bg;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-height: fit-content;
+        margin: 0 auto;
+        padding: 2rem 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
-        user-select: none;
-        box-shadow: 0 0 0 0 rgba(white, 0.5);
-        transition: box-shadow 150ms ease-out;
-        width: fit-content;
+
+        @media screen and (min-width: 50rem) {
+            flex-direction: row;
+            gap: 1.25rem;
+        }
     }
 
-    &__button-cta:hover {
-        @include buttons.button-cta-hover;
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1.25rem;
+        flex: 1;
     }
 
-    &__button-cta:active,
-    &__button-cta:focus {
-        @include buttons.button-cta-active;
+    &__heading {
+        margin: 3rem 0rem 1rem 0rem;
     }
 
+
+    &__text {
+        margin: 2rem 0 0 0;
+    }
+
+    &__image-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-left: .25rem;
+    }
+
+    &__image {
+        max-width: 70%;
+        height: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2rem;
+
+         @media screen and (max-width: 31.25rem) {
+            max-width: 90%;
+        }
+    }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        background-color: variables.$color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: variables.$color-hover;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
+    }
+}
+
+// SECTION contact
+.HPcontact {
+
+    &__container {
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        margin: 3rem 0rem 1rem 0rem;
+        text-align: center;
+        max-width: 70%;
+
+        @media screen and (max-width: 50rem) {
+            max-width: 100%;
+        }
+    }
+
+    &__paragraph {
+        margin: 2rem 0 3rem 0;
+        text-align: center;
+        max-width: 70%;
+    }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        background-color: variables.$color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: variables.$color-hover;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
+    }
 }
 
 
@@ -389,22 +580,20 @@
 
     &__button-cta {
         @include buttons.button-cta;
-        margin-top: 1.25rem;
-        overflow: hidden;
-        position: relative;
-        user-select: none;
-        box-shadow: 0 0 0 0 rgba(white, 0.5);
-        transition: box-shadow 150ms ease-out;
-        width: fit-content;
-    }
+        color: white;
+        margin-top: 1rem;
 
-    &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
+        &:hover {
+            background-color: variables.$color-hover;
+        }
 
-    &__button-cta:active,
-    &__button-cta:focus {
-        @include buttons.button-cta-active;
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
     }
 
     &__link {

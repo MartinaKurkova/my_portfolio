@@ -156,25 +156,25 @@
     }
 
     &__link:hover {
-        @include buttons.button-cta-hover;
+        @include buttons.button-cta;
     }
 
     &__link:active,
     &__link:focus {
-        @include buttons.button-cta-active;
+        @include buttons.button-cta;
     }
 
     &__link--back {
-        @include buttons.button-cta-secondary;
+        @include buttons.button-cta;
     }
 
     &__link--back:hover {
-        @include buttons.button-cta-secondary-hover;
+        @include buttons.button-cta;
     }
 
     &__link:active,
     &__link:focus {
-        @include buttons.button-cta-secondary-active;
+        @include buttons.button-cta;
     }
 }
 

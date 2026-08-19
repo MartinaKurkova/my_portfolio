@@ -6,50 +6,84 @@
 @mixin button-cta {
     display: inline-block;
     padding: .625rem 1.25rem;
-    background: variables.$color-secondary;
+    margin: 2rem 0 2.5rem 0;
     border-radius: .3125rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
     border: none;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: white;
-    text-decoration: none;
-    font-weight: 400;
-    font-family: variables.$font-sans;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+
+    @media screen and (max-width: 48rem) {
+        font-size: .9rem;
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    @media screen and (max-width: 36rem) {
+        font-size: .8rem;
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    // hover
+    @media (hover: hover) {
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: variables.$shadow;
+            font-weight: 600; 
+        }
+    }
+
+    // active
+    &:active {
+        transform: translateY(2px) scale(0.98); 
+        box-shadow: none;
+        transition: transform 0.1s; 
+    }
+
+    // FOCUS-VISIBLE
+    &:focus-visible {
+        outline: 1px solid variables.$color-outline;
+        outline-offset: 3px;
+    }
 }
 
-@mixin button-cta-hover {
-    display: inline-block;
-    padding: .625rem 1.25rem;
-    background-color: variables.$color-hover;
-    border-radius: .3125rem;
-    border: none;
-    cursor: pointer;
-    transform: translateY(-4px);
-    transition: all ease-in 1s;
-    box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: variables.$font-sans;
-}
+// @mixin button-cta-hover {
+//     display: inline-block;
+//     padding: .625rem 1.25rem;
+//     background-color: variables.$color-hover;
+//     border-radius: .3125rem;
+//     border: none;
+//     cursor: pointer;
+//     transform: translateY(-4px);
+//     transition: all ease-in 1s;
+//     box-shadow: 0 8px 20px rgba(255, 200, 100, 0.3);
+//     color: white;
+//     text-decoration: none;
+//     font-weight: 600;
+//     font-family: variables.$font-sans;
+// }
 
-@mixin button-cta-focus-visible {
-    outline: 3px solid variables.$color-outline;
-    outline-offset: 3px;
-}
+// @mixin button-cta-focus-visible {
+//     outline: 3px solid variables.$color-outline;
+//     outline-offset: 3px;
+// }
 
-@mixin button-cta-active {
-    display: inline-block;
-    padding: .625rem 1.25rem;
-    background-color: variables.$color-active;
-    border-radius: .3125rem;
-    transform: translateY(3px);
-    transition: all ease-in 1s;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: variables.$font-sans;
-}
+// @mixin button-cta-active {
+//     display: inline-block;
+//     padding: .625rem 1.25rem;
+//     background-color: variables.$color-active;
+//     border-radius: .3125rem;
+//     transform: translateY(3px);
+//     transition: all ease-in 1s;
+//     color: white;
+//     text-decoration: none;
+//     font-weight: 600;
+//     font-family: variables.$font-sans;
+// }
 
 // secondary
 @mixin button-cta-secondary {

@@ -269,26 +269,22 @@
         margin: 2rem 0;
     }
 
-    &__button-cta {
+    &__btn-cta {
         @include buttons.button-cta;
-        margin-bottom: 3rem;
+        color: white;
+        margin-top: 1rem;
 
-        @media screen and (min-width: 31.25rem) {
-            margin-bottom: 2rem;
+        &:hover {
+            background-color: variables.$color-hover;
         }
-    }
 
-     &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
+        &:active {
+            background-color: variables.$color-active;
+        }
 
-     &__button-cta:active,
-     &__button-cta:focus {
-        @include buttons.button-cta-active;
-    }
-
-    &__link {
-        @include buttons.button-cta-text;
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
     }
 }
 
@@ -327,23 +323,22 @@
         }
     }
 
-    &__button-cta {
+    &__btn-cta {
         @include buttons.button-cta;
-        margin-bottom: 3rem;
-        width: fit-content;
+        color: white;
+        margin-top: 1rem;
 
-        @media screen and (min-width: 31.25rem) {
-            margin-bottom: 2rem;
+        &:hover {
+            background-color: variables.$color-hover;
         }
-    }
 
-     &__button-cta:hover {
-        @include buttons.button-cta-hover;
-    }
+        &:active {
+            background-color: variables.$color-active;
+        }
 
-     &__button-cta:active,
-     &__button-cta:focus {
-        @include buttons.button-cta-active;
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
     }
 
     &__link {
