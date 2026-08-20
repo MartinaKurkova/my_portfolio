@@ -16,19 +16,17 @@ twitterCard: summary_large_image
         <h1 class="gallery__heading">Portfolio</h1>
         <div class="gallery__filter-container" id="myBtnContainer">
                 <button class="gallery__btn active" data-filter="all">Ukázat vše</button>
-                <button class="gallery__btn" data-filter="illustration">Ilustrace</button>
-                <button class="gallery__btn" data-filter="free">Volná tvorba</button>
-                <button class="gallery__btn" data-filter="drawing">Kresba</button>
+                <button class="gallery__btn" data-filter="book">Knihy a publikace</button>
+                <button class="gallery__btn" data-filter="edu">Naučná ilustrace</button>
                 <button class="gallery__btn" data-filter="comics">Komiks</button>
-                <button class="gallery__btn" data-filter="popUp">Pop-up</button>
-                <button class="gallery__btn" data-filter="graphic">Grafika</button>
-                <button class="gallery__btn" data-filter="web">Web</button>
+                <button class="gallery__btn" data-filter="popUp">Papír a prostor</button>
+                <button class="gallery__btn" data-filter="autor">Autorská tvorba</button>
             </div>
 
         <!-- portfolio gallery grid -->
             <div class="gallery__grid" id="galleryGrid">
                 <!-- item -->
-                <a href="/portfolio/promeny/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/promeny/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                         src="/images/gallery/promeny.webp"
@@ -45,12 +43,34 @@ twitterCard: summary_large_image
                         height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Národní divadlo: Ovidius – Proměny</h2>
-                            <p class="gallery__category">Ilustrace</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item -->
-                <a href="/portfolio/krocan/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/rohozec/" class="gallery__column show comics" data-categories="comics">
+                    <figure class="gallery__figure">
+                        <img class="gallery__image" 
+                        src="/images/gallery/Rohozec.webp"
+                        srcset="/images/gallery/Rohozec_350.webp 350w,
+                                /images/gallery/Rohozec.webp 450w"
+                        sizes="(max-width: 450px) 100vw, 
+                                (max-width: 768px) 50vw, 
+                                33vw" 
+                        data-full="/images/gallery/promeny.webp" 
+                        alt="Komiks na restaurační stojánek pivovaru Rohozec pro pivo Skalák."
+                        loading="eager" 
+                        fetchpriority="high"
+                        width="450"
+                        height="450">
+                        <figcaption class="gallery__caption">
+                            <h2 class="gallery__title">Restaurační stojánky pro pivovar Rohozec</h2>
+                            <p class="gallery__category">Komiks</p>
+                        </figcaption> 
+                    </figure>
+                </a>
+                <!-- item -->
+                <a href="/portfolio/krocan/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                         src="/images/gallery/Krocan.webp"
@@ -67,12 +87,12 @@ twitterCard: summary_large_image
                         height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Martin Zeman – Krocan</h2>
-                            <p class="gallery__category">Ilustrace</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/puda/" class="gallery__column show illustration comics graphic" data-categories="illustration, comics, graphic">
+                <a href="/portfolio/puda/" class="gallery__column show illustration comics edu book" data-categories="comics, edu, book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                         src="/images/gallery/ukzuz.webp" 
@@ -89,12 +109,12 @@ twitterCard: summary_large_image
                         height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Příběh půdy</h2>
-                            <p class="gallery__category">Ilustrace, grafika, komiks</p>
+                            <p class="gallery__category">Knihy a publikace / naučná ilustrace / komiks</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/omalovanky/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/omalovanky/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                         src="/images/gallery/omalovanky.webp"
@@ -111,12 +131,12 @@ twitterCard: summary_large_image
                         height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Matesovy říkanky pro děcka i pro mamky</h2>
-                            <p class="gallery__category">Ilustrace</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/krajanek/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/krajanek/" class="gallery__column show book edu" data-categories="book, edu">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/Krajanek.webp" 
@@ -133,12 +153,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Putování českou krajinou</h2>
-                            <p class="gallery__category">Ilustrace</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/krok_domu/" class="gallery__column show illustration comics" data-categories="illustration, comics">
+                <a href="/portfolio/krok_domu/" class="gallery__column show book comics" data-categories="comics, book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/krokDomu.webp"
@@ -155,12 +175,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Společně po svých</h2>
-                            <p class="gallery__category">Ilustrace, komiks</p>
+                            <p class="gallery__category">Knihy a publikace / komiks</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/gaiman/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/gaiman/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/Stardust_Gaiman.webp" 
@@ -176,12 +196,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Neil Gaiman – Hvězdný prach, Kniha hřbitova</h2>
-                            <p class="gallery__category">Ilustrace</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/karneval/" class="gallery__column show drawing" data-categories="drawing">
+                <a href="/portfolio/karneval/" class="gallery__column show" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/benatky_vyrez.webp" 
@@ -197,12 +217,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Karneval v Benátkách</h2>
-                            <p class="gallery__category">Kresba</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/taboo/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/taboo/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/taboo.webp" 
@@ -223,7 +243,7 @@ twitterCard: summary_large_image
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/gramla/" class="gallery__column show drawing popUp" data-categories="drawing, popUp">
+                <a href="/portfolio/gramla/" class="gallery__column show popUp" data-categories="popUp">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/gramla.webp" 
@@ -239,12 +259,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Gramla</h2>
-                            <p class="gallery__category">Kresba, pop-up</p>
+                            <p class="gallery__category">Knihy a publikace / papír a prostor</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/vinarstvi/" class="gallery__column show illustration graphic" data-categories="illustration, graphic">
+                <a href="/portfolio/vinarstvi/" class="gallery__column show edu" data-categories="edu">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/vino.webp" 
@@ -260,12 +280,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Národní zemědělské muzeum: Vinařství</h2>
-                            <p class="gallery__category">Ilustrace, grafika</p>
+                            <p class="gallery__category">Naučná ilustrace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/nzm/" class="gallery__column show illustration" data-categories="illustration">
+                <a href="/portfolio/nzm/" class="gallery__column show book edu" data-categories="edu, book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/nzm.webp" 
@@ -281,12 +301,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Národní zemědělské muzeum: Obrázkové statistiky</h2>
-                            <p class="gallery__category">Ilustrace</p>
+                            <p class="gallery__category">Knihy a publikace / naučná ilustrace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/oskare_plav/" class="gallery__column show illustration popUp" data-categories="illustration, popUp">
+                <a href="/portfolio/oskare_plav/" class="gallery__column show book popUp" data-categories="popUp, book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/oskar_obalka.webp"
@@ -302,12 +322,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Oskare, plav!</h2>
-                            <p class="gallery__category">Ilustrace, pop-up</p>
+                            <p class="gallery__category">Knihy a publikace / papír a prostor</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/pexesa/" class="gallery__column show drawing free" data-categories="drawing, free, web">
+                <a href="/portfolio/pexesa/" class="gallery__column show autor" data-categories="autor">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/pexeso.webp" 
@@ -323,12 +343,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Pexesa</h2>
-                            <p class="gallery__category">Kresba, volná tvorba, web</p>
+                            <p class="gallery__category">Autorská tvorba</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/hrosik/" class="gallery__column show illustration free" data-categories="illustration, free">
+                <a href="/portfolio/hrosik/" class="gallery__column show illustration autor book" data-categories="autor, book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/hrosik.webp"
@@ -344,12 +364,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Hošík hrošík</h2>
-                            <p class="gallery__category">Ilustrace, volná tvorba</p>
+                            <p class="gallery__category">Knihy a publikace / autorská tvorba</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/mendelu/" class="gallery__column show drawing graphic" data-categories="drawing, graphic">
+                <a href="/portfolio/mendelu/" class="gallery__column show" data-categories="">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/mendelu.webp" 
@@ -365,12 +385,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Vydavatelství Mendelovy univerzity v Brně</h2>
-                            <p class="gallery__category">Kresba, grafika</p>
+                            <p class="gallery__category"></p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/pessoa/" class="gallery__column show illustration graphic" data-categories="illustration, graphic">
+                <a href="/portfolio/pessoa/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/pessoa.webp"
@@ -386,12 +406,12 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Fernando Pessoa: Kniha neklidu</h2>
-                            <p class="gallery__category">Ilustrace, grafika</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
                 <!-- item-->
-                <a href="/portfolio/kazantzakis/" class="gallery__column show illustration graphic" data-categories="illustration, graphic">
+                <a href="/portfolio/kazantzakis/" class="gallery__column show book" data-categories="book">
                     <figure class="gallery__figure">
                         <img class="gallery__image" 
                             src="/images/gallery/pokuseni.webp" 
@@ -407,7 +427,7 @@ twitterCard: summary_large_image
                             height="450">
                         <figcaption class="gallery__caption">
                             <h2 class="gallery__title">Nikos Kazantzakis: Poslední pokušení</h2>
-                            <p class="gallery__category">Ilustrace, grafika</p>
+                            <p class="gallery__category">Knihy a publikace</p>
                         </figcaption> 
                     </figure>
                 </a>
