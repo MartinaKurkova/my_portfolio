@@ -30,6 +30,24 @@
         opacity: 0; 
     }
 
+    &__link {
+        @include buttons.button-cta;
+        background-color: variables.$color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: variables.$color-hover;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
+    }
+
     &__image-container {
         flex: 5;
         display: flex;
@@ -153,10 +171,10 @@
         outline: 2px solid variables.$color-outline;
     }
 
-    &__btn-cta {
+    &__button {
         @include buttons.button-cta;
+        background-color: variables.$color-secondary;
         color: white;
-        margin-top: 1rem;
 
         &:hover {
             background-color: variables.$color-hover;

@@ -275,10 +275,10 @@
     }
 
     // Buttons
-    &__btn-cta {
+    &__button-cta {
         @include buttons.button-cta;
+        background-color: variables.$color-secondary;
         color: white;
-        margin-top: 1rem;
 
         &:hover {
             background-color: variables.$color-hover;
@@ -291,9 +291,5 @@
         &:focus-visible {
             outline-color: variables.$color-outline; 
         }
-    }
-
-    &__button-link {
-        @include buttons.button-cta-text;
     }
 }

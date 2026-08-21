@@ -80,11 +80,6 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, auto);
         }
-
-        @media screen and (min-width: 62.5rem) {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, auto);
-        }
     }
 
     &__heading {
@@ -120,15 +115,6 @@
         }
     }
 
-    @media screen and (min-width: 62.5rem) {
-            &__item:nth-child(1),
-            &__item:nth-child(2),
-            &__item:nth-child(3) {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
     &__item.show {
         opacity: 1;
         transform: translateY(0);
@@ -156,6 +142,25 @@
 
     &__description {
         text-align: center;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__subheading {
+        margin-bottom: 1rem;
+    }
+
+    &__typo {
+        width: 100%;
+
+        @media screen and (min-width: 43rem) {
+            width: 60%;
+        }
     }
 }
 
@@ -269,10 +274,10 @@
         margin: 2rem 0;
     }
 
-    &__btn-cta {
+    &__button-cta {
         @include buttons.button-cta;
+        background-color: variables.$color-secondary;
         color: white;
-        margin-top: 1rem;
 
         &:hover {
             background-color: variables.$color-hover;
@@ -323,10 +328,10 @@
         }
     }
 
-    &__btn-cta {
+    &__button-cta {
         @include buttons.button-cta;
+        background-color: variables.$color-secondary;
         color: white;
-        margin-top: 1rem;
 
         &:hover {
             background-color: variables.$color-hover;
@@ -339,9 +344,5 @@
         &:focus-visible {
             outline-color: variables.$color-outline; 
         }
-    }
-
-    &__link {
-        @include buttons.button-cta-text;
     }
 }
