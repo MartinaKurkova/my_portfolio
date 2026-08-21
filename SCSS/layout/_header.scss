@@ -29,11 +29,14 @@
         color: white;
         text-decoration: none;
         font-size: clamp(0.875rem, calc(1rem + 1vw), 1.25rem);
-        display: inline-block;
+        display: flex;         
+        align-items: center;
+        gap: 0.5rem;
+        white-space: nowrap;
     }
 
     &__lastname {
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: 26.25rem) {
             display: none;
         }
     }
@@ -49,6 +52,13 @@
         @media screen and (max-width: 21.875rem) {
             display: none;
         }
+    }
+
+    &__logo {
+        display: block;              
+        width: 3rem;                 
+        height: auto;
+        flex-shrink: 0;
     }
 
     &__animated.typing-complete {

@@ -2,6 +2,7 @@
 @use "../base/typography";
 @use "../base/base";
 @use "../base/fonts";
+@use "../components/buttons";
 
 // navigation
 .header {
@@ -23,7 +24,7 @@
         font-size: 0.875rem;
         font-weight: 400; 
         padding: 0.5rem 1rem;
-        border-radius: .25rem;
+        border-radius: 1rem;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
@@ -45,7 +46,7 @@
 
     // CTA button
     &__nav-link_cta {
-        background-color: white;
+        background-color: variables.$color-bg;
         color: variables.$color-primary;
     }
 
@@ -118,7 +119,7 @@
             color: white;
             text-transform: uppercase;
 
-            @media screen and (max-width:26.25rem) {
+            @media screen and (max-width:28.75rem) {
                 display: none;
             }
         }
@@ -196,20 +197,29 @@
             font-weight: 800;
         }
 
-        // CTA button
-        &__nav-link_cta {
-            background-color: variables.$color-primary;
+        &__nav-item--active &__nav-link_cta {
+            background-color: variables.$color-secondary;
             color: white;
+            margin: 0;
         }
 
-        &__nav-link_cta:hover,
-        &__nav-link_cta:focus-visible,
-        &__nav-link_cta--active {
-            background-color: variables.$color-hover;
+        // CTA button
+        &__nav-link_cta {
+            @include buttons.button-cta;
+            background-color: variables.$color-secondary;
             color: white;
-            opacity: 0.9;
-            outline: 3px solid variables.$color-outline; 
-            outline-offset: 2px;
+
+            &:hover {
+                background-color: variables.$color-hover;
+            }
+
+            &:active {
+                background-color: variables.$color-active;
+            }
+
+            &:focus-visible {
+                outline-color: variables.$color-outline; 
+            }
         }
     }
 }

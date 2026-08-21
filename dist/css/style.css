@@ -176,9 +176,12 @@ strong {
   color: white;
   text-decoration: none;
   font-size: clamp(0.875rem, 1rem + 1vw, 1.25rem);
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 26.25rem) {
   .header__lastname {
     display: none;
   }
@@ -194,6 +197,12 @@ strong {
   .header__animated {
     display: none;
   }
+}
+.header__logo {
+  display: block;
+  width: 3rem;
+  height: auto;
+  flex-shrink: 0;
 }
 .header__animated.typing-complete {
   animation: none;
@@ -224,7 +233,7 @@ strong {
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .header__nav-link:hover {
@@ -240,7 +249,7 @@ strong {
   font-weight: 800;
 }
 .header__nav-link_cta {
-  background-color: white;
+  background-color: #F8F2FA;
   color: #800080;
 }
 .header__nav-link_cta:hover, .header__nav-link_cta:focus-visible, .header__nav-link_cta--active {
@@ -295,7 +304,7 @@ strong {
     text-transform: uppercase;
   }
 }
-@media screen and (max-width: 59.375rem) and (max-width: 26.25rem) {
+@media screen and (max-width: 59.375rem) and (max-width: 28.75rem) {
   .header__menu-text {
     display: none;
   }
@@ -360,16 +369,67 @@ strong {
     background-color: white;
     font-weight: 800;
   }
+  .header__nav-item--active .header__nav-link_cta {
+    background-color: #C71585;
+    color: white;
+    margin: 0;
+  }
   .header__nav-link_cta {
-    background-color: #800080;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    margin: 2rem 0 2.5rem 0;
+    border-radius: 0.3125rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #C71585;
     color: white;
   }
-  .header__nav-link_cta:hover, .header__nav-link_cta:focus-visible, .header__nav-link_cta--active {
+}
+@media screen and (max-width: 59.375rem) and (max-width: 48rem) {
+  .header__nav-link_cta {
+    font-size: 0.9rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+}
+@media screen and (max-width: 59.375rem) and (max-width: 36rem) {
+  .header__nav-link_cta {
+    font-size: 0.8rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+}
+@media screen and (max-width: 59.375rem) and (hover: hover) {
+  .header__nav-link_cta:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 59.375rem) {
+  .header__nav-link_cta:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: none;
+    transition: transform 0.1s;
+  }
+  .header__nav-link_cta:focus-visible {
+    outline: 1px solid #FFAA00;
+    outline-offset: 3px;
+  }
+  .header__nav-link_cta:hover {
     background-color: #660066;
-    color: white;
-    opacity: 0.9;
-    outline: 3px solid #FFAA00;
-    outline-offset: 2px;
+  }
+  .header__nav-link_cta:active {
+    background-color: #4d004d;
+  }
+  .header__nav-link_cta:focus-visible {
+    outline-color: #FFAA00;
   }
 }
 .no-scroll {
@@ -2381,17 +2441,7 @@ strong {
 .shop__heading {
   margin: 3rem 0;
 }
-
-.shop-intro {
-  background-color: #F8F2FA;
-}
-.shop-intro__container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 2rem 1.25rem 0 1.25rem;
-}
-.shop-intro__text {
+.shop__text {
   display: block;
   font-family: "Work Sans", sans-serif;
   text-transform: none;
@@ -2401,102 +2451,32 @@ strong {
   font-weight: 300;
 }
 
-.pexeso__container {
+.print__container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 2rem 1.25rem;
 }
-.pexeso__heading {
+.print__heading {
   margin: 0;
 }
-.pexeso__text {
+.print__text {
   color: rgb(46, 45, 45);
 }
-.pexeso__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-@media screen and (max-width: 56.25rem) {
-  .pexeso__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 37.5rem) {
-  .pexeso__grid {
-    grid-template-columns: 1fr;
-  }
-}
-.pexeso__card {
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.pexeso__card:hover {
-  transform: translateY(-4px);
-}
-.pexeso__card-link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.pexeso__sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-.pexeso__item {
-  border-radius: 5px;
-  background: white;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid whitesmoke;
-  margin-bottom: 2rem;
-}
-.pexeso__image-container {
-  margin-bottom: 1rem;
-}
-.pexeso__image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.3125rem 0.3125rem 0 0;
-  background-color: rgb(246, 246, 246);
-}
-.pexeso__text-container {
-  margin-bottom: 1rem;
-  padding: 0 1rem 1rem 1rem;
-}
-.pexeso__name {
-  font-family: "Fraunces", serif;
-  font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
-  color: #333333;
-  margin: 0.5rem 0;
-}
-.pexeso__category {
-  color: #666;
-  margin: 0 0 4px 0;
-}
-.pexeso__buy {
+.print__info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 0.5rem;
 }
-.pexeso__price {
-  font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
-  font-weight: 900;
-  margin: 0;
+.print__prices {
+  text-align: end;
+  font-weight: 800;
 }
-.pexeso__link {
+.print__list-item {
+  margin: 0.5rem 0;
+}
+.print__button-cta {
   display: inline-block;
   padding: 0.625rem 1.25rem;
   margin: 2rem 0 2.5rem 0;
@@ -2513,44 +2493,189 @@ strong {
   -webkit-tap-highlight-color: transparent;
 }
 @media screen and (max-width: 48rem) {
-  .pexeso__link {
+  .print__button-cta {
     font-size: 0.9rem;
     margin: 1.5rem 0 2rem 0;
   }
 }
 @media screen and (max-width: 36rem) {
-  .pexeso__link {
+  .print__button-cta {
     font-size: 0.8rem;
     margin: 1rem 0 1.5rem 0;
   }
 }
 @media (hover: hover) {
-  .pexeso__link:hover {
+  .print__button-cta:hover {
     transform: translateY(-4px);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     font-weight: 600;
   }
 }
-.pexeso__link:active {
+.print__button-cta:active {
   transform: translateY(2px) scale(0.98);
   box-shadow: none;
   transition: transform 0.1s;
 }
-.pexeso__link:focus-visible {
+.print__button-cta:focus-visible {
   outline: 1px solid #FFAA00;
   outline-offset: 3px;
 }
-.pexeso__link {
+.print__button-cta {
+  background-color: white;
+  border: 1px solid #C71585;
+  color: #C71585;
+  margin: 0;
+}
+.print__button-cta:hover {
+  background-color: #660066;
+  color: white;
+}
+.print__button-cta:active {
+  background-color: #4d004d;
+  color: white;
+}
+.print__button-cta:focus-visible {
+  outline-color: #FFAA00;
+  color: white;
+}
+.print__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media screen and (max-width: 56.25rem) {
+  .print__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .print__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.print__card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.print__card:hover {
+  transform: translateY(-4px);
+}
+.print__card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.print__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.print__item {
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid whitesmoke;
+  margin-bottom: 2rem;
+}
+.print__image-container {
+  margin-bottom: 1rem;
+}
+.print__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  background-color: rgb(246, 246, 246);
+}
+.print__text-container {
+  margin-bottom: 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+.print__name {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
+  color: #333333;
+  margin: 0.5rem 0;
+}
+.print__category {
+  color: #666;
+  margin: 0 0 4px 0;
+}
+.print__buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 1rem 1rem 1rem;
+}
+.print__price {
+  font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
+  font-weight: 900;
+  margin: 0;
+}
+.print__link {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  margin: 2rem 0 2.5rem 0;
+  border-radius: 0.3125rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+@media screen and (max-width: 48rem) {
+  .print__link {
+    font-size: 0.9rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+}
+@media screen and (max-width: 36rem) {
+  .print__link {
+    font-size: 0.8rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+}
+@media (hover: hover) {
+  .print__link:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+  }
+}
+.print__link:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: none;
+  transition: transform 0.1s;
+}
+.print__link:focus-visible {
+  outline: 1px solid #FFAA00;
+  outline-offset: 3px;
+}
+.print__link {
   color: white;
   margin-top: 1rem;
 }
-.pexeso__link:hover {
+.print__link:hover {
   background-color: #660066;
 }
-.pexeso__link:active {
+.print__link:active {
   background-color: #4d004d;
 }
-.pexeso__link:focus-visible {
+.print__link:focus-visible {
   outline-color: #FFAA00;
 }
 

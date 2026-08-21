@@ -22,17 +22,6 @@
         margin: 3rem 0;
     }
 
-}
-// shop intro
-.shop-intro {
-    background-color: variables.$color-bg;
-    &__container {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 2rem 1.25rem 0 1.25rem;
-    }
-
     &__text {
         display: block;
         font-family: variables.$font-sans;
@@ -44,8 +33,8 @@
     }
 }
 
-// Pexeso
-.pexeso {
+// Print
+.print {
     &__container {
         display: flex;
         flex-direction: column;
@@ -61,6 +50,45 @@
 
     &__text {
         color: rgb(46, 45, 45);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    &__prices {
+        text-align: end;
+        font-weight: 800;
+    }
+
+    &__list-item {
+        margin: 0.5rem 0;
+    }
+
+    &__button-cta {
+        @include buttons.button-cta;
+        background-color: white;
+        border: 1px solid variables.$color-secondary;
+        color: variables.$color-secondary;
+        margin: 0;
+
+        &:hover {
+            background-color: variables.$color-hover;
+            color: white;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+            color: white;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+            color: white;
+        }
     }
 
     // gallery grid
