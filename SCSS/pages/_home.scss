@@ -222,6 +222,12 @@
         margin: 0;
         text-align: center;
         font-size: 2rem;
+         font-family: variables.$font-serif;
+        -webkit-font-smoothing: antialiased;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        line-height: 1.1;
+        color: variables.$color-dark;
 
         @media screen and (max-width: 52rem) {
             font-size: 1.6rem;

@@ -824,6 +824,12 @@ strong {
   margin: 0;
   text-align: center;
   font-size: 2rem;
+  font-family: "Fraunces", serif;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #550455;
 }
 @media screen and (max-width: 52rem) {
   .small-gallery__title {
