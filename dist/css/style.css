@@ -1,79 +1,80 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces-v38-latin_latin-ext-100.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces-v38-latin_latin-ext-200.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces-v38-latin_latin-ext-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces-v38-latin_latin-ext-800.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces-v38-latin_latin-ext-900.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces-v38-latin_latin-ext-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/work-sans-v24-latin_latin-ext-200.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/work-sans-v24-latin_latin-ext-300.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/work-sans-v24-latin_latin-ext-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/work-sans-v24-latin_latin-ext-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Work Sans";
   src: url("/assets/fonts/work-sans-v24-latin_latin-ext-800.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 html {
   box-sizing: border-box;
@@ -592,10 +593,28 @@ strong {
   flex-direction: column;
   margin: 0 auto;
   padding: 2rem 1.25rem 2rem 1.25rem;
-  background: url("/images/autoportret/Autoportret_cerveny.webp") bottom right no-repeat;
-  background-size: contain;
+  position: relative; /* Nutné pro absolutní pozicování obrázku */
+  overflow: hidden;
+}
+.hero__bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 50%; /* Případně uprav podle potřeby */
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+@media screen and (max-width: 55rem) {
+  .hero__bg-img {
+    max-width: 80%; /* Na mobilu zabere větší část dole */
+  }
 }
 .hero__text-container {
+  z-index: 2;
+  margin-top: 4rem;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -607,6 +626,7 @@ strong {
 @media screen and (max-width: 58.125rem) {
   .hero__text-container {
     max-width: 55%;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 55rem) {

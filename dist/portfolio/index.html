@@ -33,7 +33,7 @@
     "name": "Martina Kurková Nožičková",
     "jobTitle": "Ilustrátorka",
     "url": "",
-    "image": "/images/autoportret/output/medium/Autoportret_vlastovky-u_medium_600.png"
+    "image": "/images/autoportret/Autoportret_cerveny.webp"
     }
     </script>
         
@@ -48,13 +48,14 @@
     <meta name="msapplication-TileColor" content="#800080">
     <meta name="theme-color" content="#800080">
 
-    <link rel="preload" href="/assets/fonts/fraunces-v38-latin_latin-ext-900.woff2" as="font" type="font/woff2" crossorigin>
-
     <!-- Canonical URL -->
     <link rel="canonical" href="/portfolio/">
 
     <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+
+    <link rel="preload" as="image" href="/images/autoportret/Autoportret_cerveny.webp" fetchpriority="high">
+    <link rel="preload" href="/assets/fonts/fraunces-v38-latin_latin-ext-900.woff2" as="font" type="font/woff2" crossorigin>
 
     
 
@@ -134,450 +135,460 @@
         <main>
 
             <!-- Gallery section -->
- <section class="gallery">
+<section class="gallery">
     <div class="gallery__container">
         <h1 class="gallery__heading">Portfolio</h1>
         <div class="gallery__filter-container" id="myBtnContainer">
-                <button class="gallery__btn active" data-filter="all">Ukázat vše</button>
-                <button class="gallery__btn" data-filter="book">Knihy a publikace</button>
-                <button class="gallery__btn" data-filter="edu">Naučná ilustrace</button>
-                <button class="gallery__btn" data-filter="comics">Komiks</button>
-                <button class="gallery__btn" data-filter="popUp">Papír a prostor</button>
-                <button class="gallery__btn" data-filter="autor">Autorská tvorba</button>
-            </div>
+            <button class="gallery__btn active" data-filter="all">Ukázat vše</button>
+            <button class="gallery__btn" data-filter="book">Knihy a publikace</button>
+            <button class="gallery__btn" data-filter="edu">Naučná ilustrace</button>
+            <button class="gallery__btn" data-filter="comics">Komiks</button>
+            <button class="gallery__btn" data-filter="popUp">Papír a prostor</button>
+            <button class="gallery__btn" data-filter="autor">Autorská tvorba</button>
+        </div>
 
         <!-- portfolio gallery grid -->
-            <div class="gallery__grid" id="galleryGrid">
-                <!-- item -->
-                <a href="/portfolio/promeny/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                        src="/images/gallery/promeny.webp"
+        <div class="gallery__grid" id="galleryGrid">
+            <!-- item 1 (LCP - načítá se jako první s vysokou prioritou) -->
+            <a href="/portfolio/promeny/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/promeny_350.webp"
                         srcset="/images/gallery/promeny_350.webp 350w,
                                 /images/gallery/promeny.webp 450w"
-                        sizes="(max-width: 450px) 100vw, 
-                                (max-width: 768px) 50vw, 
-                                33vw" 
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
                         data-full="/images/gallery/promeny.webp" 
                         alt="Ilustrace k Orfeovi a Eurydiké z Ovidiových Proměn. Ovidius se právě ohledl a ztratil navždy Eurydiké. Jeho srdce se rozpadlo na kousky."
                         loading="eager" 
                         fetchpriority="high"
                         width="450"
                         height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Národní divadlo: Ovidius – Proměny</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item -->
-                <a href="/portfolio/rohozec/" class="gallery__column show comics" data-categories="comics">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                        src="/images/gallery/Rohozec.webp"
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Národní divadlo: Ovidius – Proměny</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 2 -->
+            <a href="/portfolio/rohozec/" class="gallery__column show comics" data-categories="comics">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/Rohozec_350.webp"
                         srcset="/images/gallery/Rohozec_350.webp 350w,
                                 /images/gallery/Rohozec.webp 450w"
-                        sizes="(max-width: 450px) 100vw, 
-                                (max-width: 768px) 50vw, 
-                                33vw" 
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
                         data-full="/images/gallery/promeny.webp" 
                         alt="Komiks na restaurační stojánek pivovaru Rohozec pro pivo Skalák."
-                        loading="eager" 
-                        fetchpriority="high"
+                        loading="lazy"
                         width="450"
                         height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Restaurační stojánky pro pivovar Rohozec</h2>
-                            <p class="gallery__category">Komiks</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item -->
-                <a href="/portfolio/krocan/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                        src="/images/gallery/Krocan.webp"
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Restaurační stojánky pro pivovar Rohozec</h2>
+                        <p class="gallery__category">Komiks</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 3 -->
+            <a href="/portfolio/krocan/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/Krocan_350.webp"
                         srcset="/images/gallery/Krocan_350.webp 350w,
                                 /images/gallery/Krocan.webp 450w"
-                        sizes="(max-width: 450px) 100vw, 
-                                (max-width: 768px) 50vw, 
-                                33vw" 
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
                         data-full="/images/gallery/Krocan.webp" 
                         alt="Ilustrace k textu Martina Zemana: Krocan. Jde o středověký epos. Na kresbě vidíme tři rytíře nesoucí na lehátku čtvrtého mrtvého. V dálce je hrad, na který směřují."
-                        loading="eager" 
-                        fetchpriority="high" 
+                        loading="lazy" 
                         width="450"
                         height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Martin Zeman – Krocan</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/puda/" class="gallery__column show illustration comics edu book" data-categories="comics, edu, book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Martin Zeman – Krocan</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 4 -->
+            <a href="/portfolio/puda/" class="gallery__column show illustration comics edu book" data-categories="comics, edu, book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
                         src="/images/gallery/ukzuz.svg" 
-                        srcset="/images/gallery/ukzuz.svg,"
-                        sizes="(max-width: 450px) 100vw, 
-                                (max-width: 768px) 50vw, 
-                                33vw" 
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
                         data-full="/images/gallery/ukzuz.svg"
                         alt="Naučná ilustrace pro Úkzuz k výstavě v Národním zemědělském muzeu. Pampeliška a její kořeny v zemi. K ní cestičkami v půdě putují brouci." 
-                        loading="eager" 
-                        fetchpriority="high"
+                        loading="lazy"
                         width="450"
                         height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Příběh půdy</h2>
-                            <p class="gallery__category">Knihy a publikace / naučná ilustrace / komiks</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/omalovanky/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                        src="/images/gallery/omalovanky.webp"
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Příběh půdy</h2>
+                        <p class="gallery__category">Knihy a publikace / naučná ilustrace / komiks</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 5 -->
+            <a href="/portfolio/omalovanky/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/omalovanky_350.webp"
                         srcset="/images/gallery/omalovanky_350.webp 350w,
                                 /images/gallery/omalovanky.webp 450w"
-                        sizes="(max-width: 450px) 100vw, 
-                                (max-width: 768px) 50vw, 
-                                33vw" 
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
                         data-full="/images/gallery/omalovanky.webp" 
                         alt="Ilustrace k netradičním omalovánkám: kresby k básním Martina Kašíka – Matesovy říkanky. Na obálce vidíme babičku korenářku sedící na lavičce před svou chaloupkou."
-                        loading="eager" 
-                        fetchpriority="high"
+                        loading="lazy"
                         width="450"
                         height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Matesovy říkanky pro děcka i pro mamky</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/krajanek/" class="gallery__column show book edu" data-categories="book, edu">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/Krajanek.webp" 
-                            srcset="/images/gallery/Krajanek_350.webp 350w,
-                                    /images/gallery/Krajanek.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/Krajanek.webp" 
-                            alt="Ilustrace rozhledny pro časopis Krajánek."
-                            loading="eager" 
-                            fetchpriority="high"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Putování českou krajinou</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/krok-domu/" class="gallery__column show book comics" data-categories="comics, book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/krokDomu.webp"
-                            srcset="/images/gallery/krokDomu_350.webp 350w,
-                                    /images/gallery/krokDomu.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/krokDomu.webp"  
-                            alt="Výřez z komiksu vytvořeného pro sdružení Krok domů. Hlavní hrdinka Katka sedí na lavičce, vedle ní sedí další dívka a za ní stojí muž. Všichni jsou drogově závislí."
-                            loading="eager" 
-                            fetchpriority="high"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Společně po svých</h2>
-                            <p class="gallery__category">Knihy a publikace / komiks</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/gaiman/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/Stardust_Gaiman.webp" 
-                            srcset="/images/gallery/Stardust_Gaiman_350.webp 350w,
-                                    /images/gallery/Stardust_Gaiman.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/Stardust_Gaiman.webp" 
-                            alt="Ilustrace pro audioknihu Neila Gaimana – Hvězdný prach. V lese padá žena z nebe."
-                            loading="eager"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Neil Gaiman – Hvězdný prach, Kniha hřbitova</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/karneval/" class="gallery__column show" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/benatky_vyrez.webp" 
-                            srcset="/images/gallery/benatky_vyrez_350.webp 350w,
-                                    /images/gallery/benatky_vyrez.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/benatky_vyrez.webp" 
-                            alt="Kresba do kalendáře Karneval v Benátkách pro Konica Minolta. Pestrobarevná kresba s maskovanou postavou a lvem. Stojí na benátském náměstí."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Karneval v Benátkách</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/taboo/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/taboo.webp" 
-                            srcset="/images/gallery/taboo_350.webp 350w,
-                                    /images/gallery/taboo.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/taboo.webp" 
-                            alt="Ilustrace do knihy Taboo pojednávající o různých formách sexuality. Motiv se zdí plnou zarámovaných prezervativů."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Bohemian Taboo Stories</h2>
-                            <p class="gallery__category">Ilustrace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/gramla/" class="gallery__column show popUp" data-categories="popUp">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/gramla.webp" 
-                            srcset="/images/gallery/gramla_350.webp 350w,
-                                    /images/gallery/gramla.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/gramla.webp" 
-                            alt="Gramla – kreslená pop-up vystřihovánka pro děti s motivem velryby."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Gramla</h2>
-                            <p class="gallery__category">Knihy a publikace / papír a prostor</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/vinarstvi/" class="gallery__column show edu" data-categories="edu">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/vino.webp" 
-                            srcset="/images/gallery/vino_350.webp 350w,
-                                    /images/gallery/vino.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/vino.webp"
-                            alt="Ilustrované infografiky a grafika pro expozici vinařstí pobočky Národního zemědělského muzea ve Valticích. Na obrázku je infografika s odrůdami vína."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Národní zemědělské muzeum: Vinařství</h2>
-                            <p class="gallery__category">Naučná ilustrace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-            <a href="/portfolio/zvireci-rise/" class="small-gallery__column show">
-                <figure class="small-gallery__figure">
-                    <img class="small-gallery__image" 
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Matesovy říkanky pro děcka i pro mamky</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 6 -->
+            <a href="/portfolio/krajanek/" class="gallery__column show book edu" data-categories="book, edu">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/Krajanek_350.webp" 
+                        srcset="/images/gallery/Krajanek_350.webp 350w,
+                                /images/gallery/Krajanek.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/Krajanek.webp" 
+                        alt="Ilustrace rozhledny pro časopis Krajánek."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Putování českou krajinou</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 7 -->
+            <a href="/portfolio/krok-domu/" class="gallery__column show book comics" data-categories="comics, book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/krokDomu_350.webp"
+                        srcset="/images/gallery/krokDomu_350.webp 350w,
+                                /images/gallery/krokDomu.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/krokDomu.webp"  
+                        alt="Výřez z komiksu vytvořeného pro sdružení Krok domů. Hlavní hrdinka Katka sedí na lavičce, vedle ní sedí další dívka a za ní stojí muž. Všichni jsou drogově závislí."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Společně po svých</h2>
+                        <p class="gallery__category">Knihy a publikace / komiks</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 8 -->
+            <a href="/portfolio/gaiman/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/Stardust_Gaiman_350.webp" 
+                        srcset="/images/gallery/Stardust_Gaiman_350.webp 350w,
+                                /images/gallery/Stardust_Gaiman.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/Stardust_Gaiman.webp" 
+                        alt="Ilustrace pro audioknihu Neila Gaimana – Hvězdný prach. V lese padá žena z nebe."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Neil Gaiman – Hvězdný prach, Kniha hřbitova</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 9 -->
+            <a href="/portfolio/karneval/" class="gallery__column show" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/benatky_vyrez_350.webp" 
+                        srcset="/images/gallery/benatky_vyrez_350.webp 350w,
+                                /images/gallery/benatky_vyrez.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/benatky_vyrez.webp" 
+                        alt="Kresba do kalendáře Karneval v Benátkách pro Konica Minolta. Pestrobarevná kresba s maskovanou postavou a lvem. Stojí na benátském náměstí."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Karneval v Benátkách</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 10 -->
+            <a href="/portfolio/taboo/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/taboo_350.webp" 
+                        srcset="/images/gallery/taboo_350.webp 350w,
+                                /images/gallery/taboo.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/taboo.webp" 
+                        alt="Ilustrace do knihy Taboo pojednávající o různých formách sexuality. Motiv se zdí plnou zarámovaných prezervativů."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Bohemian Taboo Stories</h2>
+                        <p class="gallery__category">Ilustrace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 11 -->
+            <a href="/portfolio/gramla/" class="gallery__column show popUp" data-categories="popUp">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/gramla_350.webp" 
+                        srcset="/images/gallery/gramla_350.webp 350w,
+                                /images/gallery/gramla.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/gramla.webp" 
+                        alt="Gramla – kreslená pop-up vystřihovánka pro děti s motivem velryby."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Gramla</h2>
+                        <p class="gallery__category">Knihy a publikace / papír a prostor</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 12 -->
+            <a href="/portfolio/vinarstvi/" class="gallery__column show edu" data-categories="edu">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/vino_350.webp" 
+                        srcset="/images/gallery/vino_350.webp 350w,
+                                /images/gallery/vino.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/vino.webp"
+                        alt="Ilustrované infografiky a grafika pro expozici vinařstí pobočky Národního zemědělského muzea ve Valticích. Na obrázku je infografika s odrůdami vína."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Národní zemědělské muzeum: Vinařství</h2>
+                        <p class="gallery__category">Naučná ilustrace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 13 -->
+            <a href="/portfolio/zvireci-rise/" class="gallery__column show autor" data-categories="autor">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
                         src="/images/gallery/pipulky_tapeta.svg" 
-                        srcset="/images/gallery/pipulky_tapeta.svg"
-                        sizes="(max-width: 450px) 100vw, 
-                                (max-width: 768px) 50vw, 
-                                33vw" 
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
                         data-full="/images/gallery/pipulky_tapeta.svg" 
                         alt="Vektorová ilustrace pipulek." 
                         loading="lazy"
                         width="450"
                         height="450">
-                    <figcaption class="small-gallery__caption">
-                        <h3 class="small-gallery__title">Zvířecí říše</h3>
-                        <p class="small-gallery__category">Autorská tvorba</p>
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Zvířecí říše</h2>
+                        <p class="gallery__category">Autorská tvorba</p>
                     </figcaption> 
                 </figure>
             </a>
-                <!-- item-->
-                <a href="/portfolio/nzm/" class="gallery__column show book edu" data-categories="edu, book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/nzm.webp" 
-                            srcset="/images/gallery/nzm_350.webp 350w,
-                                    /images/gallery/nzm.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/nzm.webp"
-                            alt="Ilustrace do publikací/obrázkových statistik Národního zemědělského muzea – Půda, Voda a Potraviny. Kresba s myší pobýhaící v řepném poli."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Národní zemědělské muzeum: Obrázkové statistiky</h2>
-                            <p class="gallery__category">Knihy a publikace / naučná ilustrace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/oskare-plav/" class="gallery__column show book popUp" data-categories="popUp, book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/oskar_obalka.webp"
-                            srcset="/images/gallery/oskar_obalka_350.webp 350w,
-                                    /images/gallery/oskar_obalka.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/oskar_obalka.webp" 
-                            alt="Ilustrace hlavního hrdiny knihy – tučňáka Oskara. Stojí na kře uprostřed oceánu a neví, jak se dostat na břeh. Bojí se totiž vody."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Oskare, plav!</h2>
-                            <p class="gallery__category">Knihy a publikace / papír a prostor</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/pexesa/" class="gallery__column show autor" data-categories="autor">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/pexeso.webp" 
-                            srcset="/images/gallery/pexeso_350.webp 350w,
-                                    /images/gallery/pexeso.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/pexeso.webp" 
-                            alt="Kreslená autorská pexesa různých motivů. Motiv z psího pexesa: baset."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Pexesa</h2>
-                            <p class="gallery__category">Autorská tvorba</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/hrosik/" class="gallery__column show illustration autor book" data-categories="autor, book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/hrosik.webp"
-                            srcset="/images/gallery/hrosik_350.webp 350w,
-                                    /images/gallery/hrosik.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/hrosik.webp" 
-                            alt="Hošík hrošík autorská kniha. Silueta chlapce v zoo. Kouká na dva hrochy koupající se za sklem v bazénu."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Hošík hrošík</h2>
-                            <p class="gallery__category">Knihy a publikace / autorská tvorba</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/mendelu/" class="gallery__column show" data-categories="">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/mendelu.webp" 
-                            srcset="/images/gallery/mendelu_350.webp 350w,
-                                    /images/gallery/mendelu.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/mendelu.webp"
-                            alt="Propagační materiály pro Vydavatelství Mendelovy univerzity v Brně. Plakát propagující sazbu knih s motivem sazenic/rostlin."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Vydavatelství Mendelovy univerzity v Brně</h2>
-                            <p class="gallery__category"></p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/pessoa/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/pessoa.webp"
-                            srcset="/images/gallery/pessoa_350.webp 350w,
-                                    /images/gallery/pessoa.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/pessoa.webp" 
-                            alt="Ilustrace a grafická úprava Knihy neklidu od Fernanda Pessoy. Motiv z knižní obálky: portrét Fernanda Pessoy."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Fernando Pessoa: Kniha neklidu</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
-                <!-- item-->
-                <a href="/portfolio/kazantzakis/" class="gallery__column show book" data-categories="book">
-                    <figure class="gallery__figure">
-                        <img class="gallery__image" 
-                            src="/images/gallery/pokuseni.webp" 
-                            srcset="/images/gallery/pokuseni_350.webp 350w,
-                                    /images/gallery/pokuseni.webp 450w"
-                            sizes="(max-width: 450px) 100vw, 
-                                    (max-width: 768px) 50vw, 
-                                    33vw" 
-                            data-full="/images/gallery/pokuseni.webp" 
-                            alt="Ilustrace a grafická úprava knihy Nikose Kazantzakise: Poslední pokušení. Motiv z knižní obálky: Klečící Ježíš modlící se v olivovém háji před tím, než je zatčen."
-                            loading="lazy"
-                            width="450"
-                            height="450">
-                        <figcaption class="gallery__caption">
-                            <h2 class="gallery__title">Nikos Kazantzakis: Poslední pokušení</h2>
-                            <p class="gallery__category">Knihy a publikace</p>
-                        </figcaption> 
-                    </figure>
-                </a>
 
-         </div>
+            <!-- item 14 -->
+            <a href="/portfolio/nzm/" class="gallery__column show book edu" data-categories="edu, book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/nzm_350.webp" 
+                        srcset="/images/gallery/nzm_350.webp 350w,
+                                /images/gallery/nzm.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/nzm.webp"
+                        alt="Ilustrace do publikací/obrázkových statistik Národního zemědělského muzea – Půda, Voda a Potraviny. Kresba s myší pobýhaící v řepném poli."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Národní zemědělské muzeum: Obrázkové statistiky</h2>
+                        <p class="gallery__category">Knihy a publikace / naučná ilustrace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 15 -->
+            <a href="/portfolio/oskare-plav/" class="gallery__column show book popUp" data-categories="popUp, book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/oskar_obalka_350.webp"
+                        srcset="/images/gallery/oskar_obalka_350.webp 350w,
+                                /images/gallery/oskar_obalka.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/oskar_obalka.webp" 
+                        alt="Ilustrace hlavního hrdiny knihy – tučňáka Oskara. Stojí na kře uprostřed oceánu a neví, jak se dostat na břeh. Bojí se totiž vody."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Oskare, plav!</h2>
+                        <p class="gallery__category">Knihy a publikace / papír a prostor</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 16 -->
+            <a href="/portfolio/pexesa/" class="gallery__column show autor" data-categories="autor">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/pexeso_350.webp" 
+                        srcset="/images/gallery/pexeso_350.webp 350w,
+                                /images/gallery/pexeso.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/pexeso.webp" 
+                        alt="Kreslená autorská pexesa různých motivů. Motiv z psího pexesa: baset."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Pexesa</h2>
+                        <p class="gallery__category">Autorská tvorba</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 17 -->
+            <a href="/portfolio/hrosik/" class="gallery__column show illustration autor book" data-categories="autor, book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/hrosik_350.webp"
+                        srcset="/images/gallery/hrosik_350.webp 350w,
+                                /images/gallery/hrosik.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/hrosik.webp" 
+                        alt="Hošík hrošík autorská kniha. Silueta chlapce v zoo. Kouká na dva hrochy koupající se za sklem v bazénu."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Hošík hrošík</h2>
+                        <p class="gallery__category">Knihy a publikace / autorská tvorba</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 18 -->
+            <a href="/portfolio/mendelu/" class="gallery__column show" data-categories="">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/mendelu_350.webp" 
+                        srcset="/images/gallery/mendelu_350.webp 350w,
+                                /images/gallery/mendelu.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/mendelu.webp"
+                        alt="Propagační materiály pro Vydavatelství Mendelovy univerzity v Brně. Plakát propagující sazbu knih s motivem sazenic/rostlin."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Vydavatelství Mendelovy univerzity v Brně</h2>
+                        <p class="gallery__category"></p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 19 -->
+            <a href="/portfolio/pessoa/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/pessoa_350.webp"
+                        srcset="/images/gallery/pessoa_350.webp 350w,
+                                /images/gallery/pessoa.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/pessoa.webp" 
+                        alt="Ilustrace a grafická úprava Knihy neklidu od Fernanda Pessoy. Motiv z knižní obálky: portrét Fernanda Pessoy."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Fernando Pessoa: Kniha neklidu</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+
+            <!-- item 20 -->
+            <a href="/portfolio/kazantzakis/" class="gallery__column show book" data-categories="book">
+                <figure class="gallery__figure">
+                    <img class="gallery__image" 
+                        src="/images/gallery/pokuseni_350.webp" 
+                        srcset="/images/gallery/pokuseni_350.webp 350w,
+                                /images/gallery/pokuseni.webp 450w"
+                        sizes="(max-width: 30rem) 100vw, 
+                               (max-width: 48rem) 50vw, 
+                               350px" 
+                        data-full="/images/gallery/pokuseni.webp" 
+                        alt="Ilustrace a grafická úprava knihy Nikose Kazantzakise: Poslední pokušení. Motiv z knižní obálky: Klečící Ježíš modlící se v olivovém háji před tím, než je zatčen."
+                        loading="lazy"
+                        width="450"
+                        height="450">
+                    <figcaption class="gallery__caption">
+                        <h2 class="gallery__title">Nikos Kazantzakis: Poslední pokušení</h2>
+                        <p class="gallery__category">Knihy a publikace</p>
+                    </figcaption> 
+                </figure>
+            </a>
+        </div>
     </div>
- </section>
- <script src="/js/filter.js"></script>
+</section>
+<script src="/js/filter.js"></script>
 
         </main>
     

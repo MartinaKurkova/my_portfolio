@@ -13,11 +13,28 @@
         flex-direction: column;
         margin: 0 auto;
         padding: 2rem 1.25rem 2rem 1.25rem;
-        background: url('/images/autoportret/Autoportret_cerveny.webp') bottom right no-repeat;
-        background-size: contain;
+        position: relative; /* Nutné pro absolutní pozicování obrázku */
+        overflow: hidden;
+    }
+
+    &__bg-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 50%; /* Případně uprav podle potřeby */
+        height: auto;
+        object-fit: contain;
+        pointer-events: none;
+        z-index: 1;
+
+        @media screen and (max-width: 55rem) {
+            max-width: 80%; /* Na mobilu zabere větší část dole */
+        }
     }
 
     &__text-container {
+        z-index: 2;
+        margin-top: 4rem;
         margin-bottom: 0;
         display: flex;
         flex-direction: column;
@@ -28,6 +45,7 @@
 
         @media screen and (max-width: 58.125rem){
             max-width: 55%;
+            margin-top: 0;
         }
 
         @media screen and (max-width: 55rem){
