@@ -631,16 +631,16 @@ strong {
 }
 @media screen and (max-width: 37.5rem) {
   .hero__text-container {
-    margin-bottom: 20rem;
+    margin-bottom: 23rem;
     max-width: 100%;
   }
 }
 @media screen and (max-width: 31.25rem) {
   .hero__text-container {
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
   }
 }
-@media screen and (max-width: 26rem) {
+@media screen and (max-width: 28rem) {
   .hero__text-container {
     margin-bottom: 15rem;
   }
@@ -662,6 +662,11 @@ strong {
   color: #333333;
   margin-top: 1rem;
   font-weight: 200;
+}
+.hero__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 .hero__button-cta {
   display: inline-block;
