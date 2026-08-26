@@ -75,6 +75,14 @@
   font-style: normal;
   font-display: optional;
 }
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local("Georgia");
+  ascent-override: 97.8%;
+  descent-override: 25.5%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
 html {
   box-sizing: border-box;
 }
@@ -109,7 +117,7 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   -webkit-font-smoothing: antialiased;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -170,7 +178,7 @@ strong {
   padding: 0.5rem 1.25rem;
 }
 .header__logo-link {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   color: white;
@@ -464,7 +472,7 @@ strong {
   margin-bottom: 0;
   margin-top: 0;
   font-size: clamp(1.125rem, 1vw + 0.7rem, 1.4rem);
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
 }
 .footer__subheading {
   color: white;
@@ -754,12 +762,6 @@ strong {
     grid-template-columns: 1fr;
   }
 }
-.small-gallery__column {
-  opacity: 1;
-  transform: none;
-  filter: none;
-  visibility: visible;
-}
 .small-gallery__figure {
   position: relative;
   overflow: hidden;
@@ -818,7 +820,7 @@ strong {
   margin: 0;
   text-align: center;
   font-size: 2rem;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   -webkit-font-smoothing: antialiased;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -2000,7 +2002,7 @@ strong {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .process__icon {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   font-size: 4rem;
   font-weight: 900;
   color: #800080;
@@ -2023,7 +2025,7 @@ strong {
 }
 .process__subheading {
   display: block;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
   font-optical-sizing: auto;
   font-weight: 900;
@@ -2312,7 +2314,7 @@ strong {
   border-radius: 10px 10px 0 0;
   padding: 0.8rem 1.25rem;
   margin: 0;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
 }
 .timeline__description {
@@ -2597,7 +2599,7 @@ strong {
   padding: 0 1rem 1rem 1rem;
 }
 .print__name {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   font-size: clamp(1.1rem, 1.1rem + 0.8vw, 1.5rem);
   color: #333333;
   margin: 0.5rem 0;
@@ -2686,7 +2688,7 @@ strong {
 }
 .conditions__section-heading {
   font-size: clamp(1rem, 1rem + 0.5vw, 1.3rem);
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   font-weight: 800;
   margin: 2rem 0 0 0;
   color: #800080;
@@ -3066,7 +3068,7 @@ strong {
 }
 .privacy__section-heading {
   font-size: clamp(1rem, 1rem + 0.5vw, 1.3rem);
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Fraunces Fallback", serif;
   margin: 2rem 0 0 0;
 }
 .privacy__article-heading {

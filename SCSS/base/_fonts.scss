@@ -96,3 +96,12 @@
     font-style: normal;
     font-display: optional;
 }
+
+@font-face {
+    font-family: 'Fraunces Fallback';
+    src: local('Georgia');
+    ascent-override: 97.8%;
+    descent-override: 25.5%;
+    line-gap-override: 0%;
+    size-adjust: 100%;
+}
