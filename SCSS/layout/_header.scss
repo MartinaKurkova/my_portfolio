@@ -45,25 +45,11 @@
         margin: 0;
     }
 
-    &__animated {
-        border-right: 2px solid white;
-        animation: cursor 0.75s step-end infinite;
-
-        @media screen and (max-width: 21.875rem) {
-            display: none;
-        }
-    }
-
     &__logo {
         display: block;              
         width: 3rem;                 
         height: auto;
         flex-shrink: 0;
-    }
-
-    &__animated.typing-complete {
-        animation: none;
-        border-right: none;
     }
 }
 

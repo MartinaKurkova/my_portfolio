@@ -62,23 +62,23 @@ if (errorElement) {
 }
 
 
-//E-mail
-document.addEventListener('DOMContentLoaded', function() {
-  const user = 'hello';
-  const domain = 'martinakurkova.cz';
-  const email = user + '@' + domain;
+// //E-mail
+// document.addEventListener('DOMContentLoaded', function() {
+//   const user = 'hello';
+//   const domain = 'martinakurkova.cz';
+//   const email = user + '@' + domain;
   
-  // Pro hlavní kontakt
-  const emailDisplay = document.getElementById('email-display');
-  if (emailDisplay) {
-    emailDisplay.innerHTML = 
-      '<a href="mailto:' + email + '" class="contact__address-link">' + email + '</a>';
-  }
+//   // Pro hlavní kontakt
+//   const emailDisplay = document.getElementById('email-display');
+//   if (emailDisplay) {
+//     emailDisplay.innerHTML = 
+//       '<a href="mailto:' + email + '" class="contact__address-link">' + email + '</a>';
+//   }
   
-  // Pro patičku
-  const emailFooter = document.getElementById('email-footer');
-  if (emailFooter) {
-    emailFooter.innerHTML = 
-      '<a href="mailto:' + email + '" class="footer__contact-link">' + email + '</a>';
-  }
-});
+//   // Pro patičku
+//   const emailFooter = document.getElementById('email-footer');
+//   if (emailFooter) {
+//     emailFooter.innerHTML = 
+//       '<a href="mailto:' + email + '" class="footer__contact-link">' + email + '</a>';
+//   }
+// });
