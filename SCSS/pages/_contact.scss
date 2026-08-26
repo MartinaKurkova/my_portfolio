@@ -230,12 +230,14 @@
     }
 
     &__address, 
-    &__address-name {
+    &__address-name,
+    &__address-email {
         font-style: normal;
         margin: 0;
     }
 
-    &__address-link {
+    &__address-link,
+    &__address-email {
         color: variables.$color-text;
         text-decoration: none;
     }
@@ -254,7 +256,7 @@
     }
 
     &__social {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
     }
 
     &__social-links {

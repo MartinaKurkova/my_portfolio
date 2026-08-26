@@ -167,6 +167,7 @@
 // Process section
 .process {
     background-color: variables.$color-bg;
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -179,17 +180,9 @@
         overflow: hidden;
     }
 
-    &__heading,
-    &__subheading {
+    &__heading {
         text-align: center;
         margin-bottom: 1rem;
-    }
-
-    &__subheading {
-        @media screen and (min-width: 50rem) {
-            max-width: 75%;
-            text-align: center;
-        }
     }
 
     &__perex {
@@ -201,16 +194,31 @@
         }
     }
 
+    &__subheading {
+        display: block;
+        font-family: variables.$font-serif;
+        font-size: clamp(1.35rem, calc(1.35rem + 1.5vw), 2.2rem);
+        font-optical-sizing: auto;
+        font-weight: 900;
+        line-height: 1.1;
+        color: variables.$color-dark;
+        margin: 2rem 0;
+        text-align: center;
+
+        @media screen and (min-width: 50rem) {
+            max-width: 75%;
+        }
+    }
+
     &__item {
         display: flex;
         gap: 0;
-        align-items: center;
+        align-items: stretch; 
         justify-content: center;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.6s ease, transform 0.6s ease;
         width: 100%;
-        height: 170px;
         margin-bottom: 1rem;
 
         @media screen and (min-width: 50rem) {
@@ -230,12 +238,15 @@
         align-items: center;
         justify-content: center;
         padding: 1.25rem;
-        margin-bottom: 1.25rem;
         width: 100%;
-        height: 100%;
         background: variables.$color-bg-hero;
         border-radius: 11px 0 0 11px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        @media screen and (max-width: 30rem) {
+            padding: 0.75rem 0.5rem;
+            flex: 0 0 4rem; 
+        }
     }
 
     &__icon {
@@ -243,14 +254,17 @@
         font-size: 4rem;
         font-weight: 900;
         color: variables.$color-primary;
+        margin: 0; 
+        
+        @media screen and (max-width: 30rem) {
+            font-size: 2.5rem;
+        }
     }
 
     &__text-container {
         flex: 5;
         padding: 1.25rem;
-        margin-bottom: 1.25rem;
         width: 100%;
-        height: 100%;
         background-color: white;
         border-radius: 0 11px 11px 0;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -259,19 +273,13 @@
     &__title {
         font-family: variables.$font-sans;
         color: variables.$color-text;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
         text-align: start;
     }
 
-    &__subheading {
-        display: block;
-        font-family: variables.$font-serif;
-        font-size: clamp(1.35rem, calc(1.35rem + 1.5vw), 2.2rem);
-        font-optical-sizing: auto;
-        font-weight: 900;
-        line-height: 1.1;
-        color: variables.$color-dark;
-        margin: 2rem 0;
+    &__description {
+        margin: 0;
     }
 
     &__button-cta {

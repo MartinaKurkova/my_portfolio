@@ -110,6 +110,25 @@
             outline-color: variables.$color-outline; 
         }
     }
+
+    &__button-cta--secondary {
+        @include buttons.button-cta;
+        background-color: none;
+        border: 1px solid variables.$color-primary;
+        color: variables.$color-primary;
+
+        &:hover {
+            border: 1px solid variables.$color-hover;
+        }
+
+        &:active {
+            border: 1px solid variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+        }
+    }
 }
 
 // gallery section

@@ -43,7 +43,6 @@
     }
 
     &__tagline {
-        text-transform: uppercase;
         margin: 0.3rem 0 0 0;
     }
 
@@ -167,17 +166,5 @@
         &__credit {
             grid-column: 2/4;
         }
-    }
-}
-
-// animation
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
