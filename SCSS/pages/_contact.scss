@@ -25,9 +25,6 @@
     &__text-container {
         flex: 6;
         margin-bottom: 0;
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.2s;
-        opacity: 0; 
     }
 
     &__link {
@@ -306,10 +303,7 @@
         padding-top: 4rem;
         font-weight: 900;
         font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
-        margin-bottom: 1rem;
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.2s;
-        opacity: 0; 
+        margin-bottom: 1rem; 
     }
 }
 
@@ -381,9 +375,6 @@
         font-weight: 900;
         font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
         margin-bottom: 1rem;
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.2s;
-        opacity: 0; 
     }
 
     &__paragraph {
@@ -446,9 +437,6 @@
         @include buttons.button-cta;
         margin-top: 3rem;
         margin-bottom: 2rem;
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.6s;
-        opacity: 0;
         background-color: variables.$color-bg-hero;
         border: 2px solid variables.$color-secondary;
 

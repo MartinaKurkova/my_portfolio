@@ -92,11 +92,13 @@
     }
 
     // legal
-    &__legal {
+    &__legal,
+    &__nav-link {
         color: white;
         text-decoration-thickness: .5px;
         text-underline-offset: 0.2em;
         margin-top: 1rem;
+        display: block;
     }
 }
 
@@ -107,8 +109,10 @@
             display: grid;
             gap: 1.25rem;
             grid-template-areas: 
-            "about contact"
-            "info social";
+            "about about"
+            "contact contact"
+            "important menu"
+            "info info";
         }
 
         &__section_about {
@@ -119,8 +123,12 @@
             grid-area: contact;
         }
 
-        &__section_social {
-            grid-area: social;
+        &__section_important {
+            grid-area: important;
+        }
+
+        &__section_menu {
+            grid-area: menu;
         }
 
         &__section_info {
@@ -134,8 +142,10 @@
         .footer {
         &__container {
             grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
             grid-template-areas: 
-            "about contact social"
+            "about about about"
+            "contact important menu"
             "info info info";
         }
 
@@ -147,24 +157,28 @@
             grid-area: contact;
         }
 
-        &__section_social {
-            grid-area: social;
+        &__section_important {
+            grid-area: important;
+        }
+
+        &__section_menu {
+            grid-area: menu;
         }
 
         &__section_info {
             grid-area: info;
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-columns: 1fr, 2fr;
+            // display: grid;
+            // gap: 1rem;
+            // grid-template-columns: 1fr 1fr 1fr;
+            // grid-template-columns: 1fr, 2fr;
         }
 
-        &__copyright {
-            grid-column: 1/2;
-        }
+        // &__copyright {
+        //     grid-column: 1/2;
+        // }
 
-        &__credit {
-            grid-column: 2/4;
-        }
+        // &__credit {
+        //     grid-column: 2/4;
+        // }
     }
 }

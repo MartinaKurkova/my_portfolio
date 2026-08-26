@@ -515,18 +515,19 @@ strong {
 .footer__section_info {
   margin-bottom: 0;
 }
-.footer__legal {
+.footer__legal, .footer__nav-link {
   color: white;
   text-decoration-thickness: 0.5px;
   text-underline-offset: 0.2em;
   margin-top: 1rem;
+  display: block;
 }
 
 @media screen and (min-width: 38.75rem) {
   .footer__container {
     display: grid;
     gap: 1.25rem;
-    grid-template-areas: "about contact" "info social";
+    grid-template-areas: "about about" "contact contact" "important menu" "info info";
   }
   .footer__section_about {
     grid-area: about;
@@ -534,8 +535,11 @@ strong {
   .footer__section_contact {
     grid-area: contact;
   }
-  .footer__section_social {
-    grid-area: social;
+  .footer__section_important {
+    grid-area: important;
+  }
+  .footer__section_menu {
+    grid-area: menu;
   }
   .footer__section_info {
     grid-area: info;
@@ -544,7 +548,8 @@ strong {
 @media screen and (min-width: 53.75rem) {
   .footer__container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "about contact social" "info info info";
+    gap: 1rem;
+    grid-template-areas: "about about about" "contact important menu" "info info info";
   }
   .footer__section_about {
     grid-area: about;
@@ -552,21 +557,14 @@ strong {
   .footer__section_contact {
     grid-area: contact;
   }
-  .footer__section_social {
-    grid-area: social;
+  .footer__section_important {
+    grid-area: important;
+  }
+  .footer__section_menu {
+    grid-area: menu;
   }
   .footer__section_info {
     grid-area: info;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr, 2fr;
-  }
-  .footer__copyright {
-    grid-column: 1/2;
-  }
-  .footer__credit {
-    grid-column: 2/4;
   }
 }
 .hero {
@@ -2781,9 +2779,6 @@ strong {
 .contact-hero__text-container {
   flex: 6;
   margin-bottom: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 .contact-hero__link {
   display: inline-block;
@@ -3107,9 +3102,6 @@ strong {
   font-weight: 900;
   font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
   margin-bottom: 1rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 
 .privacy__container {
@@ -3167,9 +3159,6 @@ strong {
   font-weight: 900;
   font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
   margin-bottom: 1rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 .thanks__paragraph {
   margin-top: 0;
@@ -3318,9 +3307,6 @@ strong {
 .thanks__button-secondary {
   margin-top: 3rem;
   margin-bottom: 2rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.6s;
-  opacity: 0;
   background-color: #D3BDD8;
   border: 2px solid #C71585;
 }
