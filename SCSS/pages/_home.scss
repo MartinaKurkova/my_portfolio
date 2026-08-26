@@ -38,7 +38,9 @@
         margin-bottom: 0;
         display: flex;
         flex-direction: column;
+        width: 100%;       /* DŮLEŽITÉ PRO PC: drží stabilní šířku od 1. milisekundy */
         max-width: 50%;
+        flex-shrink: 0;    /* DŮLEŽITÉ PRO PC: zabrání zmenšování/skákání bloku */
         animation: fadeInUp 0.8s ease-out forwards;
         opacity: 1; 
 

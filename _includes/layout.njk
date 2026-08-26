@@ -16,7 +16,7 @@
     <!-- Open Graph pro Facebook/LinkedIn -->
     <meta property="og:title" content="{{ metaTitle or title }}">
     <meta property="og:description" content="{{ ogDescription or description }}">
-    <meta property="og:image" content="{{ ogImage or '/images/autoportret/Autoportret_cerveny.webp' }}">
+    <meta property="og:image" content="{{ ogImage or '/images/autoportret/Autoportret_cerveny_600.webp' }}">
     <meta property="og:type" content="{{ ogType or 'website' }}">
     <meta property="og:url" content="{{ page.url }}">
     <meta property="og:site_name" content="Martina Kurková Nožičková">
@@ -35,7 +35,7 @@
     "name": "Martina Kurková Nožičková",
     "jobTitle": "Ilustrátorka",
     "url": "{{ site.url }}",
-    "image": "{{ site.url }}/images/autoportret/Autoportret_cerveny.webp"
+    "image": "{{ site.url }}/images/autoportret/Autoportret_cerveny_600.webp"
     }
     </script>
         
@@ -56,7 +56,13 @@
     <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
-    <link rel="preload" as="image" href="/images/autoportret/Autoportret_cerveny.webp" fetchpriority="high">
+    <link rel="preload" 
+      as="image" 
+      href="/images/autoportret/Autoportret_cerveny_600.webp" 
+      imagesrcset="/images/autoportret/Autoportret_cerveny_350.webp 350w,
+                  /images/autoportret/Autoportret_cerveny_450.webp 450w,
+                  /images/autoportret/Autoportret_cerveny_600.webp 600w"
+      imagesizes="(max-width: 55rem) 80vw, 50vw">
     <link rel="preload" href="/assets/fonts/fraunces-v38-latin_latin-ext-900.woff2" as="font" type="font/woff2" crossorigin>
 
     {% if preloadImage %}
