@@ -498,7 +498,8 @@ strong {
 .footer__social-icon--img {
   width: 28px;
   height: 28px;
-  margin-right: 5px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 .footer__social-link {
   text-decoration: none;

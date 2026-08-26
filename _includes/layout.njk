@@ -51,7 +51,7 @@
     <meta name="theme-color" content="#800080">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
     <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
@@ -85,7 +85,7 @@
 }
 </script>
 
-    <meta name="author" content="Martina Kurková Nožičková">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'; require-trusted-types-for 'script';">
 
 </head>
 <body>
