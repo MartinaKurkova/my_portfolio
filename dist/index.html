@@ -144,14 +144,17 @@
 <!-- hero -->
 <section class="hero">
     <div class="hero__container container">
-        <!-- LCP obrázek v HTML pro okamžité vykreslení -->
-        <img class="hero__bg-img" 
-             src="/images/autoportret/Autoportret_cerveny_600.webp" 
-             alt="autoportret" 
-             fetchpriority="high" 
-             loading="eager" 
-             width="600" 
-             height="600">
+<img class="hero__bg-img" 
+     src="/images/autoportret/Autoportret_cerveny_600.webp" 
+     srcset="/images/autoportret/Autoportret_cerveny_350.webp 350w,
+             /images/autoportret/Autoportret_cerveny_450.webp 450w,
+             /images/autoportret/Autoportret_cerveny_600.webp 600w"
+     sizes="(max-width: 55rem) 80vw, 50vw"
+     alt="autoportret" 
+     fetchpriority="high" 
+     loading="eager" 
+     width="600" 
+     height="600">
 
         <div class="hero__text-container">
             <h1 class="hero__heading">
@@ -385,7 +388,7 @@
                     (max-width: 768px) 50vw, 
                     33vw" 
             data-full="/images/pexesa/pekseso2_600.webp" 
-                alt="Fotografie ptačího pexesa." 
+                alt="Fotografie pexesa s lasičkou" 
                 class="pekseso__image" 
                 loading="lazy"
                 width="600"
