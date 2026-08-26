@@ -40,8 +40,7 @@
         flex-direction: column;
         max-width: 50%;
         animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.2s;
-        opacity: 0; 
+        opacity: 1; 
 
         @media screen and (max-width: 58.125rem){
             max-width: 55%;
@@ -161,18 +160,10 @@
     }
 
     &__column {
-        opacity: 0;
-        transform: translateY(30px) scale(0.9);
-        transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
-        filter: blur(5px);
-        visibility: hidden;
-    }
-
-    &__column.show {
-        visibility: visible;
         opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
+        transform: none;
+        filter: none;
+        visibility: visible;
     }
 
     &__figure {
