@@ -13,7 +13,7 @@
         flex-direction: column;
         margin: 0 auto;
         padding: 2rem 1.25rem 2rem 1.25rem;
-        position: relative; /* Nutné pro absolutní pozicování obrázku */
+        position: relative; 
         overflow: hidden;
     }
 
@@ -21,14 +21,14 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        max-width: 50%; /* Případně uprav podle potřeby */
+        max-width: 50%; 
         height: auto;
         object-fit: contain;
         pointer-events: none;
         z-index: 1;
 
         @media screen and (max-width: 55rem) {
-            max-width: 80%; /* Na mobilu zabere větší část dole */
+            max-width: 80%; 
         }
     }
 
@@ -38,9 +38,9 @@
         margin-bottom: 0;
         display: flex;
         flex-direction: column;
-        width: 100%;       /* DŮLEŽITÉ PRO PC: drží stabilní šířku od 1. milisekundy */
+        width: 100%;   
         max-width: 50%;
-        flex-shrink: 0;    /* DŮLEŽITÉ PRO PC: zabrání zmenšování/skákání bloku */
+        flex-shrink: 0;  
         animation: fadeInUp 0.8s ease-out forwards;
         opacity: 1; 
 
@@ -50,28 +50,21 @@
         }
 
         @media screen and (max-width: 55rem){
-            margin-bottom: 40rem;
-            max-width: 90%;
-        }
-
-        @media screen and (max-width: 43.75rem){
-            margin-bottom: 35rem;
+            margin-bottom: 25rem;
             max-width: 90%;
         }
 
         @media screen and (max-width: 37.5rem){
-            margin-bottom: 30rem;
+            margin-bottom: 20rem;
             max-width: 100%;
         }
 
         @media screen and (max-width: 31.25rem){
-            max-width: 100%;
-            margin-bottom: 25rem;
+            margin-bottom: 15rem;
         }
 
         @media screen and (max-width: 26rem){
-            max-width: 100%;
-            margin-bottom: 20rem;
+            margin-bottom: 15rem;
         }
     }
 
@@ -120,11 +113,9 @@
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(30px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
