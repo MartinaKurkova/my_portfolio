@@ -41,8 +41,6 @@
         width: 100%;   
         max-width: 50%;
         flex-shrink: 0;  
-        animation: fadeInUp 0.8s ease-out forwards;
-        opacity: 1; 
 
         @media screen and (max-width: 58.125rem){
             max-width: 55%;
@@ -106,16 +104,6 @@
         &:focus-visible {
             outline-color: variables.$color-outline; 
         }
-    }
-}
-
-// Hero text animation
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }
 
@@ -502,29 +490,28 @@
 
     &__container {
         margin: 0 auto;
-        padding: 2rem 0;
+        padding: 1rem;
     }
 
     &__text-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
-    &__heading {
+    @media screen and (min-width: 40rem) {
+        align-items: center; 
+    }
+}
+
+&__paragraph,
+&__heading {
+    text-align: start;
+    
+    @media screen and (min-width: 40rem) {
         text-align: center;
         max-width: 70%;
-
-        @media screen and (max-width: 50rem) {
-            max-width: 100%;
-        }
     }
-
-    &__paragraph {
-        margin: 2rem 0 3rem 0;
-        text-align: center;
-        max-width: 70%;
-    }
+}
 
     &__button-cta {
         @include buttons.button-cta;
@@ -564,9 +551,6 @@
         font-weight: 900;
         font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
         margin-bottom: 1rem;
-        animation: fadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.2s;
-        opacity: 0; 
     }
 
     &__paragraph {

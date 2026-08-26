@@ -621,8 +621,6 @@ strong {
   width: 100%;
   max-width: 50%;
   flex-shrink: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 1;
 }
 @media screen and (max-width: 58.125rem) {
   .hero__text-container {
@@ -728,14 +726,6 @@ strong {
   outline-color: #FFAA00;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .small-gallery__container {
   margin: 0 auto;
   padding: 1.25rem;
@@ -1248,26 +1238,26 @@ strong {
 
 .HPcontact__container {
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem;
 }
 .HPcontact__text-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
-.HPcontact__heading {
-  text-align: center;
-  max-width: 70%;
-}
-@media screen and (max-width: 50rem) {
-  .HPcontact__heading {
-    max-width: 100%;
+@media screen and (min-width: 40rem) {
+  .HPcontact__text-container {
+    align-items: center;
   }
 }
-.HPcontact__paragraph {
-  margin: 2rem 0 3rem 0;
-  text-align: center;
-  max-width: 70%;
+.HPcontact__paragraph, .HPcontact__heading {
+  text-align: start;
+}
+@media screen and (min-width: 40rem) {
+  .HPcontact__paragraph, .HPcontact__heading {
+    text-align: center;
+    max-width: 70%;
+  }
 }
 .HPcontact__button-cta {
   display: inline-block;
@@ -1343,9 +1333,6 @@ strong {
   font-weight: 900;
   font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
   margin-bottom: 1rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 .error__paragraph {
   margin-top: 0;
