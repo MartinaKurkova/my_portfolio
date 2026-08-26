@@ -6,9 +6,10 @@ description: "Prohlédněte si mou práci v oblasti ilustrace, knižní grafiky 
 # SEO & Social
 metaTitle: "Portfolio – Ilustrace, knižní sazba a web"
 ogDescription: "Nahlédněte do mého vizuálního světa. Od oceněných dětských knih přes infografiky až po weby. Každý projekt je hledáním cesty, jak srozumitelně a hravě vyprávět příběh."
-ogImage: /images/autoportret/output/medium/Kreslici_autoportret_medium_600.webp
+ogImage: /images/gallery/promeny.webp
 ogType: website
 twitterCard: summary_large_image 
+preloadImage: /images/gallery/promeny_350.webp
 ---
 <!-- Gallery section -->
 <section class="gallery">
@@ -58,9 +59,10 @@ twitterCard: summary_large_image
                         sizes="(max-width: 30rem) 100vw, 
                                (max-width: 48rem) 50vw, 
                                350px" 
-                        data-full="/images/gallery/promeny.webp" 
+                        data-full="/images/gallery/Rohozec.webp.webp" 
                         alt="Komiks na restaurační stojánek pivovaru Rohozec pro pivo Skalák."
-                        loading="lazy"
+                        loading="eager" 
+                        fetchpriority="high"
                         width="450"
                         height="450">
                     <figcaption class="gallery__caption">
@@ -82,7 +84,8 @@ twitterCard: summary_large_image
                                350px" 
                         data-full="/images/gallery/Krocan.webp" 
                         alt="Ilustrace k textu Martina Zemana: Krocan. Jde o středověký epos. Na kresbě vidíme tři rytíře nesoucí na lehátku čtvrtého mrtvého. V dálce je hrad, na který směřují."
-                        loading="lazy" 
+                        loading="eager" 
+                        fetchpriority="high" 
                         width="450"
                         height="450">
                     <figcaption class="gallery__caption">
@@ -201,7 +204,7 @@ twitterCard: summary_large_image
             </a>
 
             <!-- item 9 -->
-            <a href="/portfolio/karneval/" class="gallery__column show" data-categories="book">
+            <a href="/portfolio/karneval/" class="gallery__column show" data-categories="">
                 <figure class="gallery__figure">
                     <img class="gallery__image" 
                         src="/images/gallery/benatky_vyrez_350.webp" 

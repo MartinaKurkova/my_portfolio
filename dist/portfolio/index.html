@@ -14,7 +14,7 @@
     <!-- Open Graph pro Facebook/LinkedIn -->
     <meta property="og:title" content="Portfolio – Ilustrace, knižní sazba a web">
     <meta property="og:description" content="Nahlédněte do mého vizuálního světa. Od oceněných dětských knih přes infografiky až po weby. Každý projekt je hledáním cesty, jak srozumitelně a hravě vyprávět příběh.">
-    <meta property="og:image" content="/images/autoportret/output/medium/Kreslici_autoportret_medium_600.webp">
+    <meta property="og:image" content="/images/gallery/promeny.webp">
     <meta property="og:type" content="website">
     <meta property="og:url" content="/portfolio/">
     <meta property="og:site_name" content="Martina Kurková Nožičková">
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio – Ilustrace, knižní sazba a web">
     <meta name="twitter:description" content="Prohlédněte si mou práci v oblasti ilustrace, knižní grafiky a webdesignu. Ukázky projektů, které propojují autorskou tvorbu s funkčním vizuálním stylem.">
-    <meta name="twitter:image" content="/images/autoportret/output/medium/Kreslici_autoportret_medium_600.webp">
+    <meta name="twitter:image" content="/images/gallery/promeny.webp">
 
     <!-- Strukturovaná data -->
     <script type="application/ld+json">
@@ -54,16 +54,12 @@
     <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
-    <link rel="preload" 
-      as="image" 
-      href="/images/autoportret/Autoportret_cerveny_600.webp" 
-      imagesrcset="/images/autoportret/Autoportret_cerveny_350.webp 350w,
-                  /images/autoportret/Autoportret_cerveny_450.webp 450w,
-                  /images/autoportret/Autoportret_cerveny_600.webp 600w"
-      imagesizes="(max-width: 55rem) 80vw, 50vw">
     <link rel="preload" href="/assets/fonts/fraunces-v38-latin_latin-ext-900.woff2" as="font" type="font/woff2" crossorigin>
 
-    
+    <link rel="preload" 
+      as="image" 
+      href="/images/gallery/promeny_350.webp"
+      fetchpriority="high">
 
     <script type="application/ld+json">
 {
@@ -189,9 +185,10 @@
                         sizes="(max-width: 30rem) 100vw, 
                                (max-width: 48rem) 50vw, 
                                350px" 
-                        data-full="/images/gallery/promeny.webp" 
+                        data-full="/images/gallery/Rohozec.webp.webp" 
                         alt="Komiks na restaurační stojánek pivovaru Rohozec pro pivo Skalák."
-                        loading="lazy"
+                        loading="eager" 
+                        fetchpriority="high"
                         width="450"
                         height="450">
                     <figcaption class="gallery__caption">
@@ -213,7 +210,8 @@
                                350px" 
                         data-full="/images/gallery/Krocan.webp" 
                         alt="Ilustrace k textu Martina Zemana: Krocan. Jde o středověký epos. Na kresbě vidíme tři rytíře nesoucí na lehátku čtvrtého mrtvého. V dálce je hrad, na který směřují."
-                        loading="lazy" 
+                        loading="eager" 
+                        fetchpriority="high" 
                         width="450"
                         height="450">
                     <figcaption class="gallery__caption">
@@ -332,7 +330,7 @@
             </a>
 
             <!-- item 9 -->
-            <a href="/portfolio/karneval/" class="gallery__column show" data-categories="book">
+            <a href="/portfolio/karneval/" class="gallery__column show" data-categories="">
                 <figure class="gallery__figure">
                     <img class="gallery__image" 
                         src="/images/gallery/benatky_vyrez_350.webp" 

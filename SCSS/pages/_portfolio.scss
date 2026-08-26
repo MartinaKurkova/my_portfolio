@@ -34,6 +34,7 @@
         cursor: pointer;
         text-transform: uppercase;
         font-weight: 100;
+        color: variables.$color-text;
 
         &:hover {
             font-weight: 700;
