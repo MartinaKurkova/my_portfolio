@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XPKQQXQWGR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XPKQQXQWGR');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -78,6 +88,8 @@
   ]
 }
 </script>
+
+<link rel="stylesheet" href="/css/cookieconsent.css">
 
 </head>
 <body>
@@ -367,7 +379,7 @@
 
                 <div class="footer__section footer__section_important">
                     <h3 class="footer__subheading">Důležité informace</h3>
-                    <a class="footer__legal" href="/GDPR/">Zásady ochrany osobních údajů</a>
+                    <a class="footer__legal" href="/kontakt/zasady/">Zásady ochrany osobních údajů</a>
                     <a class="footer__legal" href="/obchodni-podminky/">Obchodní podmínky</a>
                     <a class="footer__legal" href="/odstoupeni/">Odstoupení od smlouvy a&nbsp;reklamace</a>
                     <a class="footer__legal" href="/papirova-pexesa/#transport">Doprava a&nbsp;platba</a>
@@ -399,5 +411,74 @@
 
     </div>
     <script src="/js/script.js" defer></script>
+
+    <!-- Knihovna CookieConsent -->
+<script src="/js/cookieconsent.umd.js" defer fetchpriority="low"></script>
+
+<!-- Google Analytics (spustí se AŽ PO událení souhlasu) -->
+<script type="text/plain" data-category="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-XPKQQXQWGR"></script>
+<script type="text/plain" data-category="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MXSR773H36');
+</script>
+
+<!-- Konfigurace lišty -->
+<script>
+    window.addEventListener('load', function() {
+        CookieConsent.run({
+            guiOptions: {
+                consentModal: {
+                    layout: 'cloud',
+                    position: 'bottom center',
+                    equalWeightButtons: true,
+                    flipButtons: false
+                }
+            },
+            categories: {
+                necessary: { enabled: true },
+                analytics: { }
+            },
+            language: {
+                default: 'cs',
+                translations: {
+                    cs: {
+                        consentModal: {
+                            title: 'I ilustrace potřebují trošku péče (a my cookies)',
+                            description: 'Aby web fungoval správně a já věděla, které projekty vás nejvíce zajímají, používám malé soubory cookies. Ty nezbytné běží hned, o analytických můžete rozhodnout vy.',
+                            acceptAllBtn: 'Povolit vše',
+                            acceptNecessaryBtn: 'Jen nezbytné',
+                            showPreferencesBtn: 'Nastavit individuálně',
+                            footer: `
+                                <a href="/kontakt/zasady/">Ochrana osobních údajů</a>
+                            `
+                        },
+                        preferencesModal: {
+                            title: 'Nastavení cookies',
+                            acceptAllBtn: 'Povolit vše',
+                            acceptNecessaryBtn: 'Jen nezbytné',
+                            savePreferencesBtn: 'Uložit nastavení',
+                            closeIconLabel: 'Zavřít',
+                            sections: [
+                                {
+                                    title: 'Nezbytné cookies',
+                                    description: 'Tyto cookies jsou potřeba pro správné fungování a bezpečnost webu.',
+                                    linkedCategory: 'necessary'
+                                },
+                                {
+                                    title: 'Analytické cookies',
+                                    description: 'Pomáhají mi anonymně sledovat návštěvnost a zjišťovat, jaké ilustrace a projekty vás baví.',
+                                    linkedCategory: 'analytics'
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

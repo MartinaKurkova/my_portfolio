@@ -3110,10 +3110,8 @@ strong {
   padding: 3rem 1.25rem;
 }
 .gdpr-hero__heading {
-  padding-top: 4rem;
-  font-weight: 900;
-  font-size: clamp(1.8rem, 1.8rem + 2.5vw, 4rem);
-  margin-bottom: 1rem;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
+  margin-top: 3rem;
 }
 
 .privacy__container {
@@ -3121,21 +3119,24 @@ strong {
   padding: 2rem 1.25rem;
 }
 .privacy__title {
-  font-size: clamp(1.5rem, 1.5rem + 2vw, 2.9rem);
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
   margin-top: 3rem;
 }
 .privacy__section-heading {
   font-size: clamp(1rem, 1rem + 0.5vw, 1.3rem);
-  font-family: "Fraunces", "Fraunces Fallback", serif;
+  font-family: "Work Sans", sans-serif;
   margin: 2rem 0 0 0;
+  color: #800080;
 }
 .privacy__article-heading {
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0;
+  color: #333333;
 }
 .privacy__list {
-  margin: 0;
+  margin: 0 0 1rem 0;
   list-style-type: disc;
   padding-left: 1rem;
 }
@@ -3873,4 +3874,47 @@ strong {
   .lightbox__nav--next {
     right: 0.625rem;
   }
+}
+
+.cookies__title {
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
+  margin-top: 3rem;
+}
+.cookies__section-heading {
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.3rem);
+  font-family: "Work Sans", sans-serif;
+  margin: 2rem 0 0 0;
+  color: #800080;
+}
+.cookies__article-heading {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #333333;
+}
+.cookies__list {
+  margin: 0 0 1rem 0;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+.cookies__list-item {
+  padding-left: 0.5rem;
+}
+.cookies__article-body {
+  margin-top: 0;
+}
+
+#cc-main {
+  --cc-btn-primary-bg: #C71585 !important;
+  --cc-btn-primary-border-color: #C71585 !important;
+  --cc-btn-primary-hover-bg: #800080 !important;
+  --cc-btn-primary-hover-border-color: #800080 !important;
+  --cc-btn-primary-color: #ffffff !important;
+  --cc-toggle-on-bg: #C71585 !important;
+  --cc-link-color: #C71585 !important;
+  --cc-btn-secondary-bg: #f4f4f4 !important;
+  --cc-btn-secondary-color: #800080 !important;
+  --cc-btn-secondary-hover-bg: #e2e2e2 !important;
+  --cc-primary-color: #800080 !important;
 }/*# sourceMappingURL=style.css.map */

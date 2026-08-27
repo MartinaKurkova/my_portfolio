@@ -1,0 +1,66 @@
+@use "../utils/variables";
+@use "../base/typography";
+@use "../base/base";
+@use "../base/fonts";
+@use "../components/buttons";
+
+// Cookies
+.cookies {
+    &__title {
+        font-size: clamp(1.35rem, calc(1.35rem + 1.5vw), 2.2rem);
+        margin-top: 3rem;
+    }
+
+    &__section-heading {
+        font-size: clamp(1rem, calc(1rem + 0.5vw), 1.3rem);
+        font-family: variables.$font-sans;
+        margin: 2rem 0 0 0;
+        color: variables.$color-primary;
+    }
+
+    &__article-heading {
+        font-family: variables.$font-sans;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: variables.$color-text;
+    }
+
+    &__list {
+        margin: 0 0 1rem 0;
+        list-style-type: disc;
+        padding-left: 1rem;
+    }
+
+    &__list-item {
+        padding-left: 0.5rem;
+    }
+
+    &__article-body {
+        margin-top: 0;
+    }
+}
+
+// CookieConsent lišta
+#cc-main {
+    // Hlavní tlačítko (Povolit vše)
+    --cc-btn-primary-bg: #{variables.$color-secondary} !important;
+    --cc-btn-primary-border-color: #{variables.$color-secondary} !important;
+    --cc-btn-primary-hover-bg: #{variables.$color-primary} !important;
+    --cc-btn-primary-hover-border-color: #{variables.$color-primary} !important;
+    --cc-btn-primary-color: #ffffff !important;
+
+    // Přepínače v nastavení (když je cookie zapnutá)
+    --cc-toggle-on-bg: #{variables.$color-secondary} !important;
+
+    // Odkazy v liště
+    --cc-link-color: #{variables.$color-secondary} !important;
+
+    // Vedlejší tlačítka (Jen nezbytné / Nastavení)
+    --cc-btn-secondary-bg: #f4f4f4 !important;
+    --cc-btn-secondary-color: #{variables.$color-primary} !important;
+    --cc-btn-secondary-hover-bg: #e2e2e2 !important;
+
+    // Nadpisy
+    --cc-primary-color: #{variables.$color-primary} !important;
+}

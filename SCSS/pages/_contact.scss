@@ -300,10 +300,8 @@
     }
 
     &__heading {
-        padding-top: 4rem;
-        font-weight: 900;
-        font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
-        margin-bottom: 1rem; 
+        font-size: clamp(1.35rem, calc(1.35rem + 1.5vw), 2.2rem);
+        margin-top: 3rem;
     }
 }
 
@@ -315,24 +313,27 @@
     }
 
     &__title {
-        font-size: clamp(1.5rem, calc(1.5rem + 2vw), 2.9rem);
+        font-size: clamp(1.35rem, calc(1.35rem + 1.5vw), 2.2rem);
         margin-top: 3rem;
     }
 
     &__section-heading {
         font-size: clamp(1rem, calc(1rem + 0.5vw), 1.3rem);
-        font-family: variables.$font-serif;
+        font-family: variables.$font-sans;
         margin: 2rem 0 0 0;
+        color: variables.$color-primary;
     }
 
     &__article-heading {
+        font-family: variables.$font-sans;
         font-size: 1rem;
         font-weight: 600;
         margin-bottom: 0;
+        color: variables.$color-text;
     }
 
     &__list {
-        margin: 0;
+        margin: 0 0 1rem 0;
         list-style-type: disc;
         padding-left: 1rem;
     }
