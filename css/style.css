@@ -180,7 +180,7 @@ strong {
 .header__logo-link {
   font-family: "Fraunces", "Fraunces Fallback", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 900;
   color: white;
   text-decoration: none;
   font-size: clamp(0.875rem, 1rem + 1vw, 1.25rem);
@@ -2497,9 +2497,6 @@ strong {
   flex-direction: column;
   margin: 0 auto;
   padding: 2rem 1.25rem 0 1.25rem;
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 .shop__heading {
   margin: 3rem 0;
@@ -2747,23 +2744,24 @@ strong {
   padding: 2rem 1.25rem;
 }
 .conditions__title {
-  font-size: clamp(1.5rem, 1.5rem + 2vw, 2.9rem);
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
   margin-top: 3rem;
 }
 .conditions__section-heading {
   font-size: clamp(1rem, 1rem + 0.5vw, 1.3rem);
-  font-family: "Fraunces", "Fraunces Fallback", serif;
-  font-weight: 800;
+  font-family: "Work Sans", sans-serif;
   margin: 2rem 0 0 0;
   color: #800080;
 }
 .conditions__article-heading {
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0;
+  color: #333333;
 }
 .conditions__list {
-  margin: 0;
+  margin: 0 0 1rem 0;
   list-style-type: disc;
   padding-left: 1rem;
 }
