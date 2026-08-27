@@ -99,6 +99,43 @@ title: Ilustrace a vizuální obsah pro knihy i web | Martina Kurková Nožičko
                     </div>
                 </div>
             </div>
+            <!-- card lednacek-->
+            <div class="print__card">
+                <a href="/obchod/lednacek/" class="print__card-link">
+                    <span class="print__sr-only">Detail produktu - Plakát Ledňáček</span>
+                </a>
+                <div class="print__item">
+                    <div class="print__image-container">
+                        <img src="/images/obchod/lednacek/lednacek_350.webp" 
+                            srcset="/images/obchod/lednacek/lednacek_350.webp 350w,
+                                    /images/obchod/lednacek/lednacek_420.webp 420w,
+                                    /images/obchod/lednacek/lednacek_560.webp 56Ow"
+                            sizes="(max-width: 30rem) 100vw, 
+                                (max-width: 48rem) 50vw, 
+                                350px" 
+                            data-full="/images/obchod/lednacek/lednacek_560.webp"
+                            alt="Plakát s ledňáčkem" 
+                            class="print__image"
+                            loading="eager" 
+                            fetchpriority="high"
+                            width="350"
+                            height="350">
+                    </div>
+                    <div class="print__text-container">
+                        <h3 class="print__name">Ledňáček</h3>
+                        <p class="print__category">Ilustrovaný tisk</p>
+                        <div class="print__info">
+                            <div class="print__sizes">
+                                <p class="print__list-item">13 &times; 18 cm</p>
+                            </div>
+                            <div class="print__prices">
+                                <p class="print__list-item">99 Kč</p>
+                            </div>
+                        </div>
+                        <a href="/obchod/lednacek/" class="print__button-cta">Prohlédnout</a>
+                    </div>
+                </div>
+            </div>
             <!-- card tukan-->
             <div class="print__card">
                 <a href="/obchod/tukan/" class="print__card-link">
@@ -188,8 +225,7 @@ title: Ilustrace a vizuální obsah pro knihy i web | Martina Kurková Nožičko
                             data-full="/images/obchod/pipulky/pipulky_560.webp"
                             alt="Plakát pipulek" 
                             class="print__image"
-                            loading="eager" 
-                            fetchpriority="high"
+                            loading="lazy" 
                             width="350"
                             height="350">
                     </div>
