@@ -36,9 +36,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        padding: 2rem 1.25rem;
-        // border: 2px solid whitesmoke;
-        // border-radius: 1rem;
+        padding: 1rem 1.25rem;
     }
 
     &__heading {
@@ -47,45 +45,6 @@
 
     &__text {
         color: rgb(46, 45, 45);
-    }
-
-    &__info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 0.5rem;
-    }
-
-    &__prices {
-        text-align: end;
-        font-weight: 800;
-    }
-
-    &__list-item {
-        margin: 0.5rem 0;
-    }
-
-    &__button-cta {
-        @include buttons.button-cta;
-        background-color: white;
-        border: 1px solid variables.$color-secondary;
-        color: variables.$color-secondary;
-        margin: 0;
-
-        &:hover {
-            background-color: variables.$color-hover;
-            color: white;
-        }
-
-        &:active {
-            background-color: variables.$color-active;
-            color: white;
-        }
-
-        &:focus-visible {
-            outline-color: variables.$color-outline; 
-            color: white;
-        }
     }
 
     // gallery grid
@@ -107,6 +66,7 @@
         position: relative;
         cursor: pointer;
         transition: transform 0.2s;
+        height: 100%;
     }
 
     &__card:hover {
@@ -134,11 +94,13 @@
 
     &__item {
         border-radius: 5px;
-        // padding: 1rem;
         background: white;
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         border: 1px solid whitesmoke;
         margin-bottom: 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
     }
 
     &__image-container {
@@ -156,10 +118,13 @@
     &__text-container {
         margin-bottom: 1rem;
         padding: 0 1rem 1rem 1rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     &__name {
-        font-family: variables.$font-serif;
+        font-family: variables.$font-sans;
         font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
         color: variables.$color-text;
         margin: 0.5rem 0;
@@ -178,27 +143,49 @@
         padding: 0 1rem 1rem 1rem;
     }
 
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    &__prices {
+        text-align: end;
+        font-weight: 800;
+    }
+
     &__price {
         font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
         font-weight: 900;
         margin: 0;
     }
 
-    &__link {
+    &__list-item {
+        margin: 0.5rem 0;
+    }
+
+    &__button-cta {
         @include buttons.button-cta;
-        color: white;
-        margin-top: 1rem;
+        background-color: white;
+        border: 1px solid variables.$color-secondary;
+        color: variables.$color-secondary;
+        margin: 0;
+        margin-top: auto;
 
         &:hover {
             background-color: variables.$color-hover;
+            color: white;
         }
 
         &:active {
             background-color: variables.$color-active;
+            color: white;
         }
 
         &:focus-visible {
             outline-color: variables.$color-outline; 
+            color: white;
         }
     }
     
