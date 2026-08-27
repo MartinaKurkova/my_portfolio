@@ -36,6 +36,7 @@
 
     &__text {
         margin: 0;
+        font-style: normal;
     }
 
     &__section {
@@ -57,6 +58,10 @@
         font-style: normal;
     }
 
+    &__heading_pekseso {
+        margin-top: 1rem;
+    }
+
     // social icons
     &__social-icon--img {
         width: 28px; 
@@ -65,9 +70,17 @@
         margin-bottom: 1rem;
     }
 
+    &__social-links {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__social-link {
         text-decoration: none;
-        display: inline-block;
+        color: white;
+        display: flex;              
+        align-items: center;        
+        gap: 0.5rem;               
         margin-right: 0.1rem; 
         transition: transform 0.2s ease;
     }
@@ -80,12 +93,6 @@
         outline: 2px solid #007acc;
         outline-offset: 2px;
     }
-
-    &__social-links {
-        margin-top: 0.5rem;
-        display: flex;
-        flex-direction: row;
-    } 
 
     &__section_info {
         margin-bottom: 0;
@@ -110,7 +117,7 @@
             gap: 1.25rem;
             grid-template-areas: 
             "about about"
-            "contact contact"
+            "contact social"
             "important menu"
             "info info";
         }
@@ -121,6 +128,10 @@
 
         &__section_contact {
             grid-area: contact;
+        }
+
+        &__section_social {
+            grid-area: social;
         }
 
         &__section_important {
@@ -141,12 +152,12 @@
 @media screen and (min-width: 53.75rem) {
         .footer {
         &__container {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 1rem;
             grid-template-areas: 
-            "about about about"
-            "contact important menu"
-            "info info info";
+            "about about about about"
+            "contact social important menu"
+            "info info info info";
         }
 
         &__section_about {
@@ -155,6 +166,10 @@
 
         &__section_contact {
             grid-area: contact;
+        }
+
+        &__section_social {
+            grid-area: social;
         }
 
         &__section_important {
@@ -167,18 +182,7 @@
 
         &__section_info {
             grid-area: info;
-            // display: grid;
-            // gap: 1rem;
-            // grid-template-columns: 1fr 1fr 1fr;
-            // grid-template-columns: 1fr, 2fr;
+
         }
-
-        // &__copyright {
-        //     grid-column: 1/2;
-        // }
-
-        // &__credit {
-        //     grid-column: 2/4;
-        // }
     }
 }

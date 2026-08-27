@@ -473,6 +473,7 @@ strong {
 }
 .footer__text {
   margin: 0;
+  font-style: normal;
 }
 .footer__section {
   margin-bottom: 2rem;
@@ -488,15 +489,25 @@ strong {
 .footer__address {
   font-style: normal;
 }
+.footer__heading_pekseso {
+  margin-top: 1rem;
+}
 .footer__social-icon--img {
   width: 28px;
   height: 28px;
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
+.footer__social-links {
+  display: flex;
+  flex-direction: column;
+}
 .footer__social-link {
   text-decoration: none;
-  display: inline-block;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-right: 0.1rem;
   transition: transform 0.2s ease;
 }
@@ -506,11 +517,6 @@ strong {
 .footer__social-link:focus-visible {
   outline: 2px solid #007acc;
   outline-offset: 2px;
-}
-.footer__social-links {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: row;
 }
 .footer__section_info {
   margin-bottom: 0;
@@ -527,13 +533,16 @@ strong {
   .footer__container {
     display: grid;
     gap: 1.25rem;
-    grid-template-areas: "about about" "contact contact" "important menu" "info info";
+    grid-template-areas: "about about" "contact social" "important menu" "info info";
   }
   .footer__section_about {
     grid-area: about;
   }
   .footer__section_contact {
     grid-area: contact;
+  }
+  .footer__section_social {
+    grid-area: social;
   }
   .footer__section_important {
     grid-area: important;
@@ -547,15 +556,18 @@ strong {
 }
 @media screen and (min-width: 53.75rem) {
   .footer__container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
-    grid-template-areas: "about about about" "contact important menu" "info info info";
+    grid-template-areas: "about about about about" "contact social important menu" "info info info info";
   }
   .footer__section_about {
     grid-area: about;
   }
   .footer__section_contact {
     grid-area: contact;
+  }
+  .footer__section_social {
+    grid-area: social;
   }
   .footer__section_important {
     grid-area: important;
