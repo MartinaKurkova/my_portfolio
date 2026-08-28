@@ -1,0 +1,70 @@
+---
+pagination:
+  data: plakaty
+  size: 1
+  alias: plakat
+permalink: "/obchod/{{ plakat.slug }}/"
+layout: layout.njk
+---
+
+<section class="product">
+  <div class="product__container">
+
+    <div class="product__image-container">
+  <div class="product__image-main" onclick="openLightbox(0)">
+    <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ plakat.obrazky[0] }}_800.webp"
+      alt="Plakát {{ plakat.nazev }}"
+      class="product__image"
+      id="mainImg"
+      loading="eager"
+      fetchpriority="high"
+      width="800" height="800">
+  </div>
+
+  <div class="product__thumbnails">
+    {% for obr in plakat.obrazky %}
+    <div class="product__thumbnail{% if loop.first %} active{% endif %}" onclick="changeImage({{ loop.index0 }})">
+      <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ obr }}_350.webp"
+        alt="Plakát {{ plakat.nazev }}"
+        class="product_thumbnail-image"
+        loading="lazy" width="350" height="350">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+    <div class="product__text-container">
+  <h1 class="product__heading">{{ plakat.nazev }}</h1>
+  <p class="product__text">{{ plakat.popis }}</p>
+  <p class="product__text">Rám není součástí balení.</p>
+
+  <ul class="product__list">
+    <li class="product__list-item"><span class="product__label">Papír: </span>{{ plakat.papir }}</li>
+    <li class="product__list-item"><span class="product__label">Tisk: </span>{{ plakat.tisk }}</li>
+    <li class="product__list-item product__list-item--variants">
+      <span class="product__label">Formát:</span>
+      <div class="product__variants">
+        {% for f in plakat.formaty %}
+        <label class="product__variant">
+          <input type="radio" name="format" value="{{ f.velikost }}" data-price="{{ f.cena }}" {% if loop.first %}checked{% endif %}>
+          {{ f.velikost }}
+        </label>
+        {% endfor %}
+      </div>
+    </li>
+</ul>
+
+<div class="product__price" id="productPrice"></div>
+
+  <div class="product_buy">
+    <div class="product__buttons">
+      <a href="#" class="product__button-cta" id="ctaButton" data-nazev="{{ plakat.nazev }}">Mám zájem</a>
+      <a href="/obchod/" class="product__link--back">Zpět na plakáty</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<script src="/js/product.js"></script>

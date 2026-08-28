@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "tancici-plamenaci",
+    "nazev": "Tančící plameňáci",
+    "popis": "Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "plamenaci",
+    "obrazky": ["plamenaci_tanec"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 },
+      { "velikost": "21 × 30 cm", "cena": 159 }
+    ]
+  },
+  {
+    "slug": "plamenaci",
+    "nazev": "Plameňáci",
+    "popis": "Autorská vektorová ilustrace dvou plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "plamenaci",
+    "obrazky": ["plamenaci"],
+    "formaty": [
+      { "velikost": "18 × 13 cm", "cena": 99 },
+      { "velikost": "30 × 21 cm", "cena": 159 }
+    ]
+  },
+  {
+    "slug": "plamenaci-hejno",
+    "nazev": "Hejno plameňáků",
+    "popis": "Autorská vektorová ilustrace hejna plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "plamenaci",
+    "obrazky": ["plamenaci-hejno"],
+    "formaty": [
+      { "velikost": "30 × 21 cm", "cena": 159 }
+    ]
+  },
+  {
+    "slug": "lednacek",
+    "nazev": "Ledňáček",
+    "popis": "Autorská vektorová ilustrace ledňáčka z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "lednacek",
+    "obrazky": ["lednacek"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "tukan",
+    "nazev": "Tukan",
+    "popis": "Autorská vektorová ilustrace tukana z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "tukani",
+    "obrazky": ["tukan"],
+    "formaty": [
+      { "velikost": "18 × 13 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "letici-tukan",
+    "nazev": "Letící tukan",
+    "popis": "Autorská vektorová ilustrace letícího tukana z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "tukani",
+    "obrazky": ["tukan_letici"],
+    "formaty": [
+      { "velikost": "18 × 13 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "pipulky",
+    "nazev": "Pipulky",
+    "popis": "Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "pipulky",
+    "obrazky": ["pipulky"],
+    "formaty": [
+      { "velikost": "13 × 13 cm", "cena": 79 },
+      { "velikost": "18 × 13 cm", "cena": 99 }
+    ]
+  }
+]

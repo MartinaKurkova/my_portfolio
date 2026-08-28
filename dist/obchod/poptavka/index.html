@@ -18,20 +18,20 @@
    
     
 
-    <title></title>
+    <title>Poptávka | Martina Kurková Nožičková</title>
     <meta name="description" content="">
 
     <!-- Open Graph pro Facebook/LinkedIn -->
-    <meta property="og:title" content="">
+    <meta property="og:title" content="Poptávka | Martina Kurková Nožičková">
     <meta property="og:description" content="">
     <meta property="og:image" content="/images/autoportret/Autoportret_cerveny_600.webp">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/obchod/plamenaci/">
+    <meta property="og:url" content="/obchod/poptavka/">
     <meta property="og:site_name" content="Martina Kurková Nožičková">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="">
+    <meta name="twitter:title" content="Poptávka | Martina Kurková Nožičková">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
@@ -59,7 +59,7 @@
     <meta name="theme-color" content="#800080">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="/obchod/plamenaci/">
+    <link rel="canonical" href="/obchod/poptavka/">
 
     <link rel="stylesheet" href="/css/style.css">
 
@@ -149,72 +149,32 @@
         <main>
 
             
-<section class="product">
-  <div class="product__container">
+<section class="poptavka">
+  <div class="poptavka__container container">
+    <h1 class="poptavka__heading">Poptávka plakátu</h1>
+    <p class="poptavka__text">Napište mi, o které plakáty máte zájem, a ozvu se vám s dalšími informacemi (platba, doručení).</p>
 
-    <div class="product__image-container">
-  <div class="product__image-main" onclick="openLightbox(0)">
-    <img src="/images/obchod/plamenaci/plamenaci_800.webp"
-      alt="Plakát Plameňáci"
-      class="product__image"
-      id="mainImg"
-      loading="eager"
-      fetchpriority="high"
-      width="800" height="800">
-  </div>
+    <form action="https://api.web3forms.com/submit" method="POST" novalidate class="poptavka__form">
+      <input type="hidden" name="access_key" value="224e6b87-7393-4341-aec3-7caa72ba8c52">
+      <input type="hidden" name="_email.subject" value="Nová poptávka plakátu">
+      <input type="checkbox" name="botcheck" style="display: none;">
 
-  <div class="product__thumbnails">
-    
-    <div class="product__thumbnail active" onclick="changeImage(0)">
-      <img src="/images/obchod/plamenaci/plamenaci_350.webp"
-        alt="Plakát Plameňáci"
-        class="product_thumbnail-image"
-        loading="lazy" width="350" height="350">
-    </div>
-    
-  </div>
-</div>
+      <label for="jmeno">Jméno a příjmení *</label>
+      <input type="text" id="jmeno" name="name" required>
 
-    <div class="product__text-container">
-  <h1 class="product__heading">Plameňáci</h1>
-  <p class="product__text">Autorská vektorová ilustrace dvou plameňáků z kolekce věnované mým oblíbeným druhům ptáků.</p>
-  <p class="product__text">Rám není součástí balení.</p>
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" required>
 
-  <ul class="product__list">
-    <li class="product__list-item"><span class="product__label">Papír: </span>Nenatíraný papír Olin Regular 200 g/m²</li>
-    <li class="product__list-item"><span class="product__label">Tisk: </span>Digitální tisk</li>
-    <li class="product__list-item product__list-item--variants">
-      <span class="product__label">Formát:</span>
-      <div class="product__variants">
-        
-        <label class="product__variant">
-          <input type="radio" name="format" value="18 × 13 cm" data-price="99" checked>
-          18 × 13 cm
-        </label>
-        
-        <label class="product__variant">
-          <input type="radio" name="format" value="30 × 21 cm" data-price="159" >
-          30 × 21 cm
-        </label>
-        
-      </div>
-    </li>
-</ul>
+      <label for="polozky">Vaše poptávka *</label>
+      <textarea id="polozky" name="message" rows="4" required></textarea>
 
-<div class="product__price" id="productPrice"></div>
-
-  <div class="product_buy">
-    <div class="product__buttons">
-      <a href="#" class="product__button-cta" id="ctaButton" data-nazev="Plameňáci">Mám zájem</a>
-      <a href="/obchod/" class="product__link--back">Zpět na plakáty</a>
-    </div>
-  </div>
-</div>
-
+      <button type="submit" class="poptavka__button-cta">Odeslat poptávku</button>
+      <div id="form-status" class="poptavka__status" role="status" aria-live="polite"></div>
+    </form>
   </div>
 </section>
 
-<script src="/js/product.js"></script>
+<script src="/js/poptavka.js"></script>
 
         </main>
     

@@ -158,3 +158,22 @@ document.addEventListener('keydown', (e) => {
  * Inicializace po načtení stránky
  */
 document.addEventListener('DOMContentLoaded', initGallery);
+
+
+
+// form
+document.addEventListener('DOMContentLoaded', () => {
+  const variants = document.querySelectorAll('input[name="format"]');
+  const priceEl = document.getElementById('productPrice');
+  const cta = document.getElementById('ctaButton');
+  const nazev = cta.dataset.nazev;
+
+  function update() {
+    const selected = document.querySelector('input[name="format"]:checked');
+    priceEl.textContent = selected.dataset.price + ' Kč';
+    cta.href = `/obchod/poptavka/?plakat=${encodeURIComponent(nazev)}&velikost=${encodeURIComponent(selected.value)}`;
+  }
+
+  variants.forEach(v => v.addEventListener('change', update));
+  update();
+});
