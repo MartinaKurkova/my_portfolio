@@ -149,33 +149,31 @@
         gap: 2rem;
     }
 
-    &__link {
+    &__button-cta {
         @include buttons.button-cta;
-        text-decoration: none;
+        background-color: white;
+        border: 1px solid variables.$color-secondary;
+        color: variables.$color-secondary;
         margin: 0;
+        margin-top: auto;
+
+        &:hover {
+            background-color: variables.$color-hover;
+            color: white;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+            color: white;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline; 
+            color: white;
+        }
     }
 
-    &__link:hover {
-        @include buttons.button-cta;
-    }
-
-    &__link:active,
-    &__link:focus {
-        @include buttons.button-cta;
-    }
-
-    &__link--back {
-        @include buttons.button-cta;
-    }
-
-    &__link--back:hover {
-        @include buttons.button-cta;
-    }
-
-    &__link:active,
-    &__link:focus {
-        @include buttons.button-cta;
-    }
+    
 }
 
 
