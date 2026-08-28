@@ -85,5 +85,152 @@
       { "velikost": "13 × 13 cm", "cena": 79 },
       { "velikost": "18 × 13 cm", "cena": 99 }
     ]
+  },
+  {
+    "slug": "podmorsky-svet",
+    "nazev": "Podmořský svět",
+    "popis": "Autorská vektorová ilustrace ze světa velryb – podmořský svět s velrybou a tučňáky.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "velryby",
+    "obrazky": ["podmorsky"],
+    "formaty": [
+      { "velikost": "13 × 13 cm", "cena": 79 },
+      { "velikost": "25 × 25 cm", "cena": 159 }
+    ]
+  },
+  {
+    "slug": "velrybarka",
+    "nazev": "Velrybářka",
+    "popis": "Autorská vektorová ilustrace ze světa velryb – velryba chytající ryby.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "velryby",
+    "obrazky": ["velrybarka"],
+    "formaty": [
+      { "velikost": "13 × 13 cm", "cena": 79 },
+      { "velikost": "25 × 25 cm", "cena": 159 }
+    ]
+  },
+  {
+    "slug": "kuk",
+    "nazev": "Kuk!",
+    "popis": "Autorská vektorová ilustrace ze světa velryb – velryba nakukující oknem do ponorky.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "velryby",
+    "obrazky": ["kuk"],
+    "formaty": [
+      { "velikost": "13 × 13 cm", "cena": 79 },
+      { "velikost": "25 × 25 cm", "cena": 159 }
+    ]
+  },
+  {
+    "slug": "velrybi-taxi",
+    "nazev": "Velrybí taxi",
+    "popis": "Autorská vektorová ilustrace ze světa velryb – velryba převážející na svém hřbetu tučňáky.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "velryby",
+    "obrazky": ["velrybi_taxi"],
+    "formaty": [
+      { "velikost": "18 × 13 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "druhy-tucnaku",
+    "nazev": "Druhy tučňáků",
+    "popis": "Autorská vektorová ilustrace ze světa tučňáků. Na plakátu najdete všechny druhy tučňáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "tucnaci",
+    "obrazky": ["druhy-tucnaku"],
+    "formaty": [
+      { "velikost": "30 × 40 cm", "cena": 259 }
+    ]
+  },
+  {
+    "slug": "posta",
+    "nazev": "Pošta na Antarktidě",
+    "popis": "Autorská vektorová ilustrace ze světa tučňáků. Tučňáci si vyzvedávají své balíčky na poště.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "tucnaci",
+    "obrazky": ["posta"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "socha",
+    "nazev": "Socha",
+    "popis": "Autorská vektorová ilustrace ze světa tučňáků. Tučňáci si postavili svého sněhuláka ve tvaru tučňáka.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "tucnaci",
+    "obrazky": ["socha"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "vanoce",
+    "nazev": "Vánoce u tučňáků",
+    "popis": "Autorská vektorová ilustrace ze světa tučňáků - i tučňáci na jižním pólu slaví Vánoce.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "tucnaci",
+    "obrazky": ["vanoce"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "kormoran",
+    "nazev": "Kormorán",
+    "popis": "Autorská vektorová ilustrace hlavy kormorána z kolekce věnované mým oblíbeným druhům ptáků.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "kormoran",
+    "obrazky": ["hlava"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "mrozi",
+    "nazev": "Mroži",
+    "popis": "Autorská vektorová ilustrace z kolekce zvířat. Mroži hrají na schovku ve vodě mezi kameny.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "zvirata",
+    "obrazky": ["mrozi"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "medved",
+    "nazev": "Lední medvěd na bruslích",
+    "popis": "Autorská vektorová ilustrace z kolekce zvířat. Lední medvěd se učí broslit.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "zvirata",
+    "obrazky": ["medved"],
+    "formaty": [
+      { "velikost": "13 × 18 cm", "cena": 99 }
+    ]
+  },
+  {
+    "slug": "zirafy",
+    "nazev": "Žirafy",
+    "popis": "Autorská vektorová ilustrace z kolekce zvířat – dvě žirafy.",
+    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "tisk": "Digitální tisk",
+    "slozka_obrazku": "zvirata",
+    "obrazky": ["zirafy"],
+    "formaty": [
+      { "velikost": "13 × 13 cm", "cena": 79 }
+    ]
   }
 ]
