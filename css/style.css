@@ -994,18 +994,17 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   margin-left: 0.25rem;
 }
 .HPabout__image {
-  max-width: 70%;
+  max-width: 80%;
   height: auto;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   margin-bottom: 2rem;
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
 }
 @media screen and (max-width: 31.25rem) {
   .HPabout__image {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 .HPabout__button-cta {
