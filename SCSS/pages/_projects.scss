@@ -130,6 +130,10 @@
         align-items: center;
         border-radius: 50%;
     }
+
+    &__navigation-link--back {
+        color: variables.$color-primary;
+    }
 }
 
 // Lightbox 

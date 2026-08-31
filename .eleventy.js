@@ -19,6 +19,17 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("./portfolio/*.{html,njk}");
   });
 
+   // Seskupení pole podle zadaného klíče (např. plakaty podle kategorie)
+  eleventyConfig.addFilter("groupBy", (arr, key) => {
+    return arr.reduce((groups, item) => {
+      const value = item[key];
+      if (!groups[value]) groups[value] = [];
+      groups[value].push(item);
+      return groups;
+    }, {});
+  });
+
+
   return {
     templateFormats: ["njk", "html", "md"],
     markdownTemplateEngine: "njk",

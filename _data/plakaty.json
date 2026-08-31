@@ -1,5 +1,6 @@
 [
   {
+    "kategorie": "Ptáci",
     "slug": "tancici-plamenaci",
     "nazev": "Tančící plameňáci",
     "popis": "Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -13,6 +14,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "plamenaci",
     "nazev": "Plameňáci",
     "popis": "Autorská vektorová ilustrace dvou plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -26,6 +28,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "plamenaci-hejno",
     "nazev": "Hejno plameňáků",
     "popis": "Autorská vektorová ilustrace hejna plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -38,6 +41,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "lednacek",
     "nazev": "Ledňáček",
     "popis": "Autorská vektorová ilustrace ledňáčka z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -50,6 +54,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "tukan",
     "nazev": "Tukan",
     "popis": "Autorská vektorová ilustrace tukana z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -62,6 +67,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "letici-tukan",
     "nazev": "Letící tukan",
     "popis": "Autorská vektorová ilustrace letícího tukana z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -74,6 +80,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "pipulky",
     "nazev": "Pipulky",
     "popis": "Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -87,6 +94,7 @@
     ]
   },
   {
+    "kategorie": "Velryby",
     "slug": "podmorsky-svet",
     "nazev": "Podmořský svět",
     "popis": "Autorská vektorová ilustrace ze světa velryb – podmořský svět s velrybou a tučňáky.",
@@ -100,6 +108,7 @@
     ]
   },
   {
+    "kategorie": "Velryby",
     "slug": "velrybarka",
     "nazev": "Velrybářka",
     "popis": "Autorská vektorová ilustrace ze světa velryb – velryba chytající ryby.",
@@ -113,6 +122,7 @@
     ]
   },
   {
+    "kategorie": "Velryby",
     "slug": "kuk",
     "nazev": "Kuk!",
     "popis": "Autorská vektorová ilustrace ze světa velryb – velryba nakukující oknem do ponorky.",
@@ -126,6 +136,7 @@
     ]
   },
   {
+    "kategorie": "Velryby",
     "slug": "velrybi-taxi",
     "nazev": "Velrybí taxi",
     "popis": "Autorská vektorová ilustrace ze světa velryb – velryba převážející na svém hřbetu tučňáky.",
@@ -138,6 +149,7 @@
     ]
   },
   {
+    "kategorie": "Tučňáci",
     "slug": "druhy-tucnaku",
     "nazev": "Druhy tučňáků",
     "popis": "Autorská vektorová ilustrace ze světa tučňáků. Na plakátu najdete všechny druhy tučňáků.",
@@ -150,6 +162,7 @@
     ]
   },
   {
+    "kategorie": "Tučňáci",
     "slug": "posta",
     "nazev": "Pošta na Antarktidě",
     "popis": "Autorská vektorová ilustrace ze světa tučňáků. Tučňáci si vyzvedávají své balíčky na poště.",
@@ -162,6 +175,7 @@
     ]
   },
   {
+    "kategorie": "Tučňáci",
     "slug": "socha",
     "nazev": "Socha",
     "popis": "Autorská vektorová ilustrace ze světa tučňáků. Tučňáci si postavili svého sněhuláka ve tvaru tučňáka.",
@@ -174,6 +188,7 @@
     ]
   },
   {
+    "kategorie": "Tučňáci",
     "slug": "vanoce",
     "nazev": "Vánoce u tučňáků",
     "popis": "Autorská vektorová ilustrace ze světa tučňáků - i tučňáci na jižním pólu slaví Vánoce.",
@@ -186,6 +201,7 @@
     ]
   },
   {
+    "kategorie": "Ptáci",
     "slug": "kormoran",
     "nazev": "Kormorán",
     "popis": "Autorská vektorová ilustrace hlavy kormorána z kolekce věnované mým oblíbeným druhům ptáků.",
@@ -198,6 +214,7 @@
     ]
   },
   {
+    "kategorie": "Ostatní zvířata",
     "slug": "mrozi",
     "nazev": "Mroži",
     "popis": "Autorská vektorová ilustrace z kolekce zvířat. Mroži hrají na schovku ve vodě mezi kameny.",
@@ -210,6 +227,7 @@
     ]
   },
   {
+    "kategorie": "Ostatní zvířata",
     "slug": "medved",
     "nazev": "Lední medvěd na bruslích",
     "popis": "Autorská vektorová ilustrace z kolekce zvířat. Lední medvěd se učí broslit.",
@@ -222,6 +240,7 @@
     ]
   },
   {
+    "kategorie": "Ostatní zvířata",
     "slug": "zirafy",
     "nazev": "Žirafy",
     "popis": "Autorská vektorová ilustrace z kolekce zvířat – dvě žirafy.",

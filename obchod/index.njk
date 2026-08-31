@@ -1,0 +1,58 @@
+---
+layout: layout.njk
+title: Ilustrace a vizuální obsah pro knihy i web | Martina Kurková Nožičková
+permalink: "/obchod/"
+---
+
+<section class="shop">
+  <div class="shop__container container">
+    <div class="shop-container">
+      <div class="shop__text-container">
+        <h1 class="shop__heading">Papírové radosti</h1>
+        <p class="shop__text">Některé ilustrace nechávám žít i mimo obrazovku. Vznikají z nich malé tištěné série pro radost, na zeď nebo třeba jako dárek někomu, kdo má rád obrázky trochu jinak.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="print">
+  {% for kategorie, polozky in plakaty | groupBy("kategorie") %}
+  <div class="print__container container">
+    <h2 class="print__heading">{{ kategorie }}</h2>
+    <div class="print__grid">
+      {% for p in polozky %}
+      <div class="print__card">
+        <a href="/obchod/{{ p.slug }}/" class="print__card-link">
+          <span class="print__sr-only">Detail produktu - Plakát {{ p.nazev }}</span>
+        </a>
+        <div class="print__item">
+          <div class="print__image-container">
+            <img src="/images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_350.webp"
+              srcset="/images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_350.webp 350w,
+                      /images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_420.webp 420w,
+                      /images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_560.webp 560w"
+              sizes="(max-width: 30rem) 100vw, (max-width: 48rem) 50vw, 350px"
+              alt="Plakát {{ p.nazev }}"
+              class="print__image"
+              loading="lazy" width="350" height="350">
+          </div>
+          <div class="print__text-container">
+            <h3 class="print__name">{{ p.nazev }}</h3>
+            <p class="print__category">Ilustrovaný tisk</p>
+            <div class="print__info">
+              <div class="print__sizes">
+                {% for f in p.formaty %}<p class="print__list-item">{{ f.velikost }}</p>{% endfor %}
+              </div>
+              <div class="print__prices">
+                {% for f in p.formaty %}<p class="print__list-item">{{ f.cena }} Kč</p>{% endfor %}
+              </div>
+            </div>
+            <a href="/obchod/{{ p.slug }}/" class="print__button-cta">Prohlédnout</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
