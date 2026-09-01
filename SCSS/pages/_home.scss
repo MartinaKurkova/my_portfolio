@@ -283,6 +283,8 @@
     background-color: variables.$color-bg;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     &__container {
         display: flex;
@@ -291,6 +293,7 @@
         padding: 2rem 0;
         position: relative;
         z-index: 1;
+        order: 1; // text na mobilu první (nahoře)
 
         @media screen and (min-width: 50rem) {
             flex-direction: row;
@@ -303,7 +306,6 @@
         flex-direction: column;
         margin: 0 1.25rem;
         flex: 1;
-        order: 1;
 
         @media screen and (min-width: 50rem) {
             max-width: 50%;
@@ -317,9 +319,9 @@
     &__image-container {
         position: relative;
         width: 100%;
-        aspect-ratio: 4 / 3; 
-        order: 2;
-        clip-path: polygon(0 0, 100% 0%, 100% 82%, 0 100%);
+        aspect-ratio: 6 / 3; 
+        order: 2; 
+        clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
 
         @media screen and (min-width: 50rem) {
             position: absolute;
@@ -328,6 +330,7 @@
             bottom: 0;
             width: 50%;
             aspect-ratio: unset;
+            order: 0; 
             clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
         }
     }

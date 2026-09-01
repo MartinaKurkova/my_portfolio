@@ -131,8 +131,17 @@
         border-radius: 50%;
     }
 
-    &__navigation-link--back {
+    &__back-link {
+        text-decoration-thickness: .5px;
+        text-underline-offset: 0.2em;
         color: variables.$color-primary;
+        display: flex;
+        gap: 1rem;
+        transition: color 0.2s;
+
+        &:hover {
+            color: variables.$color-secondary;
+        }
     }
 }
 

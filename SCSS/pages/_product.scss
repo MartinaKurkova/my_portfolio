@@ -144,9 +144,15 @@
         margin: 1rem 0 2rem 0;
     }
 
+    &__accent-radio {
+        accent-color: variables.$color-primary;
+        padding-top: .4rem;
+    }
+
     &__buttons {
         display: flex;
         gap: 2rem;
+        align-items: center;
     }
 
     &__button-cta {
@@ -173,7 +179,18 @@
         }
     }
 
-    
+    &__back--link {
+        text-decoration-thickness: .5px;
+        text-underline-offset: 0.2em;
+        color: variables.$color-text;
+        display: flex;
+        gap: 1rem;
+        transition: color 0.2s;
+
+        &:hover {
+            color: variables.$color-primary;
+        }
+    }
 }
 
 
@@ -291,5 +308,113 @@
                 right: .625rem;
             }
         }
+    }
+}
+
+// inquiry
+.inquiry {
+    background-color: variables.$color-bg;
+
+    &__container {
+        margin: 0 auto;
+        padding: 2rem 1.25rem;
+        max-width: 40rem;
+    }
+
+    &__heading {
+        padding-top: 4rem;
+        font-weight: 900;
+        font-size: clamp(1.8rem, calc(1.8rem + 2.5vw), 4rem);
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+    }
+
+    &__fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__legend {
+        margin: 1rem 0;
+        font-weight: 800;
+        font-size: 1.3rem;
+    }
+
+    &__label {
+        display: block;
+        margin: 0.5rem 0 0.2rem 0;
+        font-weight: 500;
+    }
+
+    &__label--textarea {
+        margin-top: 0.8rem;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid variables.$color-primary;
+        border-radius: 10px;
+        font-family: inherit;
+        margin-bottom: 0.5rem;
+    }
+
+    &__input:focus,
+    &__textarea:focus,
+    &__button:focus {
+        outline: 2px solid variables.$color-outline;
+    }
+
+    // stav chyby - stejný vzor jako u contact-form
+    &__input.is-invalid,
+    &__textarea.is-invalid {
+        border: 2px solid variables.$color-secondary !important;
+        background-color: #fff8f8;
+    }
+
+    &__input.is-invalid:focus,
+    &__textarea.is-invalid:focus {
+        outline-color: variables.$color-secondary;
+        box-shadow: 0 0 5px rgba(217, 48, 37, 0.3);
+    }
+
+    &__error {
+        display: block;
+        color: variables.$color-secondary;
+        font-size: 0.85rem;
+        margin: 0 0 0.8rem 0;
+        font-weight: 500;
+    }
+
+    &__button {
+        @include buttons.button-cta;
+        background-color: variables.$color-secondary;
+        color: white;
+        margin-top: 1rem;
+
+        &:hover {
+            background-color: variables.$color-hover;
+        }
+
+        &:active {
+            background-color: variables.$color-active;
+        }
+
+        &:focus-visible {
+            outline-color: variables.$color-outline;
+        }
+    }
+
+    &__status {
+        margin-top: 1rem;
+    }
+
+    &__botcheck {
+        display: none;
     }
 }

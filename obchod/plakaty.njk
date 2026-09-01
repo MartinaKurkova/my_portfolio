@@ -5,6 +5,18 @@ pagination:
   alias: plakat
 permalink: "/obchod/{{ plakat.slug }}/"
 layout: layout.njk
+
+# Dynamické SEO & Meta tagy
+eleventyComputed:
+  title: "Plakát {{ plakat.nazev }} | Autorský tisk | Martina Kurková Nožičková"
+  description: "Autorský ilustrovaný plakát {{ plakat.nazev }}. {{ plakat.popis }} Kvalitní tisk na papír {{ plakat.papir }}."
+  
+  # Social & Open Graph
+  metaTitle: "Plakát {{ plakat.nazev }} | Martina Kurková Nožičková"
+  ogDescription: "Autorský tisk {{ plakat.nazev }}. {{ plakat.popis }}"
+  ogImage: "/images/obchod/{{ plakat.slozka_obrazku }}/{{ plakat.obrazky[0] }}_800.webp"
+  ogType: "product"
+  twitterCard: "summary_large_image"
 ---
 
 <section class="product">
@@ -25,7 +37,7 @@ layout: layout.njk
     {% for obr in plakat.obrazky %}
     <div class="product__thumbnail{% if loop.first %} active{% endif %}" onclick="changeImage({{ loop.index0 }})">
       <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ obr }}_350.webp"
-        alt="Plakát {{ plakat.nazev }}"
+        alt="Detail plakátu {{ plakat.nazev }} - ukázka {{ loop.index }}"
         class="product_thumbnail-image"
         loading="lazy" width="350" height="350">
     </div>
@@ -46,7 +58,7 @@ layout: layout.njk
       <div class="product__variants">
         {% for f in plakat.formaty %}
         <label class="product__variant">
-          <input type="radio" name="format" value="{{ f.velikost }}" data-price="{{ f.cena }}" {% if loop.first %}checked{% endif %}>
+          <input type="radio" name="format" class="product__accent-radio" value="{{ f.velikost }}" data-price="{{ f.cena }}" {% if loop.first %}checked{% endif %}>
           {{ f.velikost }}
         </label>
         {% endfor %}
@@ -56,10 +68,10 @@ layout: layout.njk
 
 <div class="product__price" id="productPrice"></div>
 
-  <div class="product_buy">
+  <div class="product__buy">
     <div class="product__buttons">
       <a href="#" class="product__button-cta" id="ctaButton" data-nazev="{{ plakat.nazev }}">Mám zájem</a>
-      <a href="/obchod/" class="product__link--back">Zpět na plakáty</a>
+      <a href="/obchod/" class="product__back--link">← Zpět do obchodu</a>
     </div>
   </div>
 </div>

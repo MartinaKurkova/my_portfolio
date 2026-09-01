@@ -149,27 +149,55 @@
         <main>
 
             
-<section class="poptavka">
-  <div class="poptavka__container container">
-    <h1 class="poptavka__heading">Poptávka plakátu</h1>
-    <p class="poptavka__text">Napište mi, o které plakáty máte zájem, a ozvu se vám s dalšími informacemi (platba, doručení).</p>
+<section class="inquiry">
+  <div class="inquiry__container container">
+    <h1 class="inquiry__heading">Poptávka plakátu</h1>
+    <p class="inquiry__text">Napište mi, o které plakáty máte zájem, a ozvu se vám s dalšími informacemi (platba, doručení).</p>
 
-    <form action="https://api.web3forms.com/submit" method="POST" novalidate class="poptavka__form">
-      <input type="hidden" name="access_key" value="224e6b87-7393-4341-aec3-7caa72ba8c52">
+    <form action="https://api.web3forms.com/submit" method="POST" novalidate class="inquiry__form">
+      <input type="hidden" name="access_key" value="2b8a480d-e053-488b-b74f-8bcf6d0df13f">
       <input type="hidden" name="_email.subject" value="Nová poptávka plakátu">
-      <input type="checkbox" name="botcheck" style="display: none;">
+      <input type="checkbox" name="botcheck" class="inquiry__botcheck" tabindex="-1" autocomplete="off">
 
-      <label for="jmeno">Jméno a příjmení *</label>
-      <input type="text" id="jmeno" name="name" required>
+      <fieldset class="inquiry__fieldset">
+        <legend class="inquiry__legend">Vaše údaje</legend>
 
-      <label for="email">E-mail *</label>
-      <input type="email" id="email" name="email" required>
+        <label for="jmeno" class="inquiry__label">Jméno a příjmení *</label>
+        <input
+          type="text"
+          id="jmeno"
+          name="name"
+          class="inquiry__input"
+          required
+          aria-describedby="jmeno-error"
+        >
+        <span id="jmeno-error" class="inquiry__error"></span>
 
-      <label for="polozky">Vaše poptávka *</label>
-      <textarea id="polozky" name="message" rows="4" required></textarea>
+        <label for="email" class="inquiry__label">E-mail *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="inquiry__input"
+          required
+          aria-describedby="email-error"
+        >
+        <span id="email-error" class="inquiry__error"></span>
 
-      <button type="submit" class="poptavka__button-cta">Odeslat poptávku</button>
-      <div id="form-status" class="poptavka__status" role="status" aria-live="polite"></div>
+        <label for="polozky" class="inquiry__label inquiry__label--textarea">Vaše poptávka *</label>
+        <textarea
+          id="polozky"
+          name="message"
+          rows="4"
+          class="inquiry__textarea"
+          required
+          aria-describedby="polozky-error"
+        ></textarea>
+        <span id="polozky-error" class="inquiry__error"></span>
+      </fieldset>
+
+      <button type="submit" class="inquiry__button">Odeslat poptávku</button>
+      <div id="form-status" class="inquiry__status" role="status" aria-live="polite"></div>
     </form>
   </div>
 </section>
