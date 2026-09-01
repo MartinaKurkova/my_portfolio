@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.poptavka__form');
+  const form = document.querySelector('.inquiry__form');
   const status = document.getElementById('form-status');
 
   // --- 1) Předvyplnění položky z URL (?plakat=...&velikost=...) ---
@@ -9,13 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (plakat) {
     document.getElementById('polozky').value = velikost
-      ? `${plakat} (${velikost})`
-      : plakat;
+      ? `Mám zájem o tisk „${plakat}“, ${velikost}.`
+      : `Mám zájem o tisk „${plakat}“.`;
   }
 
   // --- 2) Nastavení validace ---
-  // Pro každé pole: co kontrolujeme a jakou hlášku zobrazit, když je to špatně
-  const fields = [
+    const fields = [
     {
       input: document.getElementById('jmeno'),
       error: document.getElementById('jmeno-error'),
@@ -29,6 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
       message: 'Zadejte prosím platnou e-mailovou adresu.',
     },
     {
+      input: document.getElementById('telefon'),
+      error: document.getElementById('telefon-error'),
+      validate: (value) => value.trim().length === 0 || /^[+\d\s]{9,}$/.test(value.trim()),
+      message: 'Zadejte prosím platné telefonní číslo, nebo pole nechte prázdné.',
+    },
+    {
+      input: document.getElementById('ulice'),
+      error: document.getElementById('ulice-error'),
+      validate: (value) => value.trim().length > 0,
+      message: 'Vyplňte prosím ulici a číslo popisné.',
+    },
+    {
+      input: document.getElementById('mesto'),
+      error: document.getElementById('mesto-error'),
+      validate: (value) => value.trim().length > 0,
+      message: 'Vyplňte prosím město.',
+    },
+    {
+      input: document.getElementById('psc'),
+      error: document.getElementById('psc-error'),
+      validate: (value) => /^\d{3}\s?\d{2}$/.test(value.trim()),
+      message: 'Zadejte prosím PSČ ve formátu 123 45.',
+    },
+    {
       input: document.getElementById('polozky'),
       error: document.getElementById('polozky-error'),
       validate: (value) => value.trim().length > 0,
@@ -36,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ];
 
-  // Zobrazí/skryje chybu u jednoho pole a vrátí, jestli je pole v pořádku
   function validateField(field) {
     const isValid = field.validate(field.input.value);
 
@@ -51,17 +73,32 @@ document.addEventListener('DOMContentLoaded', () => {
     return isValid;
   }
 
-  // Validace za běhu (jakmile uživatel pole opustí)
   fields.forEach((field) => {
     field.input.addEventListener('blur', () => validateField(field));
+  });
+
+  // --- 2b) Validace způsobu doručení (radio buttony) ---
+  const radioButtons = document.querySelectorAll('input[name="doruceni"]');
+  const radioError = document.getElementById('doruceni-error');
+
+  function validateRadioGroup() {
+    const isValid = Array.from(radioButtons).some((radio) => radio.checked);
+    radioError.textContent = isValid ? '' : 'Vyberte prosím způsob doručení.';
+    return isValid;
+  }
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener('change', validateRadioGroup);
   });
 
   // --- 3) Odeslání formuláře ---
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const allValid = fields.every((field) => validateField(field));
-    if (!allValid) {
+    const allFieldsValid = fields.every((field) => validateField(field));
+    const radioValid = validateRadioGroup();
+
+    if (!allFieldsValid || !radioValid) {
       status.textContent = 'Zkontrolujte prosím vyznačená pole.';
       return;
     }
@@ -75,7 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
         body: new FormData(form),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         window.location.href = '/obchod/dekuji/';
       } else {
         status.textContent = 'Něco se nepovedlo, zkuste to prosím znovu.';

@@ -23,6 +23,7 @@ permalink: "/obchod/poptavka/"
           id="jmeno"
           name="name"
           class="inquiry__input"
+          placeholder="Jana Nováková"
           required
           aria-describedby="jmeno-error"
         >
@@ -34,10 +35,59 @@ permalink: "/obchod/poptavka/"
           id="email"
           name="email"
           class="inquiry__input"
+          placeholder="jana.novakova@email.cz"
           required
           aria-describedby="email-error"
         >
         <span id="email-error" class="inquiry__error"></span>
+
+                <label for="telefon" class="inquiry__label">Telefon</label>
+        <input
+          type="tel"
+          id="telefon"
+          name="telefon"
+          class="inquiry__input"
+          placeholder="+420 601 234 567"
+          aria-describedby="telefon-error"
+        >
+        <span id="telefon-error" class="inquiry__error"></span>
+
+        <label for="ulice" class="inquiry__label">Ulice a č.p. *</label>
+        <input
+          type="text"
+          id="ulice"
+          name="ulice"
+          class="inquiry__input"
+          placeholder="Květinová 123"
+          required
+          aria-describedby="ulice-error"
+        >
+        <span id="ulice-error" class="inquiry__error"></span>
+
+        <label for="mesto" class="inquiry__label">Město *</label>
+        <input
+          type="text"
+          id="mesto"
+          name="mesto"
+          class="inquiry__input"
+          placeholder="Sadská"
+          required
+          aria-describedby="mesto-error"
+        >
+        <span id="mesto-error" class="inquiry__error"></span>
+
+        <label for="psc" class="inquiry__label">PSČ *</label>
+        <input
+          type="text"
+          id="psc"
+          name="psc"
+          class="inquiry__input"
+          placeholder="289 12"
+          inputmode="numeric"
+          required
+          aria-describedby="psc-error"
+        >
+        <span id="psc-error" class="inquiry__error"></span>
 
         <label for="polozky" class="inquiry__label inquiry__label--textarea">Vaše poptávka *</label>
         <textarea
@@ -45,10 +95,44 @@ permalink: "/obchod/poptavka/"
           name="message"
           rows="4"
           class="inquiry__textarea"
+          placeholder="Mám zájem o tisk „Keporkak“, 30 × 40 cm."
           required
           aria-describedby="polozky-error"
         ></textarea>
         <span id="polozky-error" class="inquiry__error"></span>
+      </fieldset>
+
+      <fieldset class="inquiry__fieldset inquiry__fieldset--radio" aria-describedby="doruceni-error">
+        <legend class="inquiry__legend">Způsob doručení *</legend>
+
+        <div class="inquiry__radio-group">
+          <label class="inquiry__radio-label">
+            <input type="radio" name="doruceni" value="Zásilkovna – výdejní místo" class="inquiry__radio" required>
+            Zásilkovna – výdejní místo
+          </label>
+
+          <label class="inquiry__radio-label">
+            <input type="radio" name="doruceni" value="Zásilkovna – doručení domů" class="inquiry__radio">
+            Zásilkovna – doručení domů
+          </label>
+
+          <label class="inquiry__radio-label">
+            <input type="radio" name="doruceni" value="Balíkovna – výdejní místo" class="inquiry__radio">
+            Balíkovna – výdejní místo
+          </label>
+
+          <label class="inquiry__radio-label">
+            <input type="radio" name="doruceni" value="Balíkovna – doručení domů" class="inquiry__radio">
+            Balíkovna – doručení domů
+          </label>
+
+          <label class="inquiry__radio-label">
+            <input type="radio" name="doruceni" value="Osobní odběr v Sadské" class="inquiry__radio">
+            Osobní odběr v Sadské
+          </label>
+        </div>
+
+        <span id="doruceni-error" class="inquiry__error"></span>
       </fieldset>
 
       <button type="submit" class="inquiry__button">Odeslat poptávku</button>

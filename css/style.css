@@ -1401,7 +1401,7 @@ strong {
 .error__paragraph {
   margin-top: 0;
 }
-.error__button-cta {
+.error__button {
   display: inline-block;
   padding: 0.625rem 1.25rem;
   margin: 2rem 0 2.5rem 0;
@@ -1418,57 +1418,45 @@ strong {
   -webkit-tap-highlight-color: transparent;
 }
 @media screen and (max-width: 48rem) {
-  .error__button-cta {
+  .error__button {
     font-size: 0.9rem;
     margin: 1.5rem 0 2rem 0;
   }
 }
 @media screen and (max-width: 36rem) {
-  .error__button-cta {
+  .error__button {
     font-size: 0.8rem;
     margin: 1rem 0 1.5rem 0;
   }
 }
 @media (hover: hover) {
-  .error__button-cta:hover {
+  .error__button:hover {
     transform: translateY(-4px);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     font-weight: 600;
   }
 }
-.error__button-cta:active {
+.error__button:active {
   transform: translateY(2px) scale(0.98);
   box-shadow: none;
   transition: transform 0.1s;
 }
-.error__button-cta:focus-visible {
+.error__button:focus-visible {
   outline: 1px solid #FFAA00;
   outline-offset: 3px;
 }
-.error__button-cta {
+.error__button {
+  background-color: #C71585;
   color: white;
-  margin-top: 1rem;
 }
-.error__button-cta:hover {
+.error__button:hover {
   background-color: #660066;
 }
-.error__button-cta:active {
+.error__button:active {
   background-color: #4d004d;
 }
-.error__button-cta:focus-visible {
+.error__button:focus-visible {
   outline-color: #FFAA00;
-}
-.error__link {
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.2rem;
-}
-@media screen and (max-width: 31.25rem) {
-  .error__link {
-    font-size: 1rem;
-  }
 }
 
 .gallery__container {
@@ -3644,10 +3632,13 @@ strong {
   margin: 0;
   padding: 0;
 }
+.inquiry__fieldset--radio {
+  margin-top: 1.5rem;
+}
 .inquiry__legend {
-  margin: 1rem 0;
-  font-weight: 800;
-  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(1.35rem, 1.35rem + 1.5vw, 2.2rem);
 }
 .inquiry__label {
   display: block;
@@ -3664,6 +3655,14 @@ strong {
   border-radius: 10px;
   font-family: inherit;
   margin-bottom: 0.5rem;
+}
+.inquiry__input::-moz-placeholder, .inquiry__textarea::-moz-placeholder {
+  color: #333333;
+  opacity: 0.5;
+}
+.inquiry__input::placeholder, .inquiry__textarea::placeholder {
+  color: #333333;
+  opacity: 0.5;
 }
 .inquiry__input:focus, .inquiry__textarea:focus, .inquiry__button:focus {
   outline: 2px solid #FFAA00;
@@ -3682,6 +3681,27 @@ strong {
   font-size: 0.85rem;
   margin: 0 0 0.8rem 0;
   font-weight: 500;
+}
+.inquiry__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.inquiry__radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.inquiry__radio {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #800080;
+}
+.inquiry__radio:focus-visible {
+  outline: 2px solid #FFAA00;
+  outline-offset: 2px;
 }
 .inquiry__button {
   display: inline-block;

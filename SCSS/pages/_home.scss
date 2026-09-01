@@ -586,10 +586,10 @@
         margin-top: 0;
     }
 
-    &__button-cta {
-        @include buttons.button-cta;
+    &__button {
+       @include buttons.button-cta;
+        background-color: variables.$color-secondary;
         color: white;
-        margin-top: 1rem;
 
         &:hover {
             background-color: variables.$color-hover;
@@ -602,9 +602,5 @@
         &:focus-visible {
             outline-color: variables.$color-outline; 
         }
-    }
-
-    &__link {
-        @include buttons.button-cta-text;
     }
 }

@@ -338,10 +338,14 @@
         padding: 0;
     }
 
+    &__fieldset--radio {
+        margin-top: 1.5rem;
+    }
+
     &__legend {
-        margin: 1rem 0;
-        font-weight: 800;
-        font-size: 1.3rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: clamp(1.35rem, calc(1.35rem + 1.5vw), 2.2rem);
     }
 
     &__label {
@@ -362,6 +366,11 @@
         border-radius: 10px;
         font-family: inherit;
         margin-bottom: 0.5rem;
+
+        &::placeholder {
+            color: variables.$color-text;
+            opacity: 0.5;
+        }
     }
 
     &__input:focus,
@@ -370,7 +379,7 @@
         outline: 2px solid variables.$color-outline;
     }
 
-    // stav chyby - stejný vzor jako u contact-form
+    // stav chyby
     &__input.is-invalid,
     &__textarea.is-invalid {
         border: 2px solid variables.$color-secondary !important;
@@ -389,6 +398,31 @@
         font-size: 0.85rem;
         margin: 0 0 0.8rem 0;
         font-weight: 500;
+    }
+
+    &__radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__radio-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+
+    &__radio {
+        width: 1.1rem;
+        height: 1.1rem;
+        accent-color: variables.$color-primary;
+
+        &:focus-visible {
+            outline: 2px solid variables.$color-outline;
+            outline-offset: 2px;
+        }
     }
 
     &__button {
