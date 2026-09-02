@@ -2533,7 +2533,7 @@ strong {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.25rem 4rem 1.25rem;
 }
 .print__heading {
   margin: 0 0 0 1rem 0;
@@ -2706,6 +2706,57 @@ strong {
 .print__button-cta:focus-visible {
   outline-color: #FFAA00;
   color: white;
+}
+
+.order {
+  background-color: #F8F2FA;
+}
+.order__container {
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem 1.25rem;
+}
+.order__list {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+.order__subheading {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.order__paragraph {
+  text-align: center;
+  margin: 0;
+}
+.order__boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+}
+@media screen and (max-width: 56.25rem) {
+  .order__boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .order__boxes {
+    grid-template-columns: 1fr;
+  }
+}
+.order__box {
+  background-color: white;
+  border-radius: 0.6875rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order__title {
+  font-family: "Work Sans", sans-serif;
+  color: #333333;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-align: center;
 }
 
 .conditions__container {
