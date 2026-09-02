@@ -113,7 +113,7 @@
 
     &__navigation-link {
         text-decoration: none;
-        color: variables.$color-text;
+        color: variables.$color-primary;
         padding: 1rem;
         display: flex;
         justify-content: center;
@@ -129,9 +129,13 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+
+        &:hover {
+            color: variables.$color-secondary;
+        }
     }
 
-    &__back-link {
+    &__navigation-link--back {
         text-decoration-thickness: .5px;
         text-underline-offset: 0.2em;
         color: variables.$color-primary;

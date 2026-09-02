@@ -1702,7 +1702,7 @@ strong {
 }
 .project__navigation-link {
   text-decoration: none;
-  color: #333333;
+  color: #800080;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -1718,7 +1718,10 @@ strong {
   align-items: center;
   border-radius: 50%;
 }
-.project__back-link {
+.project__navigation-arrow:hover {
+  color: #C71585;
+}
+.project__navigation-link--back {
   text-decoration-thickness: 0.5px;
   text-underline-offset: 0.2em;
   color: #800080;
@@ -1726,7 +1729,7 @@ strong {
   gap: 1rem;
   transition: color 0.2s;
 }
-.project__back-link:hover {
+.project__navigation-link--back:hover {
   color: #C71585;
 }
 
