@@ -19,7 +19,7 @@
     
 
     <title>Plakát Pipulky | Autorský tisk | Martina Kurková Nožičková</title>
-    <meta name="description" content="Autorský ilustrovaný plakát Pipulky. Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular 200 g/m².">
+    <meta name="description" content="Autorský ilustrovaný plakát Pipulky. Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular.">
 
     <!-- Open Graph pro Facebook/LinkedIn -->
     <meta property="og:title" content="Plakát Pipulky | Martina Kurková Nožičková">
@@ -32,7 +32,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Plakát Pipulky | Martina Kurková Nožičková">
-    <meta name="twitter:description" content="Autorský ilustrovaný plakát Pipulky. Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular 200 g/m².">
+    <meta name="twitter:description" content="Autorský ilustrovaný plakát Pipulky. Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular.">
     <meta name="twitter:image" content="/images/obchod/pipulky/pipulky_800.webp">
 
     <!-- Strukturovaná data -->
@@ -152,28 +152,49 @@
 <section class="product">
   <div class="product__container">
 
-    <div class="product__image-container">
-  <div class="product__image-main" onclick="openLightbox(0)">
-    <img src="/images/obchod/pipulky/pipulky_800.webp"
-      alt="Plakát Pipulky"
-      class="product__image"
-      id="mainImg"
-      loading="eager"
-      fetchpriority="high"
-      width="800" height="800">
-  </div>
-
-  <div class="product__thumbnails">
+  <div class="product__image-container">
     
-    <div class="product__thumbnail active" onclick="changeImage(0)">
-      <img src="/images/obchod/pipulky/pipulky_350.webp"
-        alt="Detail plakátu Pipulky - ukázka 1"
-        class="product_thumbnail-image"
-        loading="lazy" width="350" height="350">
+    
+    <div class="product__image-main" onclick="openLightbox(0)">
+      <img src="/images/obchod/pipulky/pipulky_800.webp"
+          
+          srcset="/images/obchod/pipulky/pipulky_350.webp 350w,
+                /images/obchod/pipulky/pipulky_420.webp 420w,
+                /images/obchod/pipulky/pipulky_650.webp 650w,
+                /images/obchod/pipulky/pipulky_800.webp 800w"
+          sizes="(max-width: 768px) 100vw, 66vw"
+          
+          data-full="/images/obchod/pipulky/pipulky_800.webp"
+        alt="Plakát Pipulky"
+        class="product__image"
+        id="mainImg"
+        loading="eager"
+        fetchpriority="high"
+        width="800" height="800">
     </div>
-    
+
+    <div class="product__thumbnails">
+      
+      
+      <div class="product__thumbnail active" onclick="changeImage(0)">
+        <img src="/images/obchod/pipulky/pipulky_350.webp"
+          data-full="/images/obchod/pipulky/pipulky_800.webp"
+          alt="Kresba Pipulky - ukázka 1"
+          class="product_thumbnail-image"
+          loading="lazy" width="350" height="350">
+      </div>
+      
+      
+      <div class="product__thumbnail" onclick="changeImage(1)">
+        <img src="/images/obchod/pipulky/pipulky2.svg"
+          data-full="/images/obchod/pipulky/pipulky2_800.webp"
+          alt="Kresba Pipulky - ukázka 2"
+          class="product_thumbnail-image"
+          loading="lazy" width="350" height="350">
+      </div>
+      
+    </div>
   </div>
-</div>
 
     <div class="product__text-container">
   <h1 class="product__heading">Pipulky</h1>
@@ -181,20 +202,45 @@
   <p class="product__text">Rám není součástí balení.</p>
 
   <ul class="product__list">
-    <li class="product__list-item"><span class="product__label">Papír: </span>Nenatíraný papír Olin Regular 200 g/m²</li>
+    <li class="product__list-item"><span class="product__label">Papír: </span>Nenatíraný papír Olin Regular</li>
     <li class="product__list-item"><span class="product__label">Tisk: </span>Digitální tisk</li>
     <li class="product__list-item product__list-item--variants">
       <span class="product__label">Formát:</span>
       <div class="product__variants">
         
         <label class="product__variant">
-          <input type="radio" name="format" class="product__accent-radio" value="13 × 13 cm" data-price="79" checked>
-          13 × 13 cm
+          <input type="radio" name="format" class="product__accent-radio" value="15 × 10 cm" data-price="49" checked>
+          Pohlednice, 15 × 10 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="13 × 13 cm" data-price="79" >
+          Obrázek, 13 × 13 cm
         </label>
         
         <label class="product__variant">
           <input type="radio" name="format" class="product__accent-radio" value="18 × 13 cm" data-price="99" >
-          18 × 13 cm
+          Obrázek, 18 × 13 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="23 × 23 cm" data-price="129" >
+          Obrázek, 23 × 23 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="30 × 21 cm" data-price="159" >
+          Obrázek, 30 × 21 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="32 × 32 cm" data-price="189" >
+          Obrázek, 32 × 32 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="40 × 30 cm" data-price="229" >
+          Obrázek, 40 × 30 cm
         </label>
         
       </div>

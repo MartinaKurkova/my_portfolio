@@ -17,7 +17,7 @@ permalink: "/obchod/"
     <div class="shop-container">
       <div class="shop__text-container">
         <h1 class="shop__heading">Papírové radosti</h1>
-        <p class="shop__text">Některé ilustrace nechávám žít i mimo obrazovku. Vznikají z nich malé tištěné série pro radost, na zeď nebo třeba jako dárek někomu, kdo má rád obrázky trochu jinak.</p>
+        <p class="shop__text">Některé ilustrace nechávám žít i&nbsp;mimo obrazovku. Vznikají z&nbsp;nich malé tištěné série pro radost, na zeď nebo třeba jako dárek někomu, kdo má rád obrázky trochu jinak.</p>
       </div>
     </div>
   </div>
@@ -35,26 +35,27 @@ permalink: "/obchod/"
         </a>
         <div class="print__item">
           <div class="print__image-container">
-            <img src="/images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_350.webp"
-              srcset="/images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_350.webp 350w,
-                      /images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_420.webp 420w,
-                      /images/obchod/{{ p.slozka_obrazku }}/{{ p.obrazky[0] }}_560.webp 560w"
+            {% set obr = p.obrazky[0] %}
+            {% set format = obr.format or "webp" %}
+            {% if format == 'svg' %}
+            <img src="/images/obchod/{{ p.slozka_obrazku }}/{{ obr.soubor }}.svg"
+              alt="Plakát {{ p.nazev }}"
+              class="print__image"
+              loading="lazy" width="350" height="350">
+            {% else %}
+            <img src="/images/obchod/{{ p.slozka_obrazku }}/{{ obr.soubor }}_350.webp"
+              srcset="/images/obchod/{{ p.slozka_obrazku }}/{{ obr.soubor }}_350.webp 350w,
+                      /images/obchod/{{ p.slozka_obrazku }}/{{ obr.soubor }}_420.webp 420w,
+                      /images/obchod/{{ p.slozka_obrazku }}/{{ obr.soubor }}_560.webp 560w"
               sizes="(max-width: 30rem) 100vw, (max-width: 48rem) 50vw, 350px"
               alt="Plakát {{ p.nazev }}"
               class="print__image"
               loading="lazy" width="350" height="350">
+            {% endif %}
           </div>
           <div class="print__text-container">
             <h3 class="print__name">{{ p.nazev }}</h3>
             <p class="print__category">Ilustrovaný tisk</p>
-            <div class="print__info">
-              <div class="print__sizes">
-                {% for f in p.formaty %}<p class="print__list-item">{{ f.velikost }}</p>{% endfor %}
-              </div>
-              <div class="print__prices">
-                {% for f in p.formaty %}<p class="print__list-item">{{ f.cena }} Kč</p>{% endfor %}
-              </div>
-            </div>
             <a href="/obchod/{{ p.slug }}/" class="print__button-cta">Prohlédnout</a>
           </div>
         </div>
@@ -67,29 +68,31 @@ permalink: "/obchod/"
 
 <section class="order">
     <div class="order__container container">
+      <div class="order__how">
         <h2 class="order__heading">Jak objednávka probíhá</h2>
-        <ul class="order__list">
-            <li class="order__list-item">Vyberte si konkrétní ilustrovaný plakát a klikněte na tlačítko Mám zájem.</li>
-            <li class="order__list-item">Vyplňte krátký formulář a já vám e-mailem potvrdím dostupnost, cenu a dopravu. </li>
-            <li class="order__list-item">Po potvrzení vám zašlu fakturu s QR kódem.</li>
-            <li class="order__list-item">Jakmile bude platba připsaná, tisk pečlivě zabalím a odešlu.</li>
-        </ul>
+          <ul class="order__list">
+              <li class="order__list-item">Vyberte si konkrétní ilustrovaný plakát a&nbsp;klikněte na tlačítko Mám zájem.</li>
+              <li class="order__list-item">Vyplňte krátký poptávkový formulář a&nbsp;já vám e-mailem potvrdím dostupnost, cenu a&nbsp;dopravu. </li>
+              <li class="order__list-item">Po potvrzení vám zašlu fakturu s&nbsp;QR kódem.</li>
+              <li class="order__list-item">Jakmile bude platba připsaná, tisk pečlivě zabalím a&nbsp;odešlu.</li>
+          </ul>
+      </div>
         <!-- transport -->
         <h3 class="order__subheading" id="transport">Doprava</h3>
         <div class="order__boxes">
             <div class="order__box">
                 <h4 class="order__title">Zásilkovna</h4>
-                <p class="order__paragraph">Na výdejní místo: <strong>75 Kč</strong></p>
-                <p class="order__paragraph">K vám domů: <strong>99 Kč</strong></p>
+                <p class="order__paragraph">Na výdejní místo: <strong>75&nbsp;Kč</strong></p>
+                <p class="order__paragraph">K&nbsp;vám domů: <strong>99&nbsp;Kč</strong></p>
             </div>
             <div class="order__box">
                 <h4 class="order__title">Balíkovna</h4>
-                <p class="order__paragraph">Na výdejní místo: <strong>75 Kč</strong></p>
-                <p class="order__paragraph">K vám domů: <strong>109 Kč</strong></p>
+                <p class="order__paragraph">Na výdejní místo: <strong>75&nbsp;Kč</strong></p>
+                <p class="order__paragraph">K&nbsp;vám domů: <strong>109&nbsp;Kč</strong></p>
             </div>
             <div class="order__box">
                 <h4 class="order__title">Osobní převzetí</h4>
-                <p class="order__paragraph">V Sadské si můžete tisky vyzvednout osobně a zdarma.</p>
+                <p class="order__paragraph">V&nbsp;Sadské si můžete tisky vyzvednout osobně a&nbsp;zdarma.</p>
             </div>
         </div>
         <!-- send -->
@@ -97,15 +100,15 @@ permalink: "/obchod/"
         <div class="order__boxes">
         <div class="order__box">
             <h4 class="order__title">Z ateliéru k vám</h4>
-            <p class="order__paragraph">Každá sada projde mýma rukama – od ilustrace až po zabalení a odeslání k vám domů.</p>
+            <p class="order__paragraph">Každá sada projde mýma rukama – od ilustrace až po zabalení a&nbsp;odeslání k&nbsp;vám domů.</p>
           </div>
           <div class="order__box">
             <h4 class="order__title">Balení</h4>
-            <p class="order__paragraph">Menší tisky balím do pevné kartonové obálky, větší do tubusu. Snažím se, aby k vám dorazily bezpečně a v pořádku.</p>
+            <p class="order__paragraph">Menší tisky balím do pevné kartonové obálky, větší do tubusu. Snažím se, aby k vám dorazily bezpečně a&nbsp;v&nbsp;pořádku.</p>
           </div>
           <div class="order__box">
             <h4 class="order__title">Odeslání</h4>
-            <p class="order__paragraph">Balíčky odesílám nejpozději do 2 pracovních dnů od přijetí platby, většinou ale týž den.</p>
+            <p class="order__paragraph">Balíčky odesílám nejpozději do 2&nbsp;pracovních dnů od přijetí platby, většinou ale týž den.</p>
           </div>
         </div>
     </div>

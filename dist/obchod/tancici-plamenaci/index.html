@@ -19,7 +19,7 @@
     
 
     <title>Plakát Tančící plameňáci | Autorský tisk | Martina Kurková Nožičková</title>
-    <meta name="description" content="Autorský ilustrovaný plakát Tančící plameňáci. Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular 200 g/m².">
+    <meta name="description" content="Autorský ilustrovaný plakát Tančící plameňáci. Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular.">
 
     <!-- Open Graph pro Facebook/LinkedIn -->
     <meta property="og:title" content="Plakát Tančící plameňáci | Martina Kurková Nožičková">
@@ -32,7 +32,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Plakát Tančící plameňáci | Martina Kurková Nožičková">
-    <meta name="twitter:description" content="Autorský ilustrovaný plakát Tančící plameňáci. Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular 200 g/m².">
+    <meta name="twitter:description" content="Autorský ilustrovaný plakát Tančící plameňáci. Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků. Kvalitní tisk na papír Nenatíraný papír Olin Regular.">
     <meta name="twitter:image" content="/images/obchod/plamenaci/plamenaci_tanec_800.webp">
 
     <!-- Strukturovaná data -->
@@ -152,28 +152,49 @@
 <section class="product">
   <div class="product__container">
 
-    <div class="product__image-container">
-  <div class="product__image-main" onclick="openLightbox(0)">
-    <img src="/images/obchod/plamenaci/plamenaci_tanec_800.webp"
-      alt="Plakát Tančící plameňáci"
-      class="product__image"
-      id="mainImg"
-      loading="eager"
-      fetchpriority="high"
-      width="800" height="800">
-  </div>
-
-  <div class="product__thumbnails">
+  <div class="product__image-container">
     
-    <div class="product__thumbnail active" onclick="changeImage(0)">
-      <img src="/images/obchod/plamenaci/plamenaci_tanec_350.webp"
-        alt="Detail plakátu Tančící plameňáci - ukázka 1"
-        class="product_thumbnail-image"
-        loading="lazy" width="350" height="350">
+    
+    <div class="product__image-main" onclick="openLightbox(0)">
+      <img src="/images/obchod/plamenaci/plamenaci_tanec_800.webp"
+          
+          srcset="/images/obchod/plamenaci/plamenaci_tanec_350.webp 350w,
+                /images/obchod/plamenaci/plamenaci_tanec_420.webp 420w,
+                /images/obchod/plamenaci/plamenaci_tanec_650.webp 650w,
+                /images/obchod/plamenaci/plamenaci_tanec_800.webp 800w"
+          sizes="(max-width: 768px) 100vw, 66vw"
+          
+          data-full="/images/obchod/plamenaci/plamenaci_tanec_800.webp"
+        alt="Plakát Tančící plameňáci"
+        class="product__image"
+        id="mainImg"
+        loading="eager"
+        fetchpriority="high"
+        width="800" height="800">
     </div>
-    
+
+    <div class="product__thumbnails">
+      
+      
+      <div class="product__thumbnail active" onclick="changeImage(0)">
+        <img src="/images/obchod/plamenaci/plamenaci_tanec_350.webp"
+          data-full="/images/obchod/plamenaci/plamenaci_tanec_800.webp"
+          alt="Kresba Tančící plameňáci - ukázka 1"
+          class="product_thumbnail-image"
+          loading="lazy" width="350" height="350">
+      </div>
+      
+      
+      <div class="product__thumbnail" onclick="changeImage(1)">
+        <img src="/images/obchod/plamenaci/plamenaci_tanec2.svg"
+          data-full="/images/obchod/plamenaci/plamenaci_tanec2_800.webp"
+          alt="Kresba Tančící plameňáci - ukázka 2"
+          class="product_thumbnail-image"
+          loading="lazy" width="350" height="350">
+      </div>
+      
+    </div>
   </div>
-</div>
 
     <div class="product__text-container">
   <h1 class="product__heading">Tančící plameňáci</h1>
@@ -181,20 +202,30 @@
   <p class="product__text">Rám není součástí balení.</p>
 
   <ul class="product__list">
-    <li class="product__list-item"><span class="product__label">Papír: </span>Nenatíraný papír Olin Regular 200 g/m²</li>
+    <li class="product__list-item"><span class="product__label">Papír: </span>Nenatíraný papír Olin Regular</li>
     <li class="product__list-item"><span class="product__label">Tisk: </span>Digitální tisk</li>
     <li class="product__list-item product__list-item--variants">
       <span class="product__label">Formát:</span>
       <div class="product__variants">
         
         <label class="product__variant">
-          <input type="radio" name="format" class="product__accent-radio" value="13 × 18 cm" data-price="99" checked>
-          13 × 18 cm
+          <input type="radio" name="format" class="product__accent-radio" value="10 × 15 cm" data-price="49" checked>
+          Pohlednice, 10 × 15 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="13 × 18 cm" data-price="99" >
+          Obrázek, 13 × 18 cm
         </label>
         
         <label class="product__variant">
           <input type="radio" name="format" class="product__accent-radio" value="21 × 30 cm" data-price="159" >
-          21 × 30 cm
+          Obrázek, 21 × 30 cm
+        </label>
+        
+        <label class="product__variant">
+          <input type="radio" name="format" class="product__accent-radio" value="30 × 40 cm" data-price="229" >
+          Obrázek, 30 × 40 cm
         </label>
         
       </div>

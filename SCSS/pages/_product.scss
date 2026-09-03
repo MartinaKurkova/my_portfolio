@@ -113,6 +113,12 @@
         margin-bottom: 0;
     }
 
+    &__variants {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     &__link--web {
         color: variables.$color-text;
         text-decoration-thickness: .5px;

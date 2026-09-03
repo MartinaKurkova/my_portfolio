@@ -4,13 +4,18 @@
     "slug": "tancici-plamenaci",
     "nazev": "Tančící plameňáci",
     "popis": "Autorská vektorová ilustrace tančících plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "plamenaci",
-    "obrazky": ["plamenaci_tanec"],
+    "obrazky": [
+      { "soubor": "plamenaci_tanec" },
+      { "soubor": "plamenaci_tanec2", "format": "svg" }
+    ],
     "formaty": [
-      { "velikost": "13 × 18 cm", "cena": 99 },
-      { "velikost": "21 × 30 cm", "cena": 159 }
+      { "typ": "Pohlednice", "velikost": "10 × 15 cm", "cena": 49 },
+      { "typ": "Obrázek", "velikost": "13 × 18 cm", "cena": 99 },
+      { "typ": "Obrázek", "velikost": "21 × 30 cm", "cena": 159 },
+      { "typ": "Obrázek", "velikost": "30 × 40 cm", "cena": 229 }
     ]
   },
   {
@@ -18,13 +23,18 @@
     "slug": "plamenaci",
     "nazev": "Plameňáci",
     "popis": "Autorská vektorová ilustrace dvou plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "plamenaci",
-    "obrazky": ["plamenaci"],
+    "obrazky": [
+      { "soubor": "plamenaci" },
+      { "soubor": "plamenaci2", "format": "svg" }
+    ],
     "formaty": [
-      { "velikost": "18 × 13 cm", "cena": 99 },
-      { "velikost": "30 × 21 cm", "cena": 159 }
+      { "typ": "Pohlednice", "velikost": "15 × 10 cm", "cena": 49 },
+      { "typ": "Obrázek", "velikost": "18 × 13 cm", "cena": 99 },
+      { "typ": "Obrázek", "velikost": "30 × 21 cm", "cena": 159 },
+      { "typ": "Obrázek", "velikost": "40 × 30 cm", "cena": 229 }
     ]
   },
   {
@@ -32,12 +42,16 @@
     "slug": "plamenaci-hejno",
     "nazev": "Hejno plameňáků",
     "popis": "Autorská vektorová ilustrace hejna plameňáků z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "plamenaci",
-    "obrazky": ["plamenaci-hejno"],
+    "obrazky": [
+      { "soubor": "plamenaci-hejno" },
+      { "soubor": "plamenaci-hejno2", "format": "svg" }
+    ],
     "formaty": [
-      { "velikost": "30 × 21 cm", "cena": 159 }
+      { "typ": "Obrázek", "velikost": "30 × 21 cm", "cena": 159 },
+      { "typ": "Obrázek", "velikost": "40 × 30 cm", "cena": 229 }
     ]
   },
   {
@@ -45,12 +59,16 @@
     "slug": "lednacek",
     "nazev": "Ledňáček",
     "popis": "Autorská vektorová ilustrace ledňáčka z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "lednacek",
-    "obrazky": ["lednacek"],
+    "obrazky": [
+      { "soubor": "lednacek" },
+      { "soubor": "lednacek2", "format": "svg" }
+    ],
     "formaty": [
-      { "velikost": "13 × 18 cm", "cena": 99 }
+      { "typ": "Pohlednice", "velikost": "10 × 15 cm", "cena": 49 },
+      { "typ": "Obrázek", "velikost": "13 × 18 cm", "cena": 99 }
     ]
   },
   {
@@ -58,12 +76,18 @@
     "slug": "tukan",
     "nazev": "Tukan",
     "popis": "Autorská vektorová ilustrace tukana z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "tukani",
-    "obrazky": ["tukan"],
+    "obrazky": [
+      { "soubor": "tukan" },
+      { "soubor": "tukan2", "format": "svg" }
+    ],
     "formaty": [
-      { "velikost": "18 × 13 cm", "cena": 99 }
+      { "typ": "Pohlednice", "velikost": "15 × 10 cm", "cena": 49 },
+      { "typ": "Obrázek", "velikost": "18 × 13 cm", "cena": 99 },
+      { "typ": "Obrázek", "velikost": "30 × 21 cm", "cena": 159 },
+      { "typ": "Obrázek", "velikost": "40 × 30 cm", "cena": 229 }
     ]
   },
   {
@@ -71,7 +95,7 @@
     "slug": "letici-tukan",
     "nazev": "Letící tukan",
     "popis": "Autorská vektorová ilustrace letícího tukana z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "tukani",
     "obrazky": ["tukan_letici"],
@@ -84,13 +108,21 @@
     "slug": "pipulky",
     "nazev": "Pipulky",
     "popis": "Autorská vektorová ilustrace pipulek z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
+    "papir": "Nenatíraný papír Olin Regular",
     "tisk": "Digitální tisk",
     "slozka_obrazku": "pipulky",
-    "obrazky": ["pipulky"],
+    "obrazky": [
+      { "soubor": "pipulky" },
+      { "soubor": "pipulky2", "format": "svg" }
+    ],
     "formaty": [
-      { "velikost": "13 × 13 cm", "cena": 79 },
-      { "velikost": "18 × 13 cm", "cena": 99 }
+      { "typ": "Pohlednice", "velikost": "15 × 10 cm", "cena": 49 },
+      { "typ": "Obrázek", "velikost": "13 × 13 cm", "cena": 79 },
+      { "typ": "Obrázek", "velikost": "18 × 13 cm", "cena": 99 },
+      { "typ": "Obrázek", "velikost": "23 × 23 cm", "cena": 129 },
+      { "typ": "Obrázek", "velikost": "30 × 21 cm", "cena": 159 },
+      { "typ": "Obrázek", "velikost": "32 × 32 cm", "cena": 189 },
+      { "typ": "Obrázek", "velikost": "40 × 30 cm", "cena": 229 }
     ]
   },
   {
@@ -196,19 +228,6 @@
     "tisk": "Digitální tisk",
     "slozka_obrazku": "tucnaci",
     "obrazky": ["vanoce"],
-    "formaty": [
-      { "velikost": "13 × 18 cm", "cena": 99 }
-    ]
-  },
-  {
-    "kategorie": "Ptáci",
-    "slug": "kormoran",
-    "nazev": "Kormorán",
-    "popis": "Autorská vektorová ilustrace hlavy kormorána z kolekce věnované mým oblíbeným druhům ptáků.",
-    "papir": "Nenatíraný papír Olin Regular 200 g/m²",
-    "tisk": "Digitální tisk",
-    "slozka_obrazku": "kormoran",
-    "obrazky": ["hlava"],
     "formaty": [
       { "velikost": "13 × 18 cm", "cena": 99 }
     ]

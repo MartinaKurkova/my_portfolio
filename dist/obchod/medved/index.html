@@ -24,7 +24,7 @@
     <!-- Open Graph pro Facebook/LinkedIn -->
     <meta property="og:title" content="Plakát Lední medvěd na bruslích | Martina Kurková Nožičková">
     <meta property="og:description" content="Autorský tisk Lední medvěd na bruslích. Autorská vektorová ilustrace z kolekce zvířat. Lední medvěd se učí bruslit.">
-    <meta property="og:image" content="/images/obchod/zvirata/medved_800.webp">
+    <meta property="og:image" content="/images/obchod/zvirata/_800.webp">
     <meta property="og:type" content="product">
     <meta property="og:url" content="/obchod/medved/">
     <meta property="og:site_name" content="Martina Kurková Nožičková">
@@ -33,7 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Plakát Lední medvěd na bruslích | Martina Kurková Nožičková">
     <meta name="twitter:description" content="Autorský ilustrovaný plakát Lední medvěd na bruslích. Autorská vektorová ilustrace z kolekce zvířat. Lední medvěd se učí bruslit. Kvalitní tisk na papír Nenatíraný papír Olin Regular 200 g/m².">
-    <meta name="twitter:image" content="/images/obchod/zvirata/medved_800.webp">
+    <meta name="twitter:image" content="/images/obchod/zvirata/_800.webp">
 
     <!-- Strukturovaná data -->
     <script type="application/ld+json">
@@ -152,28 +152,40 @@
 <section class="product">
   <div class="product__container">
 
-    <div class="product__image-container">
-  <div class="product__image-main" onclick="openLightbox(0)">
-    <img src="/images/obchod/zvirata/medved_800.webp"
-      alt="Plakát Lední medvěd na bruslích"
-      class="product__image"
-      id="mainImg"
-      loading="eager"
-      fetchpriority="high"
-      width="800" height="800">
-  </div>
-
-  <div class="product__thumbnails">
+  <div class="product__image-container">
     
-    <div class="product__thumbnail active" onclick="changeImage(0)">
-      <img src="/images/obchod/zvirata/medved_350.webp"
-        alt="Detail plakátu Lední medvěd na bruslích - ukázka 1"
-        class="product_thumbnail-image"
-        loading="lazy" width="350" height="350">
+    
+    <div class="product__image-main" onclick="openLightbox(0)">
+      <img src="/images/obchod/zvirata/_800.webp"
+          
+          srcset="/images/obchod/zvirata/_350.webp 350w,
+                /images/obchod/zvirata/_420.webp 420w,
+                /images/obchod/zvirata/_650.webp 650w,
+                /images/obchod/zvirata/_800.webp 800w"
+          sizes="(max-width: 768px) 100vw, 66vw"
+          
+          data-full="/images/obchod/zvirata/_800.webp"
+        alt="Plakát Lední medvěd na bruslích"
+        class="product__image"
+        id="mainImg"
+        loading="eager"
+        fetchpriority="high"
+        width="800" height="800">
     </div>
-    
+
+    <div class="product__thumbnails">
+      
+      
+      <div class="product__thumbnail active" onclick="changeImage(0)">
+        <img src="/images/obchod/zvirata/_350.webp"
+          data-full="/images/obchod/zvirata/_800.webp"
+          alt="Kresba Lední medvěd na bruslích - ukázka 1"
+          class="product_thumbnail-image"
+          loading="lazy" width="350" height="350">
+      </div>
+      
+    </div>
   </div>
-</div>
 
     <div class="product__text-container">
   <h1 class="product__heading">Lední medvěd na bruslích</h1>

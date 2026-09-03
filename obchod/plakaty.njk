@@ -10,11 +10,11 @@ layout: layout.njk
 eleventyComputed:
   title: "Plakát {{ plakat.nazev }} | Autorský tisk | Martina Kurková Nožičková"
   description: "Autorský ilustrovaný plakát {{ plakat.nazev }}. {{ plakat.popis }} Kvalitní tisk na papír {{ plakat.papir }}."
-  
+
   # Social & Open Graph
   metaTitle: "Plakát {{ plakat.nazev }} | Martina Kurková Nožičková"
   ogDescription: "Autorský tisk {{ plakat.nazev }}. {{ plakat.popis }}"
-  ogImage: "/images/obchod/{{ plakat.slozka_obrazku }}/{{ plakat.obrazky[0] }}_800.webp"
+  ogImage: "/images/obchod/{{ plakat.slozka_obrazku }}/{{ plakat.obrazky[0].soubor }}_800.webp"
   ogType: "product"
   twitterCard: "summary_large_image"
 ---
@@ -22,28 +22,40 @@ eleventyComputed:
 <section class="product">
   <div class="product__container">
 
-    <div class="product__image-container">
-  <div class="product__image-main" onclick="openLightbox(0)">
-    <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ plakat.obrazky[0] }}_800.webp"
-      alt="Plakát {{ plakat.nazev }}"
-      class="product__image"
-      id="mainImg"
-      loading="eager"
-      fetchpriority="high"
-      width="800" height="800">
-  </div>
-
-  <div class="product__thumbnails">
-    {% for obr in plakat.obrazky %}
-    <div class="product__thumbnail{% if loop.first %} active{% endif %}" onclick="changeImage({{ loop.index0 }})">
-      <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ obr }}_350.webp"
-        alt="Detail plakátu {{ plakat.nazev }} - ukázka {{ loop.index }}"
-        class="product_thumbnail-image"
-        loading="lazy" width="350" height="350">
+  <div class="product__image-container">
+    {% set hlavni = plakat.obrazky[0] %}
+    {% set hlavni_format = hlavni.format or "webp" %}
+    <div class="product__image-main" onclick="openLightbox(0)">
+      <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ hlavni.soubor }}{% if hlavni_format == 'svg' %}.svg{% else %}_800.webp{% endif %}"
+          {% if hlavni_format != 'svg' %}
+          srcset="/images/obchod/{{ plakat.slozka_obrazku }}/{{ hlavni.soubor }}_350.webp 350w,
+                /images/obchod/{{ plakat.slozka_obrazku }}/{{ hlavni.soubor }}_420.webp 420w,
+                /images/obchod/{{ plakat.slozka_obrazku }}/{{ hlavni.soubor }}_650.webp 650w,
+                /images/obchod/{{ plakat.slozka_obrazku }}/{{ hlavni.soubor }}_800.webp 800w"
+          sizes="(max-width: 768px) 100vw, 66vw"
+          {% endif %}
+          data-full="/images/obchod/{{ plakat.slozka_obrazku }}/{{ hlavni.soubor }}_800.webp"
+        alt="Plakát {{ plakat.nazev }}"
+        class="product__image"
+        id="mainImg"
+        loading="eager"
+        fetchpriority="high"
+        width="800" height="800">
     </div>
-    {% endfor %}
+
+    <div class="product__thumbnails">
+      {% for obr in plakat.obrazky %}
+      {% set format = obr.format or "webp" %}
+      <div class="product__thumbnail{% if loop.first %} active{% endif %}" onclick="changeImage({{ loop.index0 }})">
+        <img src="/images/obchod/{{ plakat.slozka_obrazku }}/{{ obr.soubor }}{% if format == 'svg' %}.svg{% else %}_350.webp{% endif %}"
+          data-full="/images/obchod/{{ plakat.slozka_obrazku }}/{{ obr.soubor }}_800.webp"
+          alt="Kresba {{ plakat.nazev }} - ukázka {{ loop.index }}"
+          class="product_thumbnail-image"
+          loading="lazy" width="350" height="350">
+      </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
 
     <div class="product__text-container">
   <h1 class="product__heading">{{ plakat.nazev }}</h1>
@@ -59,7 +71,7 @@ eleventyComputed:
         {% for f in plakat.formaty %}
         <label class="product__variant">
           <input type="radio" name="format" class="product__accent-radio" value="{{ f.velikost }}" data-price="{{ f.cena }}" {% if loop.first %}checked{% endif %}>
-          {{ f.velikost }}
+          {% if f.typ %}{{ f.typ }}, {% endif %}{{ f.velikost }}
         </label>
         {% endfor %}
       </div>

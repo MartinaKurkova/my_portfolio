@@ -27,6 +27,10 @@
         color: variables.$color-text;
         margin-top: 1rem;
         font-weight: 300;
+
+        @media screen and (min-width: 50rem) {
+            max-width: 70%;
+        }
     }
 }
 
@@ -36,7 +40,11 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        padding: 1rem 1.25rem 4rem 1.25rem;
+        padding: 1rem 1.25rem;
+    }
+
+    &__container:last-of-type {
+        padding-bottom: 4rem;
     }
 
     &__heading {
@@ -199,9 +207,19 @@
         padding: 2rem 1.25rem 4rem 1.25rem;
     }
 
+    &__how {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__list {
-        list-style-type: disc;
         padding-left: 1rem;
+        text-align: center;
+    }
+
+    &__list-item {
+        padding-bottom: 1rem;
     }
 
     &__subheading {
@@ -220,11 +238,7 @@
         gap: 1rem;
         justify-content: center;
 
-        @media screen and (max-width: 56.25rem) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media screen and (max-width: 37.5rem) {
+        @media screen and (max-width: 43.75rem) {
             grid-template-columns: 1fr;
         } 
     }
