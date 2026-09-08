@@ -14,6 +14,9 @@ module.exports = function(eleventyConfig) {
   // Zkopírovat favicony
   eleventyConfig.addPassthroughCopy("favicon*");
 
+  //redirects
+  eleventyConfig.addPassthroughCopy("_redirects");
+
   // Kolekce všech projektů (HTML i NJK) ze složky portfolio
   eleventyConfig.addCollection("projects", (collectionApi) => {
     return collectionApi.getFilteredByGlob("./portfolio/*.{html,njk}");
