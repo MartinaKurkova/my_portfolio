@@ -1,57 +1,54 @@
 # ===================================================================
-# Soubor _redirects pro Netlify (martinanozickova.com -> martinakurkova.cz)
+# Soubor _redirects pro Netlify (přesměrování starých cest na nové)
 # ===================================================================
 
 # Hlavní stránky a kategorie
-/work                     https://martinakurkova.cz/portfolio/ 301!
-/o-mne-1                  https://martinakurkova.cz/o-mne/ 301!
-/contact                  https://martinakurkova.cz/kontakt/ 301!
+/work                     /portfolio/ 301!
+/o-mne-1                  /o-mne/ 301!
+/contact                  /kontakt/ 301!
 
 # Projekty s přesným novým detailem
-/bohemian-taboo-stories   https://martinakurkova.cz/portfolio/taboo/ 301!
-/wine-infographics        https://martinakurkova.cz/portfolio/vinarstvi/ 301!
-/gramla-paper-cut-out     https://martinakurkova.cz/portfolio/gramla/ 301!
-/foodstuffs               https://martinakurkova.cz/portfolio/nzm/ 301!
-/water                    https://martinakurkova.cz/portfolio/nzm/ 301!
-/soil                     https://martinakurkova.cz/portfolio/nzm/ 301!
-/dogs-memory-game         https://martinakurkova.cz/portfolio/peksesa/ 301!
-/christmas-memory-game    https://martinakurkova.cz/portfolio/peksesa/ 301!
-/birds-memory-cards       https://martinakurkova.cz/portfolio/peksesa/ 301!
-/vegetables               https://martinakurkova.cz/portfolio/peksesa/ 301!
-/memory-game-forest-animals https://martinakurkova.cz/portfolio/peksesa/ 301!
-/christmas-cards          https://martinakurkova.cz/portfolio/zvireci-rise/ 301!
-/manakins                 https://martinakurkova.cz/portfolio/zvireci-rise/ 301!
-/penguins-and-whales      https://martinakurkova.cz/portfolio/zvireci-rise/ 301!
-/exotic-birds             https://martinakurkova.cz/portfolio/zvireci-rise/ 301!
-/whales                   https://martinakurkova.cz/portfolio/zvireci-rise/ 301!
-/oscar-swim/              https://martinakurkova.cz/portfolio/oskare-plav/ 301!
-/little-hippo             https://martinakurkova.cz/portfolio/hrosik/ 301!
-/promotion-mendel-university-press-1 https://martinakurkova.cz/portfolio/mendelu/ 301!
-/fernando-pessoa-book-of-disquiet https://martinakurkova.cz/portfolio/pessoa/ 301!
-/the-last-temptation-of-christ-nikos-kazantzakis https://martinakurkova.cz/portfolio/kazantzakis/ 301!
+/bohemian-taboo-stories   /portfolio/taboo/ 301!
+/wine-infographics        /portfolio/vinarstvi/ 301!
+/gramla-paper-cut-out     /portfolio/gramla/ 301!
+/foodstuffs               /portfolio/nzm/ 301!
+/water                    /portfolio/nzm/ 301!
+/soil                     /portfolio/nzm/ 301!
+/dogs-memory-game         /portfolio/peksesa/ 301!
+/christmas-memory-game    /portfolio/peksesa/ 301!
+/birds-memory-cards       /portfolio/peksesa/ 301!
+/vegetables               /portfolio/peksesa/ 301!
+/memory-game-forest-animals /portfolio/peksesa/ 301!
+/christmas-cards          /portfolio/zvireci-rise/ 301!
+/manakins                 /portfolio/zvireci-rise/ 301!
+/penguins-and-whales      /portfolio/zvireci-rise/ 301!
+/exotic-birds             /portfolio/zvireci-rise/ 301!
+/whales                   /portfolio/zvireci-rise/ 301!
+/oscar-swim/              /portfolio/oskare-plav/ 301!
+/little-hippo             /portfolio/hrosik/ 301!
+/promotion-mendel-university-press-1 /portfolio/mendelu/ 301!
+/fernando-pessoa-book-of-disquiet /portfolio/pessoa/ 301!
+/the-last-temptation-of-christ-nikos-kazantzakis /portfolio/kazantzakis/ 301!
 
 # Starší projekty přesměrované na přehled portfolia
-/easter-card-for-mondi     https://martinakurkova.cz/portfolio/ 301!
-/famous-animals-vergilius-and-fly https://martinakurkova.cz/portfolio/ 301!
-/ota-hofman-escape         https://martinakurkova.cz/portfolio/ 301!
-/zoo                      https://martinakurkova.cz/portfolio/ 301!
-/christmas-wrapping-papers https://martinakurkova.cz/portfolio/ 301!
-/scout                    https://martinakurkova.cz/portfolio/ 301!
-/magazine-covers          https://martinakurkova.cz/portfolio/ 301!
-/mendel-university-in-brno-postcards https://martinakurkova.cz/portfolio/ 301!
-/shirley-jackson-the-haunting-of-hill-house https://martinakurkova.cz/portfolio/ 301!
-/its-seven-oclock-in-the-morning-stand-up https://martinakurkova.cz/portfolio/ 301!
-/pilsen-republic-square   https://martinakurkova.cz/portfolio/ 301!
-/comics-of-pilsner-beer   https://martinakurkova.cz/portfolio/ 301!
-/those-who-fear-should-not-come-to-prague https://martinakurkova.cz/portfolio/ 301!
-/bear-cub                 https://martinakurkova.cz/portfolio/ 301!
-/war-of-the-worlds        https://martinakurkova.cz/portfolio/ 301!
-/fernando-pessoa-faust    https://martinakurkova.cz/portfolio/ 301!
-/comics-elephant-calf     https://martinakurkova.cz/portfolio/ 301!
-/mr-theodor-mundstock     https://martinakurkova.cz/portfolio/ 301!
-/comics-sacrifice-obet    https://martinakurkova.cz/portfolio/ 301!
-/my-grandmother           https://martinakurkova.cz/portfolio/ 301!
-/comics-hermina-tyrlova-recalls https://martinakurkova.cz/portfolio/ 301!
-
-# Všechny ostatní nenalezené adresy přesměrovat na novou doménu (fallback)
-/*                        https://martinakurkova.cz/:splat 301!
+/easter-card-for-mondi     /portfolio/ 301!
+/famous-animals-vergilius-and-fly /portfolio/ 301!
+/ota-hofman-escape         /portfolio/ 301!
+/zoo                      /portfolio/ 301!
+/christmas-wrapping-papers /portfolio/ 301!
+/scout                    /portfolio/ 301!
+/magazine-covers          /portfolio/ 301!
+/mendel-university-in-brno-postcards /portfolio/ 301!
+/shirley-jackson-the-haunting-of-hill-house /portfolio/ 301!
+/its-seven-oclock-in-the-morning-stand-up /portfolio/ 301!
+/pilsen-republic-square   /portfolio/ 301!
+/comics-of-pilsner-beer   /portfolio/ 301!
+/those-who-fear-should-not-come-to-prague /portfolio/ 301!
+/bear-cub                 /portfolio/ 301!
+/war-of-the-worlds        /portfolio/ 301!
+/fernando-pessoa-faust    /portfolio/ 301!
+/comics-elephant-calf     /portfolio/ 301!
+/mr-theodor-mundstock     /portfolio/ 301!
+/comics-sacrifice-obet    /portfolio/ 301!
+/my-grandmother           /portfolio/ 301!
+/comics-hermina-tyrlova-recalls /portfolio/ 301!
