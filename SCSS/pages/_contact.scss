@@ -9,22 +9,22 @@
 
     &__container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 0 auto;
         padding: 2rem 1.25rem 0 1.25rem;
 
-        // @media screen and (max-width: 62.5rem) {
-        //     grid-template-columns: repeat(2, 1fr);
-        // }
-
-        @media screen and (max-width: 43.75rem) {
-            flex-direction: column;
+        @media screen and (min-width: 43rem) {
+            flex-direction: row;
         }
     }
 
     &__text-container {
-        flex: 6;
-        margin-bottom: 0;
+        flex: 3;
+        padding-bottom: 1rem;
+
+        @media screen and (min-width: 62.5rem) {
+            flex: 2;
+        }
     }
 
     &__link {
@@ -46,7 +46,7 @@
     }
 
     &__image-container {
-        flex: 5;
+        flex: 1;
         display: flex;
         align-items: end;
         justify-content: end;

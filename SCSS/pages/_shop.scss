@@ -13,6 +13,19 @@
         flex-direction: column;
         margin: 0 auto;
         padding: 2rem 1.25rem 0 1.25rem;
+
+        @media screen and (min-width: 43rem) {
+            flex-direction: row;
+        }
+    }
+
+    &__text-container {
+        flex: 3;
+        padding-bottom: 1rem;
+
+        @media screen and (min-width: 62.5rem) {
+            flex: 2;
+        }
     }
 
     &__heading {
@@ -27,9 +40,27 @@
         color: variables.$color-text;
         margin-top: 1rem;
         font-weight: 300;
+    }
 
-        @media screen and (min-width: 50rem) {
-            max-width: 70%;
+    &__image-container {
+        flex: 1;
+        position: relative;
+
+        @media screen and (min-width: 43rem) {
+            position: relative;
+        }
+    }
+
+    &__image {
+        width: 50%;
+        height: auto;
+        display: block;
+
+        @media screen and (min-width: 43rem) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
         }
     }
 }
@@ -65,9 +96,9 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media screen and (max-width: 37.5rem) {
-            grid-template-columns: 1fr;
-        }
+        // @media screen and (max-width: 37.5rem) {
+        //     grid-template-columns: 1fr;
+        // }
     }
 
     &__card {
@@ -124,7 +155,6 @@
     }
 
     &__text-container {
-        margin-bottom: 1rem;
         padding: 0 1rem 1rem 1rem;
         flex-grow: 1;
         display: flex;
@@ -156,17 +186,6 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 0.5rem;
-    }
-
-    &__prices {
-        text-align: end;
-        font-weight: 800;
-    }
-
-    &__price {
-        font-size: clamp(1.1rem, calc(1.1rem + 0.8vw), 1.5rem);
-        font-weight: 900;
-        margin: 0;
     }
 
     &__list-item {
@@ -210,12 +229,24 @@
     &__how {
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+
+    &__heading {
+
+        text-align: center;
+        @media screen and (max-width: 56.25rem) {
+            text-align: start;
+        }
     }
 
     &__list {
         padding-left: 1rem;
         text-align: center;
+
+        @media screen and (max-width: 56.25rem) {
+            text-align: start;
+            padding-left: 0;
+        }
     }
 
     &__list-item {
