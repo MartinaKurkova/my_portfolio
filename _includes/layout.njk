@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GQW8VG9W1Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GQW8VG9W1Q');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,7 +18,7 @@
     <meta property="og:description" content="{{ ogDescription or description }}">
     <meta property="og:image" content="{{ ogImage or '/images/autoportret/Autoportret_cerveny_600.webp' }}">
     <meta property="og:type" content="{{ ogType or 'website' }}">
-    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="Martina Kurková Nožičková">
 
     <!-- Twitter Card -->
