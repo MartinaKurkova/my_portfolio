@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "http://martinanozickova.com/*"
+  to = "https://martinakurkova.cz/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://martinanozickova.com/*"
   to = "https://martinakurkova.cz/:splat"
   status = 301
