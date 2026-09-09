@@ -2,335 +2,303 @@
 # Přesměrování staré domény martinanozickova.com na martinakurkova.cz
 # ===================================================================
 
-# 1. Hlavní stránka a kategorie
+# ============================================================
+# 1. HLAVNÍ STRÁNKA A HLAVNÍ PODSTRÁNKY
+# ============================================================
+
 [[redirects]]
-  from = "/"
+  from = "https://martinanozickova.com/"
   to = "https://martinakurkova.cz/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/work"
+  from = "https://martinanozickova.com/work"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/o-mne-1"
+  from = "https://martinanozickova.com/o-mne-1"
   to = "https://martinakurkova.cz/o-mne/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/contact"
+  from = "https://martinanozickova.com/contact"
   to = "https://martinakurkova.cz/kontakt/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
-# 2. Detailní projekty
+
+# ============================================================
+# 2. DETAILNÍ PROJEKTY
+# ============================================================
+
 [[redirects]]
-  from = "/bohemian-taboo-stories"
+  from = "https://martinanozickova.com/bohemian-taboo-stories"
   to = "https://martinakurkova.cz/portfolio/taboo/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/wine-infographics"
+  from = "https://martinanozickova.com/wine-infographics"
   to = "https://martinakurkova.cz/portfolio/vinarstvi/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/gramla-paper-cut-out"
+  from = "https://martinanozickova.com/gramla-paper-cut-out"
   to = "https://martinakurkova.cz/portfolio/gramla/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/foodstuffs"
+  from = "https://martinanozickova.com/foodstuffs"
   to = "https://martinakurkova.cz/portfolio/nzm/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/water"
+  from = "https://martinanozickova.com/water"
   to = "https://martinakurkova.cz/portfolio/nzm/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/soil"
+  from = "https://martinanozickova.com/soil"
   to = "https://martinakurkova.cz/portfolio/nzm/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/dogs-memory-game"
+  from = "https://martinanozickova.com/dogs-memory-game"
   to = "https://martinakurkova.cz/portfolio/pexesa/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/christmas-memory-game"
+  from = "https://martinanozickova.com/christmas-memory-game"
   to = "https://martinakurkova.cz/portfolio/pexesa/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/birds-memory-cards"
+  from = "https://martinanozickova.com/birds-memory-cards"
   to = "https://martinakurkova.cz/portfolio/pexesa/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/vegetables"
+  from = "https://martinanozickova.com/vegetables"
   to = "https://martinakurkova.cz/portfolio/pexesa/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/memory-game-forest-animals"
+  from = "https://martinanozickova.com/memory-game-forest-animals"
   to = "https://martinakurkova.cz/portfolio/pexesa/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/christmas-cards"
+  from = "https://martinanozickova.com/christmas-cards"
   to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/manakins"
+  from = "https://martinanozickova.com/manakins"
   to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/penguins-and-whales"
+  from = "https://martinanozickova.com/penguins-and-whales"
   to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/exotic-birds"
+  from = "https://martinanozickova.com/exotic-birds"
   to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/whales"
+  from = "https://martinanozickova.com/whales"
   to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/oscar-swim/"
+  from = "https://martinanozickova.com/oscar-swim/"
   to = "https://martinakurkova.cz/portfolio/oskare-plav/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/little-hippo"
+  from = "https://martinanozickova.com/little-hippo"
   to = "https://martinakurkova.cz/portfolio/hrosik/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/promotion-mendel-university-press-1"
+  from = "https://martinanozickova.com/promotion-mendel-university-press-1"
   to = "https://martinakurkova.cz/portfolio/mendelu/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/fernando-pessoa-book-of-disquiet"
+  from = "https://martinanozickova.com/fernando-pessoa-book-of-disquiet"
   to = "https://martinakurkova.cz/portfolio/pessoa/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/the-last-temptation-of-christ-nikos-kazantzakis"
+  from = "https://martinanozickova.com/the-last-temptation-of-christ-nikos-kazantzakis"
   to = "https://martinakurkova.cz/portfolio/kazantzakis/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
-# 3. Ostatní staré podstránky na portfolio
+
+# ============================================================
+# 3. OSTATNÍ STARÉ PODSTRÁNKY → PORTFOLIO
+# ============================================================
+
 [[redirects]]
-  from = "/easter-card-for-mondi"
+  from = "https://martinanozickova.com/easter-card-for-mondi"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/famous-animals-vergilius-and-fly"
+  from = "https://martinanozickova.com/famous-animals-vergilius-and-fly"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/ota-hofman-escape"
+  from = "https://martinanozickova.com/ota-hofman-escape"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/zoo"
+  from = "https://martinanozickova.com/zoo"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/christmas-wrapping-papers"
+  from = "https://martinanozickova.com/christmas-wrapping-papers"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/scout"
+  from = "https://martinanozickova.com/scout"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/magazine-covers"
+  from = "https://martinanozickova.com/magazine-covers"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/mendel-university-in-brno-postcards"
+  from = "https://martinanozickova.com/mendel-university-in-brno-postcards"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/shirley-jackson-the-haunting-of-hill-house"
+  from = "https://martinanozickova.com/shirley-jackson-the-haunting-of-hill-house"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/its-seven-oclock-in-the-morning-stand-up"
+  from = "https://martinanozickova.com/its-seven-oclock-in-the-morning-stand-up"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/pilsen-republic-square"
+  from = "https://martinanozickova.com/pilsen-republic-square"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/comics-of-pilsner-beer"
+  from = "https://martinanozickova.com/comics-of-pilsner-beer"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/those-who-fear-should-not-come-to-prague"
+  from = "https://martinanozickova.com/those-who-fear-should-not-come-to-prague"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/bear-cub"
+  from = "https://martinanozickova.com/bear-cub"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/war-of-the-worlds"
+  from = "https://martinanozickova.com/war-of-the-worlds"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/fernando-pessoa-faust"
+  from = "https://martinanozickova.com/fernando-pessoa-faust"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/comics-elephant-calf"
+  from = "https://martinanozickova.com/comics-elephant-calf"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/mr-theodor-mundstock"
+  from = "https://martinanozickova.com/mr-theodor-mundstock"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/comics-sacrifice-obet"
+  from = "https://martinanozickova.com/comics-sacrifice-obet"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/my-grandmother"
+  from = "https://martinanozickova.com/my-grandmother"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
-  from = "/comics-hermina-tyrlova-recalls"
+  from = "https://martinanozickova.com/comics-hermina-tyrlova-recalls"
   to = "https://martinakurkova.cz/portfolio/"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
-# 4. Všechny ostatní nenalezené adresy ze staré domény
+
+# ============================================================
+# 4. VŠECHNY OSTATNÍ URL STARÉ DOMÉNY
+# ============================================================
+
 [[redirects]]
-  from = "/*"
+  from = "https://martinanozickova.com/*"
   to = "https://martinakurkova.cz/:splat"
   status = 301
   force = true
-  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
