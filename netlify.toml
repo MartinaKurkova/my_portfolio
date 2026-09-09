@@ -8,7 +8,7 @@
   to = "https://martinakurkova.cz/"
   status = 301
   force = true
-  conditions = {Language = [], Country = [], Role = [], Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
 
 [[redirects]]
   from = "/work"
