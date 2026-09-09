@@ -1,0 +1,336 @@
+# ===================================================================
+# Přesměrování staré domény martinanozickova.com na martinakurkova.cz
+# ===================================================================
+
+# 1. Hlavní stránka a kategorie
+[[redirects]]
+  from = "/"
+  to = "https://martinakurkova.cz/"
+  status = 301
+  force = true
+  conditions = {Language = [], Country = [], Role = [], Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/work"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/o-mne-1"
+  to = "https://martinakurkova.cz/o-mne/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/contact"
+  to = "https://martinakurkova.cz/kontakt/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+# 2. Detailní projekty
+[[redirects]]
+  from = "/bohemian-taboo-stories"
+  to = "https://martinakurkova.cz/portfolio/taboo/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/wine-infographics"
+  to = "https://martinakurkova.cz/portfolio/vinarstvi/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/gramla-paper-cut-out"
+  to = "https://martinakurkova.cz/portfolio/gramla/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/foodstuffs"
+  to = "https://martinakurkova.cz/portfolio/nzm/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/water"
+  to = "https://martinakurkova.cz/portfolio/nzm/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/soil"
+  to = "https://martinakurkova.cz/portfolio/nzm/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/dogs-memory-game"
+  to = "https://martinakurkova.cz/portfolio/pexesa/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/christmas-memory-game"
+  to = "https://martinakurkova.cz/portfolio/pexesa/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/birds-memory-cards"
+  to = "https://martinakurkova.cz/portfolio/pexesa/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/vegetables"
+  to = "https://martinakurkova.cz/portfolio/pexesa/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/memory-game-forest-animals"
+  to = "https://martinakurkova.cz/portfolio/pexesa/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/christmas-cards"
+  to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/manakins"
+  to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/penguins-and-whales"
+  to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/exotic-birds"
+  to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/whales"
+  to = "https://martinakurkova.cz/portfolio/zvireci-rise/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/oscar-swim/"
+  to = "https://martinakurkova.cz/portfolio/oskare-plav/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/little-hippo"
+  to = "https://martinakurkova.cz/portfolio/hrosik/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/promotion-mendel-university-press-1"
+  to = "https://martinakurkova.cz/portfolio/mendelu/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/fernando-pessoa-book-of-disquiet"
+  to = "https://martinakurkova.cz/portfolio/pessoa/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/the-last-temptation-of-christ-nikos-kazantzakis"
+  to = "https://martinakurkova.cz/portfolio/kazantzakis/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+# 3. Ostatní staré podstránky na portfolio
+[[redirects]]
+  from = "/easter-card-for-mondi"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/famous-animals-vergilius-and-fly"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/ota-hofman-escape"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/zoo"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/christmas-wrapping-papers"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/scout"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/magazine-covers"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/mendel-university-in-brno-postcards"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/shirley-jackson-the-haunting-of-hill-house"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/its-seven-oclock-in-the-morning-stand-up"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/pilsen-republic-square"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/comics-of-pilsner-beer"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/those-who-fear-should-not-come-to-prague"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/bear-cub"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/war-of-the-worlds"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/fernando-pessoa-faust"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/comics-elephant-calf"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/mr-theodor-mundstock"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/comics-sacrifice-obet"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/my-grandmother"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+[[redirects]]
+  from = "/comics-hermina-tyrlova-recalls"
+  to = "https://martinakurkova.cz/portfolio/"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
+
+# 4. Všechny ostatní nenalezené adresy ze staré domény
+[[redirects]]
+  from = "/*"
+  to = "https://martinakurkova.cz/:splat"
+  status = 301
+  force = true
+  conditions = {Host = ["martinanozickova.com", "www.martinanozickova.com"]}
