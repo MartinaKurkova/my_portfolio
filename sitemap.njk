@@ -4,12 +4,25 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+{# Běžné stránky webu #}
 {%- for page in collections.all %}
-  {%- if not page.data.draft and page.url %}
+  {%- if not page.data.draft
+        and page.url
+        and page.url != "/README/"
+        and not page.data.plakat %}
   <url>
     <loc>https://martinakurkova.cz{{ page.url | url }}</loc>
     <lastmod>{{ page.date.toISOString() }}</lastmod>
   </url>
   {%- endif %}
 {%- endfor %}
+
+{# Produktové stránky obchodu generované z dat plakaty #}
+{%- for plakat in plakaty %}
+  <url>
+    <loc>https://martinakurkova.cz/obchod/{{ plakat.slug }}/</loc>
+  </url>
+{%- endfor %}
+
 </urlset>
