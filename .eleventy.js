@@ -14,6 +14,9 @@ module.exports = function(eleventyConfig) {
   // Zkopírovat favicony
   eleventyConfig.addPassthroughCopy("favicon*");
 
+  // Zkopírovat robots.txt
+  eleventyConfig.addPassthroughCopy("robots.txt");
+
   //redirects
   eleventyConfig.addPassthroughCopy("_redirects");
 
